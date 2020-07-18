@@ -1,0 +1,5 @@
+{{- if .IsNamedParams -}}
+<i class="material-icons" {{with .Get "size"}}style="font-size:{{.}}"{{end}}>{{.Get "name"}}</i>
+{{- else -}}
+<i class="material-icons">{{.Get 0}}</i>
+{{- end -}}

@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="{{ now.Format "2006-01-02T15:04:05 MST" }}">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+{{ with .Site.Params.author }}
+<meta name="author" content="{{ . }}">
+{{ end }}
+
+
+<title>{{ .Title }} :: {{ .Site.Title }}</title>
+
+<link rel="shortcut icon" href='{{"images/favicon.png" | relURL}}' type="image/x-icon" />
+
+<link rel="preload" as="style" href='{{"/fonts/Montserrat/Montserrat.css" | relURL}}'>
+<link rel="stylesheet" href='{{ (resources.Get "sass/layout.scss" | toCSS).Permalink }}'>
+<link rel="stylesheet" href='{{ (resources.Get "sass/colors.scss" | toCSS).Permalink }}'>
+<link rel="stylesheet" href='{{ (resources.Get "sass/main.scss" | toCSS).Permalink }}'>
+<link rel="stylesheet" href='{{ (resources.Get "sass/menu.scss" | toCSS).Permalink }}'>
+
+
+<!-- <link rel="stylesheet" href='{{"vendor/bootstrap/bootstrap-4.5.0-dist/css/bootstrap.min.css" | relURL}}'  crossorigin="anonymous"> -->
+
+<!-- <link href='{{"vendor/FontAwesome/fontawesome-free-5.13.1-web/css/all.css" | relURL}}' rel="stylesheet">  -->
+<!--load all styles -->
+
+<link rel="stylesheet" href="{{"/vendor/materialize/material-icons.css"|relURL}}" type="text/css">
+
+
+<style type="text/css">
+
+.ddexp{
+cursor: pointer;
+}
+
+i.keyboard_arrow_right:before {
+  content: "keyboard_arrow_right"
+}
+
+i.keyboard_arrow_down:before {
+  content: "keyboard_arrow_down"
+}
+
+i.chevron_right:before {
+  content: "chevron_right"
+}
+
+i.expand_more:before {
+  content: "expand_more"
+}
+
+</style>
+
+
+<script src='{{"vendor/jquery/jquery-3.5.1.min.js" | relURL}}'></script>
+<script src='{{"js/docport.js" | relURL}}'></script>
+
+<script type="text/javascript">
+      var baseurl = "{{.Site.BaseURL}}";
+</script>
+
+
+

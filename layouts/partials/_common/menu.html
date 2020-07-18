@@ -1,0 +1,79 @@
+{{- $currentNode := . }}
+
+{{- if eq .Site.Params.ordersectionsby "title"}}
+  {{- range .Site.Home.Sections.ByTitle}}
+  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode   "level" 0}}
+  {{- end}}
+{{- else}}
+  {{- range .Site.Home.Sections.ByWeight}}
+  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" 0}}
+  {{- end}}
+{{- end}}
+
+<!-- templates -->
+{{- define "section-tree-nav" }}
+{{- $currentNode := .currentnode }}
+{{- $level := .level }}
+ {{- with .sect}}
+  {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
+    {{- $numberOfPages := (len .Sections) }}
+    {{- safeHTML .Params.head}}
+    <li data-nav-id="{{.Permalink}}" class="dd-item
+        {{- if .IsAncestor $currentNode}} parent{{end}}
+        {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
+        {{- if .Params.alwaysopen}} alwaysopen{{end -}}
+        {{- if ne $numberOfPages 0 }} haschildren{{end}}
+        item_level_$level
+        ">
+      
+      {{if gt $level 0 }}
+            <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+      {{end}}    
+      
+      {{- if ne $numberOfPages 0 }}
+        {{- if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
+          <i class="material-icons ddexp keyboard_arrow_down"></i>
+        {{- else -}}
+          <i class="material-icons ddexp keyboard_arrow_right"></i>
+        {{- end}}
+      {{- end}}
+        
+      {{if eq $level 0 }}
+            <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+      {{end}}    
+
+
+      
+      {{- if ne $numberOfPages 0 }}
+        <ul>
+          {{- .Scratch.Set "pages" .Pages }}
+          {{- if .Sections}}
+            {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+          {{- end}}
+          {{- $pages := (.Scratch.Get "pages") }}
+
+        {{- if eq .Site.Params.ordersectionsby "title"}}
+          {{- range $pages.ByTitle }}
+            {{- if and .Params.hidden (not $.showhidden) }}
+            {{- else}}
+              {{ if eq .Kind "section"}}
+                {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" (add $level 1)}}
+              {{- end}}
+            {{- end}}
+          {{- end}}
+        {{- else}}
+          {{- range $pages.ByWeight }}
+            {{- if and .Params.hidden (not $.showhidden) }}
+            {{- else}}
+              {{ if eq .Kind "section"}}
+                {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" (add $level 1)}}
+              {{- end}}
+            {{- end}}
+          {{- end}}
+        {{- end}}
+        </ul>
+      {{- end}}
+    </li>
+  {{- end}}
+ {{- end}}
+{{- end}}

@@ -1,0 +1,7 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/alert.scss" | toCSS).Permalink }}'>
+<div class="alert{{- " " -}}{{- if .IsNamedParams -}}
+{{- with .Get "theme" -}}{{.}}{{- else -}}info{{- end -}}
+{{- else -}}
+	{{- with .Get 0 -}}{{.}}{{- else -}}info{{- end -}}
+{{- end -}} " role="alert">{{- .Inner | safeHTML -}}</div>

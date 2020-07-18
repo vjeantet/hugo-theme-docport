@@ -1,0 +1,76 @@
+baseURL = "/"
+
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+title = "DocPort Documentation"
+theme = "hugo-theme-docport"
+themesdir = "../.."
+pygmentsCodeFences = true
+pygmentsStyle = "monokai"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+
+# [Languages]
+# [Languages.en]
+# title = "Documentation for Hugo docport"
+# weight = 1
+# languageName = "English"
+# 
+# [Languages.fr]
+# title = "Documentation du thème docport"
+# weight = 2
+# languageName = "Français"
+
+[params]
+editURL = "https://github.com/vjeantet/hugo-theme-docport/edit/master/exampleSite/content/"
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+menushortcutsnewtab = false # set true to open shortcuts links to a new tab/window
+enableGitInfo = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+# Code highlight configuration
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+
+[markup.goldmark.renderer]
+unsafe = true
+
+# top menu shotcuts
+[[menu.shortcuts]]
+pre = "<h>More</h3>"
+name = "Github repo"
+identifier = "ds"
+url = "https://github.com/vjeantet/hugo-theme-docport"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='material-icons'>cloud_download</i> Download"
+url = "https://github.com/vjeantet/hugo-theme-docport/archive/master.zip"
+weight = 11
+
+[[menu.shortcuts]]
+name = "Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
+
+[[menu.shortcuts]]
+name = "Credits"
+url = "/credits"
+weight = 30

@@ -1,0 +1,78 @@
+	<section class="page {{.Params.layout }}">
+{{if not .IsHome}}
+	    <!-- FIL D'ARIANE -->
+	    {{if not .Params.layout }}
+	    <nav id="breadcrumb" aria-label="breadcrumb">
+	      <ol class="breadcrumb">
+	        {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+	      </ol>
+	    </nav>
+	    {{end}}
+	    <!-- FIN FIL D'ARIANE -->
+
+		{{if not .Params.layout }}	
+			<h1>{{.CurrentSection.Title}}
+				{{if ne .CurrentSection.Title .Title}}<span>{{.Title}}</span>{{end}}
+			</h1>
+			{{ if gt (len .CurrentSection.Pages) 0}}
+				{{- $cPage := . }}
+				<nav class="subpages">
+			 	{{- range .CurrentSection.Pages.ByWeight }}
+		            {{- if not .Params.hidden }}
+	            		{{- if eq .Kind "page" }}
+	            	<li {{if eq . $cPage}}class="active"{{- end}}>
+	            		<a title="{{.Title}}" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+	            	</li>
+	            		{{- end}}
+		            {{- end}}
+	        	{{- end}}
+	        	</nav>
+			{{end}}
+		{{else}}
+			<h1>{{.Title}}</h1>
+		{{end}}
+{{end}}
+		<div class="content">
+	    {{- with .Content -}}
+	      {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1}${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
+	    {{- end -}}
+		</div>
+
+		
+		<div class="chevrons {{.Params.layout}}">
+			{{ partial "_common/next-prev-page.html" .CurrentSection }}
+		</div>
+
+	</section>
+
+	<!-- NAVIGATION DROITE TOC -->
+    <section class="right-menu {{.Params.layout }}">
+
+        <div class="actions">
+
+        </div>
+
+        <div class="TableOfContents">
+            <label>Table of contents</label>
+            <nav>
+                <ul >
+                    <li><a href="{{ .RelPermalink }}">{{.Title}}</a></li>
+                </ul>
+            </nav>
+            {{ .TableOfContents }}
+        </div>
+    </section>
+    <!-- FIN NAVIGATION DROITE TOC -->
+
+{{ define "breadcrumbnav" }}
+  {{ if .p1.Parent }}
+    {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+  {{ else if not .p1.IsHome }}
+    {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+  {{ end }}
+    <li class="breadcrumb-item {{ if eq .p1 .p2 }}active{{ end }}">
+      {{ if ne .p1 .p2 }}<a class="text-link" href="{{ .p1.RelPermalink }}">{{ end }}
+        {{ .p1.Title }}
+      {{ if ne .p1 .p2 }}</a>{{ end }}
+    </li>
+{{ end }}

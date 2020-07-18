@@ -1,0 +1,115 @@
+article>aside {
+    background-color: #f9f9f9;
+    padding: 2rem 0rem 1rem 0rem;
+    
+    .menu {
+        list-style-type: none;
+        line-height: 2rem;
+
+        ul {
+            display: none;
+        } 
+
+        // first menu level
+        >.dd-item {
+            margin-top: 24px;
+
+           
+                >a{
+                    font-weight: 700;
+                    font-size: 16px;
+                    color:black;
+                }
+            
+        } 
+
+        // menu items
+        .dd-item {
+            padding: 10px 0px 10px 16px;
+            
+            list-style: none;
+            a {
+                text-decoration: none;
+            }
+            >a{
+                line-height: 20px;
+                font-size: 14px;
+                color: rgb(110, 119, 122);
+            }
+            ul {
+                padding-inline-start: 0px;
+            }
+            li {
+                /*border-left: 1px solid #eee;*/
+            }
+
+            &.haschildren{
+                &.parent{
+                    >a {
+                       font-weight: 600                        
+                    }
+                }
+            }
+
+            &.parent{
+                >a {
+                 
+                }
+                >ul {
+                    display: block;
+                }
+            }
+
+
+            &.active {
+                background-color: rgba(110, 119, 122, 0.1);
+                
+                &.haschildren {
+                    /*background-color: transparent;*/
+
+                    > a {
+                        font-weight: 700                        
+                    }
+                }
+
+                >a{
+                    color:black;
+                }
+
+                >ul {
+                    display: block;
+                }
+                >div {
+                    background-color: #eee;
+                    * {
+                        font-weight: bold;
+                        border-bottom: dotted 1px red;
+                    }
+                }
+            }
+
+            
+            &.alwaysopen>ul {
+                display: block
+            }
+            
+            &.parent>ul {
+                display: block
+            }
+
+   
+
+        }
+    }
+
+    section {
+        margin: 2rem 0rem;
+    }
+}
+
+body{
+    a{
+        text-decoration: none;
+    }
+}
+
