@@ -1,7 +1,14 @@
 [build]
+publish = "public"
+
+[build]
   publish = "exampleSite/public"
-  command = '''hugo -s exampleSite --config "exampleSite/config.toml" \
-&& hugo -s exampleSite --config "exampleSite/config.toml,exampleSite/config-original.toml"'''
+  command = "hugo -gc --minify -s exampleSite --config \"exampleSite/config.toml\""
+
+[context.production.environment]
+HUGO_VERSION = "0.74.3"
+HUGO_ENV = "production"
+
 
 [build.environment]
   HUGO_THEME = "repo"
