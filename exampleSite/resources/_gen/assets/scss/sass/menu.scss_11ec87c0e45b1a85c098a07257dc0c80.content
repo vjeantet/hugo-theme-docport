@@ -1,7 +1,7 @@
 article > aside {
   /*background-color: $c_light3;*/
-  background-color: rgba(176, 176, 176, 0.1);
-  background-color: white;
+  background-color: rgba(124, 106, 118, 0.1);
+  background-color: #f3f1f3;
   padding: 2rem 0rem 1rem 0rem; }
   article > aside .menu {
     list-style-type: none;
@@ -24,7 +24,7 @@ article > aside {
         font-size: 14px;
         /*color: rgb(110, 119, 122);*/
         /*color:$color_main;*/
-        color: #a1a1a1; }
+        color: #6b5b66; }
       article > aside .menu .dd-item ul {
         padding-inline-start: 0px; }
       article > aside .menu .dd-item li {
@@ -34,17 +34,17 @@ article > aside {
       article > aside .menu .dd-item.parent > ul {
         display: block; }
       article > aside .menu .dd-item.active {
-        background-color: rgba(176, 176, 176, 0.1); }
+        background-color: rgba(124, 106, 118, 0.1); }
         article > aside .menu .dd-item.active.haschildren {
           /*background-color: transparent;*/ }
           article > aside .menu .dd-item.active.haschildren > a {
             font-weight: 700; }
         article > aside .menu .dd-item.active > a {
-          color: #8a8a8a; }
+          color: #53464f; }
         article > aside .menu .dd-item.active > ul {
           display: block; }
         article > aside .menu .dd-item.active > div {
-          background-color: #8a8a8a; }
+          background-color: #53464f; }
           article > aside .menu .dd-item.active > div * {
             font-weight: bold;
             border-bottom: dotted 1px red; }
