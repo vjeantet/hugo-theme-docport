@@ -1,7 +1,4 @@
 [build]
-publish = "public"
-
-[build]
   publish = "exampleSite/public"
   command = "hugo -gc --minify -s exampleSite --config \"exampleSite/config.toml\""
 
