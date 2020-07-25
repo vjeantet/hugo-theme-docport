@@ -4,7 +4,6 @@
 && hugo -s exampleSite --config "exampleSite/config.toml,exampleSite/config-original.toml"'''
 
 [build.environment]
-  HUGO_VERSION = "0.73"
   HUGO_THEME = "repo"
   HUGO_THEMESDIR = "/opt/build"
 
