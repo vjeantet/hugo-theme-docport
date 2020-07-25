@@ -3,9 +3,9 @@ body {
   font-family: "Montserrat",sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: #615f05; }
+  color: black; }
   body a {
-    color: #fffc4d;
+    color: #7a0010;
     text-decoration: none;
     background-color: transparent; }
   body header {
@@ -17,7 +17,7 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
-    color: #f2ee0d; }
+    color: #2b0308; }
     body header .logo {
       display: flex;
       flex-direction: row;
@@ -57,7 +57,7 @@ body {
           font-size: 1.5rem;
           margin-right: 0.5rem; }
         body header nav.shortcuts li a {
-          color: #f2ee0d;
+          color: #2b0308;
           padding: 0 1rem;
           font-weight: bold;
           font-size: 90%; }
@@ -81,8 +81,8 @@ body {
         letter-spacing: -1px;
         display: block;
         margin-bottom: 14px;
-        border-bottom: 1px dotted #fffc4d;
-        color: #aaa709;
+        border-bottom: 1px dotted #7a0010;
+        color: black;
         font-variant: small-caps; }
       body article section.right-menu .TableOfContents nav > ul {
         padding: 0px 0px 0px 0px;
@@ -90,7 +90,7 @@ body {
         body article section.right-menu .TableOfContents nav > ul ul {
           padding: 0px 0px 0px 14px;
           margin: 0px 0px 0px 0px;
-          border-left: 1px solid #fffc4d; }
+          border-left: 1px solid #7a0010; }
           body article section.right-menu .TableOfContents nav > ul ul li {
             font-size: 90%; }
       body article section.right-menu .TableOfContents ul {
@@ -119,11 +119,11 @@ article section.page #breadcrumb {
         display: inline-block;
         padding-right: .5rem;
         padding-left: .5rem;
-        color: #615f05;
+        color: black;
         content: "⊸"; }
       article section.page #breadcrumb ol li a {
-        color: #615f05;
-        border-bottom: 1px solid #f2ee0d;
+        color: black;
+        border-bottom: 1px solid #2b0308;
         padding-bottom: 2px;
         padding-right: 0px; }
       article section.page #breadcrumb ol li.active:after {
@@ -145,22 +145,22 @@ article section.page nav.subpages {
     min-width: 50px; }
     article section.page nav.subpages li a {
       font-size: 90%;
-      color: #fffc4d; }
+      color: #7a0010; }
     article section.page nav.subpages li:not(:first-child):before {
       display: inline-block;
       padding-right: .75rem;
-      color: #fffc4d;
+      color: #7a0010;
       content: "|"; }
     article section.page nav.subpages li.active {
       font-weight: bold; }
   article section.page nav.subpages li:first-child:before {
     content: "└ ";
-    color: #fffc4d; }
+    color: #7a0010; }
 
 article section.page div.chevrons {
   margin-top: 3rem;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 1px solid #f46c7e;
+  border-bottom: 1px solid #f46c7e;
   padding: 1rem 0rem;
   display: flex;
   flex-direction: row;
@@ -198,7 +198,7 @@ article section.page {
   article section.page h1:first-of-type {
     font-size: 2.6rem;
     margin-top: 3rem !important;
-    color: #aaa709;
+    color: black;
     margin-bottom: 0px;
     line-height: 1.05;
     letter-spacing: -.05em;
@@ -209,7 +209,7 @@ article section.page {
       article section.page h1:first-of-type span:before {
         padding-left: .75rem;
         padding-right: .75rem;
-        color: #aaa709;
+        color: black;
         content: "⊷"; }
 
 article section.page div.content {
@@ -220,11 +220,11 @@ article section.page div.content {
     top: -7rem;
     visibility: hidden; }
   article section.page div.content a {
-    color: #fffc4d;
+    color: #7a0010;
     font-weight: 500;
     text-decoration: underline; }
   article section.page div.content h1 {
-    color: #f2ee0d;
+    color: #2b0308;
     font-size: 30px;
     font-variant-ligatures: none;
     font-weight: 700;
