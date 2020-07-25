@@ -1,5 +1,19 @@
+{{if  .Site.Params.color_main}}
+$color_main : {{ .Site.Params.color_main  }}  ;
+{{else}}
+$color_main : hsl(random(360)-1, random(100)-1%, 45%);
+{{end}}
+
+
+
+$c_dark1 : darken($color_main, 15%);  
+
+
+
 article>aside {
-    background-color: #f9f9f9;
+    /*background-color: $c_light3;*/
+    background-color: transparentize($color_main,0.9);
+    background-color: lighten($color_main,50%);
     padding: 2rem 0rem 1rem 0rem;
     
     .menu {
@@ -13,14 +27,11 @@ article>aside {
         // first menu level
         >.dd-item {
             margin-top: 24px;
-
-           
                 >a{
                     font-weight: 700;
                     font-size: 16px;
                     color:black;
                 }
-            
         } 
 
         // menu items
@@ -34,7 +45,12 @@ article>aside {
             >a{
                 line-height: 20px;
                 font-size: 14px;
-                color: rgb(110, 119, 122);
+                /*color: rgb(110, 119, 122);*/
+                /*color:$color_main;*/
+                
+                color: darken($color_main,6);
+                
+                
             }
             ul {
                 padding-inline-start: 0px;
@@ -62,7 +78,7 @@ article>aside {
 
 
             &.active {
-                background-color: rgba(110, 119, 122, 0.1);
+                background-color: transparentize($color_main,0.9);
                 
                 &.haschildren {
                     /*background-color: transparent;*/
@@ -73,14 +89,14 @@ article>aside {
                 }
 
                 >a{
-                    color:black;
+                    color:$c_dark1;
                 }
 
                 >ul {
                     display: block;
                 }
                 >div {
-                    background-color: #eee;
+                    background-color: $c_dark1;
                     * {
                         font-weight: bold;
                         border-bottom: dotted 1px red;

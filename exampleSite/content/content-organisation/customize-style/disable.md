@@ -6,13 +6,13 @@ You can disable feature in docport by changing some params in `config.toml`
 
 
 ## hide Next / Prev Chevrons
-```
-[params]
-disableNavChevron = true
+```toml
+	[params]
+	disableNavChevron = true
 ```
 
 ## hide Search box in side menu
-```
-[params]
-disableSearch = true
+```toml
+	[params]
+	disableSearch = true
 ```

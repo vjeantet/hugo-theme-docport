@@ -1,0 +1,13 @@
+{{- template "extrapage" dict "name" .name "page" .context "tip" .tip -}}
+{{- define "extrapage" -}}
+	{{ $header := print .name "." .page.Lang   }}
+	{{ range where .page.Site.Pages "File.BaseFileName" $header }}
+		{{ .Content }} 
+	{{else}}
+		{{ if .page.Site.GetPage "page" (print .name ".md") }}
+	    	{{(.page.Site.GetPage "page" (print .name ".md")).Content}}
+	    {{else}}
+	    	{{safeHTML .tip}}
+	  	{{end}}
+	{{end}}
+{{- end -}}

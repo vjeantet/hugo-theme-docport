@@ -4,7 +4,9 @@ description = ""
 weight = 1
 +++
 
-{{% alert theme="warning" %}}HUGO **v0.73 extended** minimum required to use this theme (not tested with prior versions){{%/alert%}}
+{{% alert theme="warning" %}}HUGO **v0.43** minimum required to use this theme (prefer extended version if you want to modify this theme source{{%/alert%}}
+
+{{% alert theme="info" %}}Last version of HUGO is recomended, tests are always done with the last version.{{%/alert%}}
 
 The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you to train by following this [great documentation for beginners](https://gohugo.io/overview/quickstart/).
 <!--more-->
@@ -16,8 +18,8 @@ We assume that all changes to Hugo content and customizations are going to be tr
 Before start real work:
 
 1. Initialize Hugo
-2. Install DocPock theme
-3. Configure DocPock and Hugo
+2. Install DocPort theme
+3. Configure DocPort and Hugo
 
 ### Prepare empty Hugo site
 
@@ -30,7 +32,7 @@ AFTER that, initialize this as git directory where to track further changes
 $ git init
 ```
 
-Next, there are at least three ways to install DocPock (first recommended):
+Next, there are at least three ways to install DocPort (first recommended):
 
 1. **As git submodule**
 2. As git clone
@@ -38,9 +40,9 @@ Next, there are at least three ways to install DocPock (first recommended):
 
 Navigate to your themes folder in your Hugo site and use perform one of following scenarios.
 
-### 1. Install DocPock as git submodule
+### 1. Install DocPort as git submodule
 
-DocPock will be added like a dependency repo to original project. When using CI tools like Netlify, Jenkins etc., submodule method is required, or you will get `theme not found` issues. Same applies when building site on remote server trough SSH.
+DocPort will be added like a dependency repo to original project. When using CI tools like Netlify, Jenkins etc., submodule method is required, or you will get `theme not found` issues. Same applies when building site on remote server trough SSH.
 
 If submodule is no-go, use 3rd option.
 
@@ -58,9 +60,9 @@ $ git submodule update
 
 Now you are ready to add content and customize looks. Do not change any file inside themes directory.
 
-If you want to freeze changes to DocPock theme itself and use still submodules, fork private copy of DocPock and use that as submodule. When you are ready to update theme, just pull changes from origin to your private fork.
+If you want to freeze changes to DocPort theme itself and use still submodules, fork private copy of DocPort and use that as submodule. When you are ready to update theme, just pull changes from origin to your private fork.
 
-### 2. Install DocPock simply as git clone
+### 2. Install DocPort simply as git clone
 
 This method results that files are checked out locally, but won't be visible from parent git repo. Probably you will build site locally with `hugo` command and use result from `public/` on your own.
 
@@ -69,9 +71,9 @@ $ git clone https://github.com/vjeantet/hugo-theme-docport.git themes/docport
 ```
 
 
-### 3. Install DocPock from ZIP
+### 3. Install DocPort from ZIP
 
-All files from theme will be tracked inside parent repo, to update it, have to override files in theme. [{{%icon download%}} download following zip](https://github.com/vjeantet/hugo-theme-docport/archive/master.zip) and extract inside `themes/`.
+All files from theme will be tracked inside parent repo, to update it, have to override files in theme. [{{%icon cloud_download%}} download zip](https://github.com/vjeantet/hugo-theme-docport/archive/master.zip) and extract inside `themes/`.
 
 ```
 https://github.com/vjeantet/hugo-theme-docport/archive/master.zip
@@ -80,4 +82,4 @@ Name of theme in next step will be `hugo-theme-docport-master`, can rename as yo
 
 ## Configuration
 
-[Follow instructions here]({{%relref "configuration.md"%}})
+[Follow instructions here]({{%relref "getting-start/configuration/_index.md"%}})

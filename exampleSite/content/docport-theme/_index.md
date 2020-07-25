@@ -4,19 +4,17 @@ description = ""
 weight = 1
 +++
 
-# Hugo docPort theme
-[Hugo-theme-docport](https://github.com/vjeantet/hugo-theme-docport) is a theme for Hugo, a fast and modern static website engine written in Go. Hugo is often used for blogs, **this theme is fully designed for documentation.**
+[Hugo-theme-docport](https://github.com/vjeantet/hugo-theme-docport) is a theme for Hugo, a fast and modern static website engine. Hugo is often used for blogs.
 
-This theme is a partial porting of the [docDock theme](https://github.com/vjenatet/hugo-theme-docdock) which is a fork of a great theme : [hugo-theme-learn from matCornic](https://github.com/matcornic/hugo-theme-learn)
+**This theme is fully designed for documentation.** and a port of the [docDock theme](https://github.com/vjenatet/hugo-theme-docdock) itslef a fork of a great theme : [hugo-theme-learn from matCornic](https://github.com/matcornic/hugo-theme-learn)
 
-{{%panel%}}docPort works with a "page tree structure" to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "content-organisation/_index.md"%}}) {{%/panel%}}
+{{%panel%}}DocPort works with a "page tree structure" to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "content-organisation/_index.md"%}}) {{%/panel%}}
 
 ## Main features
 
-* [Automatic Search]({{%relref "search/_index.md" %}})
+* [Search Engine]({{%relref "search/_index.md" %}})
 * **Unlimited menu levels**
-* [Generate RevealJS presentation]({{%relref "page-slide.md"%}}) from markdown (embededed or fullscreen page)
-* Automatic next button to navigate through menu entries
+* [RevealJS presentation]({{%relref "page-slide.md"%}}) from markdown (embededed or fullscreen page)
 * [Image resizing, shadow...]({{%relref "create-page/page-images.md" %}})
 * [Attachments files]({{%relref "shortcodes/attachments.md" %}})
 * [List child pages]({{%relref "shortcodes/children/_index.md" %}})
@@ -31,10 +29,4 @@ Feel free to update this content, just click the **Edit this page** link display
 
 ## Documentation website
 This current documentation has been statically generated with Hugo with a simple command : `hugo -t docport` -- source code is [available here at GitHub](https://github.com/vjeantet/hugo-theme-docPort)
-
-{{% panel theme="success" header="Automated deployments" footer="Netlify builds, deploys, and hosts  frontends." %}}
-Automatically published and hosted thanks to [Netlify](https://www.netlify.com/).
-
-Read more about [Automated HUGO deployments with Netlify](https://www.netlify.com/blog/2015/07/30/hosting-hugo-on-netlifyinsanely-fast-deploys/)
-{{% /panel %}}
 

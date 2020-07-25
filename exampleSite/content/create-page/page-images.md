@@ -1,6 +1,8 @@
 +++
-title = "About images"
+title = "With images"
 date = "2017-04-24T18:36:24+02:00"
+weight = 10
+hidden = false
 +++
 
 Images have a similar syntax to links but include a preceding exclamation point.

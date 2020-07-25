@@ -1,10 +1,43 @@
-{{ $header := print "_header." .Lang }}
-	{{ range where .Site.Pages "File.BaseFileName" $header }}
-	{{ .Content }} 
-	{{else}}
-  {{ if .Site.GetPage "page" "_header.md" }}
-    {{(.Site.GetPage "page" "_header.md").Content}}
-  {{else}}
-    <a class="baselink" href="{{.Site.BaseURL}}">{{.Site.Title}}</a>
-  {{end}}
-{{end}}
+  <div class="logo">
+    <div class="burger {{.Params.layout }}">
+    	<a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+    <div>
+    {{- $defaultheader := printf "<a class='baselink' href='%s'>%s</a>" .Site.BaseURL .Site.Title -}}
+    {{- partial "_mdinclude.html" (dict "name" "_header" "context" . "tip" $defaultheader ) -}}
+    </div>
+    
+    {{- with .Site.Menus.shortcuts}}
+    <nav class="shortcuts">
+        {{- range sort . "Weight"}}
+            <li class="" role="">
+                <a href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}} rel="noopener">
+                  {{safeHTML .Name}}
+                </a>
+            </li>
+        {{- end}}
+    </nav>
+    {{- end}}
+
+  </div>
+  
+  {{- if not .Site.Params.disableSearch}}
+  <div class="search">
+    <div class="searchbox">
+      <input data-search-input id="search-by" type="text" placeholder="{{T "Search-placeholder"}}">
+    </div>
+    <script type="text/javascript" src="{{"vendor/lunr/lunr.min.js" | relURL}}"></script>
+    <script type="text/javascript" src="{{"vendor/auto-complete/auto-complete.js" | relURL}}"></script>
+    <link href="{{"vendor/auto-complete/auto-complete.css" | relURL}}" rel="stylesheet">
+    <script type="text/javascript">
+      {{ if .Site.IsMultiLingual }}
+          var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+      {{ else }}
+          var baseurl = "{{.Site.BaseURL}}";
+      {{ end }}
+    </script>
+    <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
+  </div>
+  {{- end}}
+

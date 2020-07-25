@@ -31,6 +31,8 @@ disableSearch = false # default is false
 disableNavChevron = false # set true to hide next/prev chevron, default is false
 menushortcutsnewtab = false # set true to open shortcuts links to a new tab/window
 enableGitInfo = true
+#color_main = "#B0B0B0"
+# color_second = "green"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
@@ -72,5 +74,5 @@ weight = 20
 
 [[menu.shortcuts]]
 name = "Credits"
-url = "/credits"
+url = "/docport-theme/credits/"
 weight = 30

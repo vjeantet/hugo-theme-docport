@@ -1,4 +1,3 @@
-	<section class="page {{.Params.layout }}">
 {{if not .IsHome}}
 	    <!-- FIL D'ARIANE -->
 	    {{if not .Params.layout }}
@@ -40,29 +39,12 @@
 
 		
 		<div class="chevrons {{.Params.layout}}">
-			{{ partial "_common/next-prev-page.html" .CurrentSection }}
+			{{ partial "_next-prev-page.html" .CurrentSection }}
 		</div>
 
-	</section>
+	
 
-	<!-- NAVIGATION DROITE TOC -->
-    <section class="right-menu {{.Params.layout }}">
-
-        <div class="actions">
-
-        </div>
-
-        <div class="TableOfContents">
-            <label>Table of contents</label>
-            <nav>
-                <ul >
-                    <li><a href="{{ .RelPermalink }}">{{.Title}}</a></li>
-                </ul>
-            </nav>
-            {{ .TableOfContents }}
-        </div>
-    </section>
-    <!-- FIN NAVIGATION DROITE TOC -->
+	
 
 {{ define "breadcrumbnav" }}
   {{ if .p1.Parent }}

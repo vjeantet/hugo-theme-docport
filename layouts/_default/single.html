@@ -1,7 +1,11 @@
 {{ define "title" }}
-{{ .Title }} :: {{ .Site.Title }}
+	{{ .Title }} :: {{ .Site.Title }}
 {{ end }}
 
 {{ define "main" }}
-	{{ partial "_common/content.html" . }}
+	{{ partial "body-article-content.html" . }}
+{{ end }}
+
+{{ define "sidepage" }}
+	{{ partial "body-article-sidepage.html" . }}
 {{ end }}

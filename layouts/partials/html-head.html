@@ -2,20 +2,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="{{ now.Format "2006-01-02T15:04:05 MST" }}">
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+
 {{ with .Site.Params.author }}
 <meta name="author" content="{{ . }}">
 {{ end }}
 
-
 <title>{{ .Title }} :: {{ .Site.Title }}</title>
 
+
 <link rel="shortcut icon" href='{{"images/favicon.png" | relURL}}' type="image/x-icon" />
+ 
 
 <link rel="preload" as="style" href='{{"/fonts/Montserrat/Montserrat.css" | relURL}}'>
 <link rel="stylesheet" href='{{ (resources.Get "sass/layout.scss" | toCSS).Permalink }}'>
-<link rel="stylesheet" href='{{ (resources.Get "sass/colors.scss" | toCSS).Permalink }}'>
-<link rel="stylesheet" href='{{ (resources.Get "sass/main.scss" | toCSS).Permalink }}'>
-<link rel="stylesheet" href='{{ (resources.Get "sass/menu.scss" | toCSS).Permalink }}'>
+<link rel="stylesheet" href='{{ (resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS).Permalink }}'>
+<link rel="stylesheet" href='{{ (resources.Get "sass/menu.scss" | resources.ExecuteAsTemplate "style.menu.scss" . | toCSS).Permalink }}'>
 
 
 <!-- <link rel="stylesheet" href='{{"vendor/bootstrap/bootstrap-4.5.0-dist/css/bootstrap.min.css" | relURL}}'  crossorigin="anonymous"> -->
@@ -26,6 +27,7 @@
 <link rel="stylesheet" href="{{"/vendor/materialize/material-icons.css"|relURL}}" type="text/css">
 
 
+<link rel="stylesheet" href='{{"/css/docport.css" | relURL}}'>
 <style type="text/css">
 
 .ddexp{
@@ -58,5 +60,5 @@ i.expand_more:before {
       var baseurl = "{{.Site.BaseURL}}";
 </script>
 
-
+{{- partial "head.html" . }}
 

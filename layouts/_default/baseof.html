@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-    {{ if and (eq .Site.Home .) (eq "" .Site.Home.Content) }}
-    <!-- when no homepage exists, redirect to first page -->
-      {{with index .Site.Sections 0}}
-        <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
-      {{end}}
-    {{end}}
-
-    {{if .Site.Params.themeStyle}}
-      {{ partial (printf "%s/html-head.html" .Site.Params.themeStyle) . }}
-    {{else}}
-      {{ partial "html-head.html" . }}
-    {{end}}
+    <title>{{ block "title" . }}{{ end }}</title>
+    {{ partial "html-head.html" . }}
   </head>
   <body data-url="{{ .RelPermalink }}">
-
-    {{if .Site.Params.themeStyle}}
-      {{ partial (printf "%s/body-beforecontent.html" .Site.Params.themeStyle) . }}
-    {{else}}
-      {{ partial "body-beforecontent.html" . }}
-    {{end}}
-
-    {{ block "main" . }}
-    {{ end }}
+<!-- 
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
     
-    {{if .Site.Params.themeStyle}}
-      {{ partial (printf "%s/body-aftercontent.html" .Site.Params.themeStyle) . }}
-    {{else}}
-      {{ partial "body-aftercontent.html" . }}
-    {{ end }}
+    min-height: 150px;
 
-    {{ partial "custom-footer.html" . }}
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+<pre id="debug">
+  {{ printf "%#v" resources }}  
+</pre>
+ -->
+
+{{ if eq .Params.layout "raw" }}
+      {{- .Content -}}
+{{ else }}
+    <header>
+        {{ partial "body-header.html" . }}
+    </header>
+
+    <article>
+
+      <aside class="{{.Params.layout }}">
+        {{ partial "body-sidebar.html" . }}
+      </aside>
+
+      <section class="page {{.Params.layout }}">
+      {{ block "main" . }}
+      {{ end }}
+      </section>
+
+      <!-- NAVIGATION DROITE TOC -->
+      <section class="right-menu {{.Params.layout }}">
+      {{ block "sidepage" . }}
+      {{ end }}
+      </section>
+      <!-- FIN NAVIGATION DROITE TOC -->
+
+    </article>
+
+    <footer>
+      {{ partial "body-footer.html" . }}
+    </footer>
+{{end}}
+
   </body>
 </html>

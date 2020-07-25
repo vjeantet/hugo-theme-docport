@@ -8,12 +8,12 @@ description = "Documentation theme for Hugo"
 homepage = "https://github.com/vjeantet/hugo-theme-docport"
 repo = "https://github.com/vjeantet/hugo-theme-docport"
 tags = ["documentation", "menu","slide","search"]
-features = ["documentation","menu","nested sections","search","slide", "attachments"]
-min_version = 0.73
+features = ["documentation","menu","nested sections","search","slide","attachments"]
+min_version = 0.43
 
 [author]
   name = "Valere JEANTET"
-  homepage = "http://vjeantet.fr/"
+  homepage = "http://twitter.com/valere_jeantet"
 
 [original]
   name = "docPort"

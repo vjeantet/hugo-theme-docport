@@ -2,37 +2,35 @@
 
 This repository contains a theme for [Hugo](https://gohugo.io/), based on 
 
+* [DocDock theme](https://github.com/vjeantet/hugo-theme-docdock/).
 * [Matcornic Learn theme](https://github.com/matcornic/hugo-theme-learn/).
-* [facette.io](https://facette.io/)'s documentation style css (Facette is a great time series data visualization software)
 
 Visit the [theme documentation](http://docport.netlify.com/) to see what is going on. It is actually built with this theme.
 
 # Main features
 
-- Search
-- **Unlimited menu levels**
+- Search Engine
+- Unlimited menu levels and subpages
 - RevealJS presentation from markdown (embededed or fullscreen page)
+- Image resizing, shadow…
 - Attachments files
 - List child pages
-- Include segment of content from one page in another (Excerpt)
-- Automatic next/prev buttons to navigate through menu entries
-- Mermaid diagram
-- Icons, Buttons, Alerts, Panels, Tip/Note/Info/Warning boxes
-- Image resizing, shadow...
+- Excerpt ! Include segment of content from one page in another
+- Mermaid diagram (flowchart, sequence, gantt)
+- Icons, Buttons, Alerts, Panels, Tip/Note/Info/Warning boxes, Expand
 - Customizable look and feel
-
 
 ![Overview](https://github.com/vjeantet/hugo-theme-docport/raw/master/images/tn.png)
 
 ## Installation
 
-Check that your Hugo version is minimum `0.30` with `hugo version`. We assume that all changes to Hugo content and customizations are going to be tracked by git (GitHub, Bitbucket etc.). Develop locally, build on remote system.
+Check that your Hugo version is minimum `0.43 extended` with `hugo version`. We assume that all changes to Hugo content and customizations are going to be tracked by git (GitHub, Bitbucket etc.). Develop locally, build on remote system.
 
 To start real work:
 
 1. Initialize Hugo
-2. Install DocPock theme
-3. Configure DocPock and Hugo
+2. Install DocPort theme
+3. Configure DocPort and Hugo
 
 ### Prepare empty Hugo site
 
@@ -45,7 +43,7 @@ AFTER that, initialize this as git directory where to track further changes
 $ git init
 ```
 
-Next, there are at least three ways to install DocPock (first recommended):
+Next, there are at least three ways to install DocPort (first recommended):
 
 1. **As git submodule**
 2. As git clone
@@ -53,8 +51,8 @@ Next, there are at least three ways to install DocPock (first recommended):
 
 Navigate to your themes folder in your Hugo site and use perform one of following scenarios.
 
-### 1. Install DocPock as git submodule
-DocPock will be added like a dependency repo to original project. When using CI tools like Netlify, Jenkins etc., submodule method is required, or you will get `theme not found` issues. Same applies when building site on remote server trough SSH.
+### 1. Install DocPort as git submodule
+DocPort will be added like a dependency repo to original project. When using CI tools like Netlify, Jenkins etc., submodule method is required, or you will get `theme not found` issues. Same applies when building site on remote server trough SSH.
 
 If submodule is no-go, use 3rd option.
 
@@ -72,9 +70,9 @@ $ git submodule update
 
 Now you are ready to add content and customize looks. Do not change any file inside theme directory.
 
-If you want to freeze changes to DocPock theme itself and use still submodules, fork private copy of DocPock and use that as submodule. When you are ready to update theme, just pull changes from origin to your private fork.
+If you want to freeze changes to DocPort theme itself and use still submodules, fork private copy of DocPort and use that as submodule. When you are ready to update theme, just pull changes from origin to your private fork.
 
-### 2. Install DocPock simply as git clone
+### 2. Install DocPort simply as git clone
 This method results that files are checked out locally, but won't be visible from parent git repo. Probably you will build site locally with `hugo` command and use result from `public/` on your own.
 
 ```
@@ -82,7 +80,7 @@ $ git clone https://github.com/vjeantet/hugo-theme-docport.git themes/docport
 ```
 
 
-### 3. Install DocPock from ZIP
+### 3. Install DocPort from ZIP
 
 All files from theme will be tracked inside parent repo, to update it, have to override files in theme. Download following zip and extract inside `themes/`.
 
@@ -123,7 +121,6 @@ $ hugo server
 to browse site on http://localhost:1313
 
 ## Usage
-
 - [Visit the documentation](http://docport.netlify.com/)
 - [Hugo docs](https://gohugo.io/getting-started/configuration/)
 - [Git submodules](https://git-scm.com/docs/git-submodule)

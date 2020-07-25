@@ -1,0 +1,13 @@
+{{- partial "_mdinclude.html" (dict "name" "_sidebar-before" "context" .) -}}
+
+<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+  {{- partial "_menu.html" . }}
+</ul>
+
+{{- partial "_mdinclude.html" (dict "name" "_sidebar-after" "context" .) -}}

@@ -1,0 +1,13 @@
+{{- partial "_mdinclude.html" (dict "name" "_article-sidepage-before" "context" .) -}}
+<div class="actions">
+</div>
+<div class="TableOfContents">
+    <label>Table of contents</label>
+    <nav>
+        <ul >
+            <li><a href="{{ .RelPermalink }}">{{.Title}}</a></li>
+        </ul>
+    </nav>
+    {{ .TableOfContents }}
+</div>
+{{- partial "_mdinclude.html" (dict "name" "_article-sidepage-after" "context" .) -}}

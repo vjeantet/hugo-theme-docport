@@ -8,39 +8,34 @@ lastmodifierdisplayname = "Valere JEANTET"
 lastmodifieremail = "valere.jeantet@gmail.com"
 tags = ["tag1","tag2"]
 weight = 10
+
+layout = ""
+head = "<hr/>MY SECTION"
+pre = ""
+post = "👋"
+hidden = false
+
 +++
 
 
 Hugo-theme-docport defines two types of pages. _Default_ and _Slide_.
 
-* **Default** is the common page like the current one you are reading.
-* **Slide** is a page that use the full screen to display its markdown content as a [reveals.js presentation](http://lab.hakim.se/reveal-js/).
-* **HomePage** is a special content that will be displayed as home page content.
-
-To tell Hugo-theme-docport to consider a page as a slide, just add a `type="slide"`in then frontmatter of your file. [{{%icon play_circle_filled%}}read more on page as slide]({{%relref "page-slide.md"%}})
-
-
-Hugo-theme-docport provides archetypes to help you create this kind of pages.
-
-
-## Front Matter
-Each Hugo page has to define a Front Matter in yaml, toml or json.
+## Page layout
+Each page may define a Front Matter in yaml, toml or json.
 
 Hugo-theme-docport uses the following parameters on top of the existing ones :
 
 ```toml
 +++
-# Type of content, set "slide" to display it fullscreen with reveal.js
-type="page"
-
-# Creator's Display name
-creatordisplayname = "Valère JEANTET"
-# Creator's Email
-creatoremail = "valere.jeantet@gmail.com"
-# LastModifier's Display name
-lastmodifierdisplayname = "Valere JEANTET"
-# LastModifier's Email
-lastmodifieremail = "valere.jeantet@gmail.com"
+title="Create Page"
+layout = "full"
+# - <empty> will show left navigation, table of content, breadcrumb 
+# - "simple" - will hide right bar and breadcrumb 
+# - "full" will hide left nav, right nav and breadcrumb
+# - "raw" - only the page content will display (usefull for homepage)
+#
+# other keys exists to control how to render this page in navigations (see "Navigation Appearance")
+#
 +++
 ```
 
@@ -50,4 +45,24 @@ Hugo provides a flexible way to handle order for your pages.
 
 The simplest way is to use `weight` parameter in the front matter of your page. 
 
+```toml
++++
+weight = 10
++++
+```
+
 [{{%icon play_circle_filled%}}Read more on content organization]({{%relref "content-organisation/_index.md"%}})
+
+## Page as a slidedeck
+* **Slide** is a page that use the full screen to display its markdown content as a [reveals.js presentation](http://lab.hakim.se/reveal-js/).
+
+To tell Hugo-theme-docport to consider a page as a slide, just add a `type="slide"`in then frontmatter of your file. [{{%icon play_circle_filled%}}read more on page as slide]({{%relref "page-slide.md"%}})
+
+```toml
++++
+type="slide"
++++
+```
+
+
+

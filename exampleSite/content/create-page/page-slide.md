@@ -1,10 +1,13 @@
 +++
-title = "Present a Slide"
+title = "As a SlideDeck"
 description = ""
 date = "2017-04-24T18:36:24+02:00"
+weight = 90
 +++
 
 A basic md content page can be rendered as a reveal.js presentation full screen.
+
+* [{{%icon aspect_ratio%}} click here to view an example]({{%relref "myslide.md"%}})
 
 {{%alert info%}}You can, also, **embed presentation in a page** as a small box, using the [revealjs]({{% relref "shortcodes/revealjs.md"%}}) shortcode in your md file.{{%/alert%}}
 
@@ -22,7 +25,7 @@ Please read the [{{%icon book%}} doc from hakimel](https://github.com/hakimel/re
 In the frontmatter of your page file, set **type** and **revealOptions** params
 
 Your content will be served as a fullscreen revealjs presentation and revealOptions will be used to ajust its behaviour.
-
+```toml
 	+++
 	title = "Test slide"
 	type="slide"
@@ -35,7 +38,7 @@ Your content will be served as a fullscreen revealjs presentation and revealOpti
 	history= true
 	center= true
 	+++
-
+```
 [read more about reveal options here](https://github.com/hakimel/reveal.js/#configuration)
 
 
@@ -46,12 +49,15 @@ As both horizontal and vertical slides are supported by reveal.js each has it's 
 
 To denote the start of a horizontal slide simply add the following delimiter (dashes) in your Markdown:
 
+```md
 	---
+```
 
 
 To denote the start of a vertical slide simply add the following delimiter (underscores) in your Markdown:
-	
+```md
 	___
+```
 
 By using a combination of horizontal and vertical slides you can customize the navigation within your slideshow presentation. Typically vertical slides are used to present information below a top-level horizontal slide.
 
@@ -59,7 +65,7 @@ By using a combination of horizontal and vertical slides you can customize the n
 
 For example, a very simple slideshow presentation can be created as follows
 
-```
+```md
 +++
 
 title = "test"
