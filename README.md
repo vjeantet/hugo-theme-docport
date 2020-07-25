@@ -121,6 +121,6 @@ $ hugo server
 to browse site on http://localhost:1313
 
 ## Usage
-- [Visit the documentation](http://docport.netlify.com/)
+- [Visit the documentation](https://docport.netlify.app/)
 - [Hugo docs](https://gohugo.io/getting-started/configuration/)
 - [Git submodules](https://git-scm.com/docs/git-submodule)
