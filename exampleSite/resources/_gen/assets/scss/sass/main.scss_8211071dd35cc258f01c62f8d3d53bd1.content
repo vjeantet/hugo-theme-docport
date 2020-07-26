@@ -5,7 +5,7 @@ body {
   line-height: 1.5;
   color: black; }
   body a {
-    color: black;
+    color: #241500;
     text-decoration: none;
     background-color: transparent; }
   body header {
@@ -81,7 +81,7 @@ body {
         letter-spacing: -1px;
         display: block;
         margin-bottom: 14px;
-        border-bottom: 1px dotted black;
+        border-bottom: 1px dotted #241500;
         color: black;
         font-variant: small-caps; }
       body article section.right-menu .TableOfContents nav > ul {
@@ -90,7 +90,7 @@ body {
         body article section.right-menu .TableOfContents nav > ul ul {
           padding: 0px 0px 0px 14px;
           margin: 0px 0px 0px 0px;
-          border-left: 1px solid black; }
+          border-left: 1px solid #241500; }
           body article section.right-menu .TableOfContents nav > ul ul li {
             font-size: 90%; }
       body article section.right-menu .TableOfContents ul {
@@ -145,22 +145,22 @@ article section.page nav.subpages {
     min-width: 50px; }
     article section.page nav.subpages li a {
       font-size: 90%;
-      color: black; }
+      color: #241500; }
     article section.page nav.subpages li:not(:first-child):before {
       display: inline-block;
       padding-right: .75rem;
-      color: black;
+      color: #241500;
       content: "|"; }
     article section.page nav.subpages li.active {
       font-weight: bold; }
   article section.page nav.subpages li:first-child:before {
     content: "└ ";
-    color: black; }
+    color: #241500; }
 
 article section.page div.chevrons {
   margin-top: 3rem;
-  border-top: 1px solid #737373;
-  border-bottom: 1px solid #737373;
+  border-top: 1px solid #f09719;
+  border-bottom: 1px solid #f09719;
   padding: 1rem 0rem;
   display: flex;
   flex-direction: row;
@@ -220,7 +220,7 @@ article section.page div.content {
     top: -7rem;
     visibility: hidden; }
   article section.page div.content a {
-    color: black;
+    color: #241500;
     font-weight: 500;
     text-decoration: underline; }
   article section.page div.content h1 {

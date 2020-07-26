@@ -50,7 +50,7 @@ now feel free to add the JS, CSS code you want :)
 
 ## Add custom HTML before and after key elements of this theme :
 
-* @see [site placehors]({{%relref "placeholders/_index.md"%}})
+* @see [site placehors]({{%relref "content-organisation/placeholders/_index.md"%}})
 
 ## Overide existing CSS or JS
 
