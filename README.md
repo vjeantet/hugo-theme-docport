@@ -11,13 +11,11 @@ Visit the [theme documentation](http://docport.netlify.com/) to see what is goin
 
 - Search Engine
 - Unlimited menu levels and subpages
+- Placeholders to inject HTML, CSS, JS in theme without modifying it.
 - RevealJS presentation from markdown (embededed or fullscreen page)
-- Image resizing, shadow…
-- Attachments files
-- List child pages
-- Excerpt ! Include segment of content from one page in another
 - Mermaid diagram (flowchart, sequence, gantt)
-- Icons, Buttons, Alerts, Panels, Tip/Note/Info/Warning boxes, Expand
+- Attachments, Icons, Buttons, Alerts, Panels, Tip/Note/Info/Warning boxes, Expand, Image resizing, shadow…, List child pages
+- Excerpt ! Include segment of content from one page in another
 - Customizable look and feel
 
 ![Overview](https://github.com/vjeantet/hugo-theme-docport/raw/master/images/tn.png)
