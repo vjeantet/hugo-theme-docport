@@ -3,7 +3,13 @@
 {{ end }}
 
 {{ define "main" }}
-	{{ partial "body-article-content.html" . }}
+	{{ if eq .WordCount 0}}
+	 {{with index .Pages 0}}
+	    {{ partial "body-article-content.html" . }}
+	 {{end}}
+	{{else}}
+		{{ partial "body-article-content.html" . }}
+	{{end}}
 {{ end }}
 
 {{ define "sidepage" }}

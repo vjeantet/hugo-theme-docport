@@ -4,7 +4,7 @@ description = ""
 weight = 1
 +++
 
-{{% alert theme="warning" %}}HUGO **v0.43** minimum required to use this theme (prefer extended version if you want to modify this theme source{{%/alert%}}
+{{% alert theme="warning" %}}HUGO **v0.50** minimum required to use this theme (prefer extended version if you want to modify this theme source{{%/alert%}}
 
 {{% alert theme="info" %}}Last version of HUGO is recomended, tests are always done with the last version.{{%/alert%}}
 

@@ -10,8 +10,10 @@
 	    <!-- FIN FIL D'ARIANE -->
 
 		{{if not .Params.layout }}	
-			<h1>{{.CurrentSection.Title}}
-				{{if ne .CurrentSection.Title .Title}}<span>{{.Title}}</span>{{end}}
+			{{$pagetitle := .Title}}
+	        {{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
+			<h1>{{.Section}}
+				{{if .IsPage }}<span>{{$pagetitle}}</span>{{end}}
 			</h1>
 			{{ if gt (len .CurrentSection.Pages) 0}}
 				{{- $cPage := . }}
@@ -19,8 +21,10 @@
 			 	{{- range .CurrentSection.Pages.ByWeight }}
 		            {{- if not .Params.hidden }}
 	            		{{- if eq .Kind "page" }}
+	            		{{$pagetitle := .Title}}
+	        			{{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
 	            	<li {{if eq . $cPage}}class="active"{{- end}}>
-	            		<a title="{{.Title}}" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+	            		<a title="$pagetitle" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$pagetitle}}{{safeHTML .Params.Post}}</a>
 	            	</li>
 	            		{{- end}}
 		            {{- end}}
@@ -34,6 +38,12 @@
 		<div class="content">
 	    {{- with .Content -}}
 	      {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1}${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
+	    {{- else -}}
+	      {{with index .Pages 0}}
+	      <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
+	      {{- else -}}
+	      	No content
+	      {{- end -}}
 	    {{- end -}}
 		</div>
 
