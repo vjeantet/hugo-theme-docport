@@ -1,3 +1,4 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
 {{- $showhidden := .Get "showhidden"}}
 {{- $style :=  .Get "style" | default "li" }}
 {{- $depth :=  .Get "depth" | default 1 }}
@@ -14,13 +15,14 @@
 
 {{- $cpage := (.Scratch.Get "current") }}
 
+<link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/children.scss" | toCSS).Permalink }}'>
+
 <ul class="children children-{{$style}}">
 	{{- .Scratch.Set "pages" $cpage.Pages }}
     {{- if $cpage.Sections}}
 	    {{- .Scratch.Set "pages" ($cpage.Pages | union $cpage.Sections) }}
     {{- end}}
     {{- $pages := (.Scratch.Get "pages") }}
-
 	{{- if eq $sortTerm "Weight"}}
 		{{- template "childs" dict "menu" $pages.ByWeight "style" $style "showhidden" $showhidden "count" 1 "depth" $depth "pages" .Site.Pages "description" $withDescription "sortTerm" $sortTerm}}
 	{{- else if eq $sortTerm "Name"}}

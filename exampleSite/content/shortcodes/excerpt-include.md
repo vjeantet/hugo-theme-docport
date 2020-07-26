@@ -1,6 +1,6 @@
 +++
 title = "excerpt-include"
-description = ""
+description = "The Excerpt Include shortcode is used to display ‘excerpted’ (that is, a segment of) content from one page in another."
 +++
 
 The Excerpt Include shortcode is used to display 'excerpted' (that is, a segment of) content from one page in another.

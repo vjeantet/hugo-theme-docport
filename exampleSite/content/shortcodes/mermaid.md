@@ -1,6 +1,6 @@
 +++
 title = "mermaid"
-description = ""
+description = "Mermaid is a tool that generates diagrams and charts, from markdown-inspired text definitions"
 +++
 
 ## Flowchart example
