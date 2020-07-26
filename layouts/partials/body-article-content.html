@@ -12,7 +12,7 @@
 		{{if not .Params.layout }}	
 			{{$pagetitle := .Title}}
 	        {{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
-			<h1>{{.Section}}
+			<h1>{{.CurrentSection.Title}}
 				{{if .IsPage }}<span>{{$pagetitle}}</span>{{end}}
 			</h1>
 			{{ if gt (len .CurrentSection.Pages) 0}}
