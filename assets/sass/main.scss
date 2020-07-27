@@ -46,7 +46,8 @@ body{
     
 
     header {
-        background-color: white;    
+        background-color: $c_dark2;    
+
         border-bottom: 2px solid gray ;
         box-shadow: 0 0 0.2rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.2);
         
@@ -56,8 +57,10 @@ body{
         justify-content: space-between;
         align-items: stretch ;
 
-        color:$c_dark1;       
-
+        color:($c_light2);
+        a {
+            color:invert($c_dark2);
+        }
         .logo {
             display: flex; 
             flex-direction: row;
@@ -103,8 +106,7 @@ body{
                 }
 
                 a {
-
-                    color:$c_saturate2;
+                    color:lighten($c_saturate1,10%);
                     padding: 0 1rem;
                     font-weight: bold;
                     font-size: 90%;
@@ -176,8 +178,11 @@ body{
     }
 
     footer {
-        background-color: black;
-        color:#D9D9D9;
+        background-color: $c_dark2;    
+        color:invert($c_dark2);
+        a{
+            color:invert($c_light4);
+        }
         padding: 3rem;
     }
 
