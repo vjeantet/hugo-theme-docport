@@ -21,7 +21,8 @@ article > aside {
       border-bottom: 1px solid rgba(115, 115, 115, 0.2); }
   article > aside .menu {
     list-style-type: none;
-    line-height: 2rem; }
+    line-height: 2rem;
+    margin-top: 2rem; }
     article > aside .menu ul {
       display: none; }
     article > aside .menu > .dd-item {
