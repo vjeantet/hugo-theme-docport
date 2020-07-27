@@ -106,7 +106,7 @@ body{
                 }
 
                 a {
-                    color:lighten($c_saturate1,10%);
+                    color:lighten(invert($c_dark2),4%);
                     padding: 0 1rem;
                     font-weight: bold;
                     font-size: 90%;
@@ -181,7 +181,7 @@ body{
         background-color: $c_dark2;    
         color:invert($c_dark2);
         a{
-            color:invert($c_light4);
+            color:invert($c_dark2);
         }
         padding: 3rem;
     }
