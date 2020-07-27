@@ -5,7 +5,7 @@ body {
   line-height: 1.5;
   color: black; }
   body a {
-    color: #b30000;
+    color: black;
     text-decoration: none;
     background-color: transparent; }
   body header {
@@ -57,7 +57,7 @@ body {
           font-size: 1.5rem;
           margin-right: 0.5rem; }
         body header nav.shortcuts li a {
-          color: #4d4d4d;
+          color: #b30000;
           padding: 0 1rem;
           font-weight: bold;
           font-size: 90%; }
@@ -81,7 +81,7 @@ body {
         letter-spacing: -1px;
         display: block;
         margin-bottom: 14px;
-        border-bottom: 1px dotted #b30000;
+        border-bottom: 1px dotted #999999;
         color: #272626;
         font-variant: small-caps; }
       body article section.right-menu .TableOfContents nav > ul {
@@ -90,7 +90,7 @@ body {
         body article section.right-menu .TableOfContents nav > ul ul {
           padding: 0px 0px 0px 14px;
           margin: 0px 0px 0px 0px;
-          border-left: 1px solid #b30000; }
+          border-left: 1px solid #e6e6e6; }
           body article section.right-menu .TableOfContents nav > ul ul li {
             font-size: 90%; }
       body article section.right-menu .TableOfContents ul {
@@ -123,8 +123,8 @@ article section.page #breadcrumb {
         content: "⊸"; }
       article section.page #breadcrumb ol li a {
         color: black;
-        border-bottom: 1px solid #4d4d4d;
-        padding-bottom: 2px;
+        border-bottom: 1px dotted #b30000;
+        padding-bottom: 4px;
         padding-right: 0px; }
       article section.page #breadcrumb ol li.active:after {
         display: inline-block;

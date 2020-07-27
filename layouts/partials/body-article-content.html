@@ -58,7 +58,15 @@
 
 {{ define "breadcrumbnav" }}
   {{ if .p1.Parent }}
-    {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+  	{{ if .p1.Parent.IsHome}}
+	<li class="breadcrumb-item ">
+      <a class="text-link" href="{{.p1.Site.BaseURL}}">
+        Home
+      </a>
+    </li>
+	{{else}}
+		{{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}	
+  	{{end}}
   {{ else if not .p1.IsHome }}
     {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
   {{ end }}
