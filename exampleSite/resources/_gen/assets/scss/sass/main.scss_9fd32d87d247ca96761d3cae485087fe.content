@@ -9,7 +9,7 @@ body {
     text-decoration: none;
     background-color: transparent; }
   body header {
-    background-color: #272727;
+    background-color: #333333;
     border-bottom: 2px solid gray;
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
     display: flex;
@@ -19,7 +19,7 @@ body {
     align-items: stretch;
     color: #e6e6e6; }
     body header a {
-      color: #d9d9d9; }
+      color: #cccccc; }
     body header .logo {
       display: flex;
       flex-direction: row;
@@ -50,7 +50,7 @@ body {
           font-size: 1.5rem;
           margin-right: 0.5rem; }
         body header nav.shortcuts li a {
-          color: #e3e3e3;
+          color: #d6d6d6;
           padding: 0 1rem;
           font-weight: bold;
           font-size: 90%; }
@@ -75,7 +75,7 @@ body {
         display: block;
         margin-bottom: 14px;
         border-bottom: 1px dotted #999999;
-        color: #272727;
+        color: #333333;
         font-variant: small-caps; }
       body article section.right-menu .TableOfContents nav > ul {
         padding: 0px 0px 0px 0px;
@@ -91,11 +91,11 @@ body {
       body article section.right-menu .TableOfContents li {
         padding: 8px 0px 8px 0px; }
   body footer {
-    background-color: #272727;
-    color: #d9d9d9;
+    background-color: #333333;
+    color: #cccccc;
     padding: 3rem; }
     body footer a {
-      color: #d9d9d9; }
+      color: #cccccc; }
 
 article section.page #breadcrumb {
   display: block;
@@ -193,7 +193,7 @@ article section.page {
   article section.page h1:first-of-type {
     font-size: 2.6rem;
     margin-top: 3rem !important;
-    color: #272727;
+    color: #333333;
     margin-bottom: 0px;
     line-height: 1.05;
     letter-spacing: -.05em;
@@ -204,7 +204,7 @@ article section.page {
       article section.page h1:first-of-type span:before {
         padding-left: .75rem;
         padding-right: .75rem;
-        color: #272727;
+        color: #333333;
         content: "⊷"; }
 
 article section.page div.content {
