@@ -26,3 +26,7 @@ Create a `_sidepage-after.md` page in content root folder.
 
 
 {{%alert info%}}**Tip :** You can put a full HTML content in your .md files{{%/alert%}}
+
+{{%alert info%}}**Tip :** You can [ hide search box ]({{%relref "content-organisation/customize-style/disable.md"%}}) if you want to remove the search box from header
+
+{{%/alert%}}

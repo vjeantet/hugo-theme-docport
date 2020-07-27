@@ -84,17 +84,7 @@ body{
 
         }
 
-        div.search{
-            order: 5; /* default is 0 */
-            flex-grow: 1;
-            margin-left: 25px;
 
-            input {
-                padding: 5px;
-                width: 100%;
-                height: 20px;
-            }
-        }
 
 
         nav.shortcuts {

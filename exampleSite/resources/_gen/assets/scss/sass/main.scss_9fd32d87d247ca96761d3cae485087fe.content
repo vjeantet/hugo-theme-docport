@@ -35,15 +35,6 @@ body {
         margin-right: 0.5rem; }
       body header .logo .burger {
         margin-right: 1rem; }
-    body header div.search {
-      order: 5;
-      /* default is 0 */
-      flex-grow: 1;
-      margin-left: 25px; }
-      body header div.search input {
-        padding: 5px;
-        width: 100%;
-        height: 20px; }
     body header nav.shortcuts {
       margin-left: 24px;
       display: flex;

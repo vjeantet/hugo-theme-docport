@@ -22,22 +22,4 @@
 
   </div>
   
-  {{- if not .Site.Params.disableSearch}}
-  <div class="search">
-    <div class="searchbox">
-      <input data-search-input id="search-by" type="text" placeholder="{{T "Search-placeholder"}}">
-    </div>
-    <script type="text/javascript" src="{{"vendor/lunr/lunr.min.js" | relURL}}"></script>
-    <script type="text/javascript" src="{{"vendor/auto-complete/auto-complete.js" | relURL}}"></script>
-    <link href="{{"vendor/auto-complete/auto-complete.css" | relURL}}" rel="stylesheet">
-    <script type="text/javascript">
-      {{ if .Site.IsMultiLingual }}
-          var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
-      {{ else }}
-          var baseurl = "{{.Site.BaseURL}}";
-      {{ end }}
-    </script>
-    <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
-  </div>
-  {{- end}}
 
