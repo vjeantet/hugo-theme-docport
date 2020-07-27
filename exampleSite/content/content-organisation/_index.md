@@ -10,7 +10,7 @@ With docport, **Each content page composes the menu**, they shape the structure 
 
 To link pages to each other, place them in a folders hierarchy
 
-```md
+```text
 	content
 	├── _index.md  <-- homepage
 	└── folder-one/

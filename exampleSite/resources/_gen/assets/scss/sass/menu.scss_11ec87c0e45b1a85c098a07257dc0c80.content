@@ -1,11 +1,11 @@
 .autocomplete-suggestions {
-  background-color: #f3f2f2 !important;
+  background-color: #f3f3f3 !important;
   height: 100vh; }
 
 article > aside {
   /*background-color: $c_light3;*/
   background-color: rgba(115, 115, 115, 0.1);
-  background-color: #f3f2f2;
+  background-color: #f3f3f3;
   padding: 2rem 0rem 1rem 0rem; }
   article > aside div.search {
     position: absolute;
