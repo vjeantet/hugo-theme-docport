@@ -1,4 +1,5 @@
 [{{ range $index, $page := .Site.Pages }}
+{{- if hasPrefix $page.Section "_" -}}
 {{- if ne $page.Type "json" -}}
 {{- if and $index (gt $index 0) -}},{{- end }}
 {
@@ -8,5 +9,6 @@
 	"description": "{{ htmlEscape .Description}}",
 	"content": {{$page.Plain | jsonify}}
 }
+{{- end -}}
 {{- end -}}
 {{- end -}}]

@@ -6,7 +6,9 @@
   {{- end}}
 {{- else}}
   {{- range .Site.Home.Sections.ByWeight}}
-  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" 0}}
+    {{- if not (hasPrefix .Section "_") -}}
+      {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" 0}}
+    {{end}}
   {{- end}}
 {{- end}}
 
@@ -68,7 +70,7 @@
           {{- range $pages.ByWeight }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
-              {{ if eq .Kind "section"}}
+              {{ if eq .Kind "section" }}
                 {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" (add $level 1)}}
               {{- end}}
             {{- end}}

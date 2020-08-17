@@ -5,7 +5,7 @@
     
     <div>
     {{- $defaultheader := printf "<a class='baselink' href='%s'>%s</a>" .Site.BaseURL .Site.Title -}}
-    {{- partial "_mdinclude.html" (dict "name" "_header" "context" . "tip" $defaultheader ) -}}
+    {{- partial "_mdinclude.html" (dict "name" "_include/header/_index" "context" . "tip" $defaultheader ) -}}
     </div>
     
     {{- with .Site.Menus.shortcuts}}
