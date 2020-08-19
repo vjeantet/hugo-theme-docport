@@ -8,8 +8,8 @@
 </label>
 
 {{with .Page.File}}
-{{if eq .BaseFileName "index"}}
-	{{$.Scratch.Add "filesName" "files"}}
+{{if eq .BaseFileName "_index"}}
+	{{$.Scratch.Add "filesName" "_files"}}
 {{else}}
 	{{$.Scratch.Add "filesName" (printf "%s.files" .BaseFileName)}}
 {{end}}

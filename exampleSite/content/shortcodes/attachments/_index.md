@@ -12,25 +12,18 @@ Example :
 
 ## Usage
 
-The shortcurt lists files found in a **specific folder**.
-Currently, it support two implementations for pages
+The shortcurt lists files found in the **_files folder**.
 
-1. If your page is a markdown file, attachements must be place in a **folder** named like your page and ending with **.files**.
+2. If your page is a **folderA**, attachements must be place in a **'_files'** subfolder.
 
-    > * content
-    >   * _index.md
-    >   * page.files
-    >      * attachment.pdf
-    >   * page.md
-
-2. If your page is a **folder**, attachements must be place in a nested **'files'** folder.
-
-    > * content
-    >   * _index.md
-    >   * page
-    >      * index.md
-    >      * files
-    >          * attachment.pdf
+```
+content
+└── folderA
+       ├── _index.md
+       └── _files
+              ├── attachment.pdf
+              └── attachment.pdf
+```
 
 That's all !
 
