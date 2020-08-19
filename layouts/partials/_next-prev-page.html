@@ -5,7 +5,7 @@
 
 {{- define "menu-nextprev" -}}
     {{- $currentNode := .currentnode -}}
-    {{- if ne .menu.Params.hidden true -}}
+    {{- if and (ne .menu.Params.hidden true) (not (hasPrefix .menu.Section "_")) -}}
         {{- if hasPrefix $currentNode.Permalink .menu.Permalink -}}
             {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
             {{- $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") -}}
