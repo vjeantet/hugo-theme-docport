@@ -36,4 +36,4 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
 
-{{%alert info%}}See re use example with [excerpt-include shortcode]({{%relref "shortcodes/excerpt-include.md"%}}){{%/alert%}}
+{{%alert info%}}See re use example with [excerpt-include shortcode]({{%relref "shortcodes/excerpt-include/_index.md"%}}){{%/alert%}}

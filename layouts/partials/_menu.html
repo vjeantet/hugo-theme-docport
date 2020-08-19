@@ -16,9 +16,12 @@
 {{- define "section-tree-nav" }}
 {{- $currentNode := .currentnode }}
 {{- $level := .level }}
+{{- $maxlevel := 99 }}
+{{if lt $level $maxlevel }}
  {{- with .sect}}
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- $numberOfPages := (len .Sections) }}
+    {{- $numberOfPages := (len (where .Sections "Params.tab" "ne" "true")) }}
     {{- safeHTML .Params.head}}
     <li data-nav-id="{{.Permalink}}" class="dd-item
         {{- if .IsAncestor $currentNode}} parent{{end}}
@@ -32,10 +35,10 @@
       {{if eq $menuTitle ""}}{{$menuTitle = .CurrentSection}}{{end}}
       
       {{if gt $level 0 }}
-            <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$menuTitle}}{{safeHTML .Params.Post}}</a>
+          <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$menuTitle}}{{safeHTML .Params.Post}}</a>
       {{end}}    
       
-      {{- if ne $numberOfPages 0 }}
+      {{- if and (ne $numberOfPages 0) (lt (add $level 1) $maxlevel) }}
         {{- if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
           <i class="material-icons ddexp keyboard_arrow_down"></i>
         {{- else -}}
@@ -44,10 +47,8 @@
       {{- end}}
         
       {{if eq $level 0 }}
-            <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$menuTitle}}{{safeHTML .Params.Post}}</a>
+          <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$menuTitle}}{{safeHTML .Params.Post}}</a>
       {{end}}    
-
-
       
       {{- if ne $numberOfPages 0 }}
         <ul>
@@ -70,7 +71,9 @@
           {{- range $pages.ByWeight }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
-              {{ if eq .Kind "section" }}
+              {{ if and (eq .Kind "section") (not .Params.tab ) }}
+
+
                 {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" (add $level 1)}}
               {{- end}}
             {{- end}}
@@ -79,6 +82,7 @@
         </ul>
       {{- end}}
     </li>
+   {{- end}}
   {{- end}}
  {{- end}}
 {{- end}}

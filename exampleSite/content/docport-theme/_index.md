@@ -17,11 +17,11 @@ weight = 1
 * **Unlimited menu levels**
 * [Placeholders]({{%relref "content-organisation/placeholders/_index.md" %}}) to inject HTML, CSS, JS in theme without modifying it.
 * [Customizable look and feel, colors]({{%relref "content-organisation/customize-style/_index.md" %}})
-* [RevealJS presentation]({{%relref "page-slide.md"%}}) from markdown (embededed or fullscreen page)
-* [Image resizing, shadow...]({{%relref "create-page/page-images.md" %}})
-* [Mermaid diagram]({{%relref "shortcodes/mermaid.md" %}}) (flowchart, sequence, gantt)
-* [Attachments files]({{%relref "shortcodes/attachments.md" %}}), [Icons]({{%relref "shortcodes/icon.md" %}}), [Buttons]({{%relref "shortcodes/button.md" %}}), [Alerts]({{%relref "shortcodes/alert.md" %}}), [Panels]({{%relref "shortcodes/panel.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice.md" %}}), [Expand]({{%relref "shortcodes/expand.md" %}}), [List child pages]({{%relref "shortcodes/children/_index.md" %}})
-* [Excerpt]({{%relref "shortcodes/excerpt.md"%}}) ! Include segment of content from one page in another
+* [RevealJS presentation]({{%relref "page-slide/_index.md"%}}) from markdown (embededed or fullscreen page)
+* [Image resizing, shadow...]({{%relref "create-page/page-images/_index.md" %}})
+* [Mermaid diagram]({{%relref "shortcodes/mermaid/_index.md" %}}) (flowchart, sequence, gantt)
+* [Attachments files]({{%relref "shortcodes/attachments/_index.md" %}}), [Icons]({{%relref "shortcodes/icon/_index.md" %}}), [Buttons]({{%relref "shortcodes/button/_index.md" %}}), [Alerts]({{%relref "shortcodes/alert/_index.md" %}}), [Panels]({{%relref "shortcodes/panel/_index.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice/_index.md" %}}), [Expand]({{%relref "shortcodes/expand/_index.md" %}}), [List child pages]({{%relref "shortcodes/children/_index.md" %}})
+* [Excerpt]({{%relref "shortcodes/excerpt/_index.md"%}}) ! Include segment of content from one page in another
 
 ## Contribute to this documentation
 Feel free to update this content, just click the **Edit this page** link displayed on top right of each page, and pullrequest it

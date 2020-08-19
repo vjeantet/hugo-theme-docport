@@ -1,5 +1,7 @@
 +++
 title="Colors"
+tab=true
+
 +++
 
 This theme use 1 main color to compute other colors and colorize all elements.

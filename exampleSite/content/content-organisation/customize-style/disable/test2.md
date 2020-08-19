@@ -1,5 +1,5 @@
 +++
-title = "Disable features"
+title = "test B"
 +++
 
 You can disable feature in docport by changing some params in `config.toml`

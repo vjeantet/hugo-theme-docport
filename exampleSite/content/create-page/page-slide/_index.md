@@ -9,7 +9,7 @@ A basic md content page can be rendered as a reveal.js presentation full screen.
 
 * [{{%icon aspect_ratio%}} click here to view an example]({{%relref "myslide.md"%}})
 
-{{%alert info%}}You can, also, **embed presentation in a page** as a small box, using the [revealjs]({{% relref "shortcodes/revealjs.md"%}}) shortcode in your md file.{{%/alert%}}
+{{%alert info%}}You can, also, **embed presentation in a page** as a small box, using the [revealjs]({{% relref "shortcodes/revealjs/_index.md"%}}) shortcode in your md file.{{%/alert%}}
 
 
 ## Formating

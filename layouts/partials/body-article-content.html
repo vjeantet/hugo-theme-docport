@@ -9,31 +9,52 @@
 	    {{end}}
 	    <!-- FIN FIL D'ARIANE -->
 
+	    <!-- TITRE -->
 		{{if not .Params.layout }}	
 			{{$pagetitle := .Title}}
 	        {{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
-			<h1>{{.CurrentSection.Title}}
-				{{if .IsPage }}<span>{{$pagetitle}}</span>{{end}}
-			</h1>
-			{{ if gt (len .CurrentSection.Pages) 0}}
-				{{- $cPage := . }}
-				<nav class="subpages">
-			 	{{- range .CurrentSection.Pages.ByWeight }}
-		            {{- if not .Params.hidden }}
-	            		{{- if eq .Kind "page" }}
-	            		{{$pagetitle := .Title}}
-	        			{{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
-	            	<li {{if eq . $cPage}}class="active"{{- end}}>
-	            		<a title="$pagetitle" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$pagetitle}}{{safeHTML .Params.Post}}</a>
-	            	</li>
-	            		{{- end}}
-		            {{- end}}
-	        	{{- end}}
-	        	</nav>
+			
+			{{ $cPage := .}}
+			{{ $elements := (where .Sections "NONONO" false) }}
+			{{ $isSubPage := .Params.tab }}
+			{{ $subpages := (where (where (where .Sections.ByWeight "Params.tab" true) "Params.hidden" "ne" true ) "Kind" "section")}}
+			{{ $pages := (where (where .CurrentSection.Pages.ByWeight "Kind" "page") "Params.hidden" "ne" true ) }}
+
+			{{if $isSubPage }}
+	        	<h1>{{.Parent.Title}}<span>{{$pagetitle}}</span></h1>
+	        {{else}}
+				<h1>{{.CurrentSection.Title}}{{if .IsPage }}<span>{{$pagetitle}}</span>{{end}}</h1>
+	        {{end}}
+
+			{{if gt (len $subpages) 0}} 	<!-- section has subpage -->
+				{{ $elements = $subpages }}
+			{{else if $isSubPage }}			<!-- Section is subpage -->
+				{{ $elements = (where (where .Parent.Sections.ByWeight "Params.tab" true) "Params.hidden" "ne" true ) }}
+			{{else if gt (len $pages) 0}}	<!-- Section has pages	 -->
+				{{ $elements = $pages }}
+			{{else}}
+											<!-- section has no subpage and is not subpage -->
 			{{end}}
+
+			{{ if gt (len $elements) 0}}
+					<nav class="subpages">
+				 	{{- range $elements}}
+			            {{- if not .Params.hidden }}
+		            		{{$pagetitle := .Title}}
+		        			{{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
+		            	<li {{if eq . $cPage}}class="active"{{- end}}>
+		            		<a title="$pagetitle" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$pagetitle}}{{safeHTML .Params.Post}}</a>
+		            	</li>
+			            {{- end}}
+		        	{{- end}}
+		        	</nav> 
+			{{ end }}
+
+
 		{{else}}
 			<h1>{{.Title}}</h1>
 		{{end}}
+		<!-- FIN TITRE -->
 {{end}}
 		<div class="content">
 	    {{- with .Content -}}
@@ -54,7 +75,7 @@
 
 	
 
-	
+
 
 {{ define "breadcrumbnav" }}
   {{ if .p1.Parent }}
