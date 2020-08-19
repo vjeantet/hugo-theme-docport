@@ -2,6 +2,7 @@
 title="Navigation appearance"
 pre = "👻&nbsp;&nbsp;"
 post = "&nbsp;&nbsp;👋"
+subpage = true
 +++
 
 Each page is displayed on navigation bars

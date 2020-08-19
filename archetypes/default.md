@@ -2,7 +2,8 @@
 title= "{{ replace .TranslationBaseName "-" " " | title }}"
 date= {{ .Date }}
 description = ""
-draft= true
+draft = true
+subpage = false
 +++
 
 Lorem Ipsum.

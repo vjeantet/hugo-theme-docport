@@ -16,8 +16,8 @@
 			
 			{{ $cPage := .}}
 			{{ $elements := (where .Sections "NONONO" false) }}
-			{{ $isSubPage := .Params.tab }}
-			{{ $subpages := (where (where (where .Sections.ByWeight "Params.tab" true) "Params.hidden" "ne" true ) "Kind" "section")}}
+			{{ $isSubPage := .Params.subpage }}
+			{{ $subpages := (where (where (where .Sections.ByWeight "Params.subpage" true) "Params.hidden" "ne" true ) "Kind" "section")}}
 			{{ $pages := (where (where .CurrentSection.Pages.ByWeight "Kind" "page") "Params.hidden" "ne" true ) }}
 
 			{{if $isSubPage }}
@@ -29,7 +29,7 @@
 			{{if gt (len $subpages) 0}} 	<!-- section has subpage -->
 				{{ $elements = $subpages }}
 			{{else if $isSubPage }}			<!-- Section is subpage -->
-				{{ $elements = (where (where .Parent.Sections.ByWeight "Params.tab" true) "Params.hidden" "ne" true ) }}
+				{{ $elements = (where (where .Parent.Sections.ByWeight "Params.subpage" true) "Params.hidden" "ne" true ) }}
 			{{else if gt (len $pages) 0}}	<!-- Section has pages	 -->
 				{{ $elements = $pages }}
 			{{else}}

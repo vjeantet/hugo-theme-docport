@@ -2,6 +2,7 @@
 title = "Footer"
 description = ""
 weight = 100
+subpage = true
 +++
 
 

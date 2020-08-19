@@ -21,7 +21,7 @@
  {{- with .sect}}
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- $numberOfPages := (len .Sections) }}
-    {{- $numberOfPages := (len (where .Sections "Params.tab" "ne" "true")) }}
+    {{- $numberOfPages := (len (where .Sections "Params.subpage" "ne" "true")) }}
     {{- safeHTML .Params.head}}
     <li data-nav-id="{{.Permalink}}" class="dd-item
         {{- if .IsAncestor $currentNode}} parent{{end}}
@@ -71,7 +71,7 @@
           {{- range $pages.ByWeight }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
-              {{ if and (eq .Kind "section") (not .Params.tab ) }}
+              {{ if and (eq .Kind "section") (not .Params.subpage ) }}
 
 
                 {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "level" (add $level 1)}}
