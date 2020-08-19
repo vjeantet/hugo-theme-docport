@@ -1,0 +1,28 @@
+backend:
+  name: test-repo
+  repo: vjeantet/hugo-theme-docport
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: static/images
+public_folder: /images
+publish_mode: editorial_workflow
+site_url: https://docport.netlify.app
+nested:
+      depth: 100 # max depth to show in the collection tree
+      summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'exampleSite/content'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: true
+    meta: { path: { widget: string, label: 'Path', index_file: '_index', pattern: ['.*', "Error"] } }
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+    
+
