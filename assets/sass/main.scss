@@ -138,8 +138,9 @@ body{
             font-size:14px;
             line-height:20px;
             padding-left:2px;
+
             .TableOfContents {
-                font-weight:500;
+                
                 > *{
                     margin-left:5px;
                 }
@@ -170,6 +171,14 @@ body{
                 }
                 li{
                     padding: 8px 0px 8px 0px;
+                    a {
+                        font-weight:300;
+                        /*padding-left: 2px;*/
+                        &.active{
+                            font-weight:500;
+                        }
+                    }
+                    
                 }
                 
             }
