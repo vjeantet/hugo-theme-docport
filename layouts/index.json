@@ -1,5 +1,5 @@
 [{{ range $index, $page := .Site.Pages }}
-{{- if hasPrefix $page.Section "_" -}}
+{{- if not (hasPrefix $page.Section "_") -}}
 {{- if ne $page.Type "json" -}}
 {{- if and $index (gt $index 0) -}},{{- end }}
 {
