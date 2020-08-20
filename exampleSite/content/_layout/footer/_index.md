@@ -1,5 +1,8 @@
-+++
-+++
+---
+title: Footer
+date: 2020-08-20T11:05:53.114Z
+description: footer
+---
 <style type="text/css">
 
 .footer-gray {
