@@ -1,9 +1,11 @@
-+++
-title = "Getting started"
-description = ""
-weight = 1
-alwaysopen = true
-+++
+---
+title: Getting started
+description: Getting started
+weight: 1
+date: 2020-08-20T16:42:11.812Z
+head: <hr/>
+alwaysopen: true
+---
 
 ## Requirements
 
