@@ -1,9 +1,9 @@
 backend:
-  name: github
+  name: git-gateway
   repo: vjeantet/hugo-theme-docport
   branch: master # Branch to update (optional; defaults to master)
-media_folder: static/images
-public_folder: /images
+media_folder: static/images/uploads
+public_folder: /images/uploads
 publish_mode: editorial_workflow
 site_url: https://docport.netlify.app
 nested:
@@ -11,18 +11,29 @@ nested:
       summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
 collections:
   - name: 'pages'
-    label: 'Pages'
+    label: 'Home'
+    label_singular: 'Page'
     folder: 'exampleSite/content'
     create: true
     media_folder: ''
     public_folder: ''
+    nested:
+      depth: 100 # max depth to show in the collection tree
+      summary: '{{title}}' # how menu is displayed in menu tree
+    summary: '{{title}}' # how page names are displayed
     editor:
       preview: true
-    meta: { path: { widget: string, label: 'Path', index_file: '_index', pattern: ['.*', "Error"] } }
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Title', name: 'title', widget: 'string', default: '' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Display As', name: 'layout', widget: 'select',required: false, hint: 'Choose how to layout your content', options: [{ label: "Default (empty value)", value: "" },{ label: "Simple - hide right bar and breadcrumb ", value: "simple" }, { label: "Full - hide left nav, right nav and breadcrumb", value: "full" }, { label: "Raw - only the content will be displayed (usefull for homepage)", value: "raw" }]}
+      - { label: 'Is Subpage ?', name: 'subpage', widget: 'boolean',required: false, default: false, hint: 'Display this page as subcontent' }
+      - { label: 'Is Hidden ?', name: 'hidden', widget: 'boolean',required: false, default: false, hint: 'Hide this page from any menu' }
+      - { label: 'Menu Entry Head', name: 'head', widget: 'string', required: false, hint: 'Display something before menu entry' }
+      - { label: 'Menu label Prefix', name: 'pre', widget: 'string', required: false, hint: 'Display something before menu label' }
+      - { label: 'Menu label Suffix', name: 'post', widget: 'string', required: false, hint: 'Display something after menu label' }
+      - { label: 'Menu - Always open', name: 'alwaysopen', widget: 'boolean', required: false, default: false, hint: 'Open menu by default' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-    
+    meta: { path: { widget: string, label: 'Path', index_file: '_index', pattern: ['.*', "Error"] } }
 
