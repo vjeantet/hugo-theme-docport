@@ -1,21 +1,21 @@
-+++
-title = "Create Page"
-description = ""
-date = "2017-04-24T18:36:24+02:00"
-creatordisplayname = "Valere JEANTET"
-creatoremail = "valere.jeantet@gmail.com"
-lastmodifierdisplayname = "Valere JEANTET"
-lastmodifieremail = "valere.jeantet@gmail.com"
-tags = ["tag1","tag2"]
-weight = 10
-
-layout = ""
-head = "<hr/>MY SECTION"
-pre = ""
-post = "👋"
-hidden = false
-
-+++
+---
+post: 👋
+lastmodifierdisplayname: Valere JEANTET
+title: Create Page
+description: Create page
+date: 2017-04-24T18:36:24+02:00
+layout: ""
+hidden: false
+head: ""
+creatordisplayname: Valere JEANTET
+pre: ""
+lastmodifieremail: valere.jeantet@gmail.com
+creatoremail: valere.jeantet@gmail.com
+weight: 10
+tags:
+  - tag1
+  - tag2
+---
 
 
 Hugo-theme-docport defines two types of pages. _Default_ and _Slide_.
