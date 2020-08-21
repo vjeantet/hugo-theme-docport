@@ -1,14 +1,9 @@
-[create-header-md]
-other = "Create a content/_layout/header/_index.md to customize this"
 
 [create-footer-md]
 other = "Create a content/_layout/footer/_index.md file to customize the footer content !"
 
 [Search-placeholder]
 other = "Type to search..."
-
-[Clear-History]
-other = "Clear History"
 
 [Page]
 other = "Page"
@@ -42,3 +37,15 @@ other = "Expand me..."
 
 [last-update-on]
 other = "Last update on"
+
+[jump-to-section]
+other= "Jump to Section"
+
+[home]
+other= "Home"
+
+[next-section]
+other= "Next page"
+
+[table-of-contents]
+other= "Table of contents"

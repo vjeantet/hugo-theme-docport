@@ -55,6 +55,20 @@
 			<h1>{{.Title}}</h1>
 		{{end}}
 		<!-- FIN TITRE -->
+
+		<!-- JUMP TO SECTION -->
+		<div class="jump-to-section">
+    		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'material-icons expand_more' : 'material-icons chevron_right';});});">
+      			{{ T "jump-to-section"}}
+      			<i style=";" class="material-icons chevron_right"></i>
+    		</span>
+    		{{ .TableOfContents }}
+    	</div>
+		<!-- / JUMP TO SECTION -->
+
+
+
+
 {{end}}
 		<div class="content">
 	    {{- with .Content -}}
@@ -82,7 +96,7 @@
   	{{ if .p1.Parent.IsHome}}
 	<li class="breadcrumb-item ">
       <a class="text-link" href="{{.p1.Site.BaseURL}}">
-        Home
+        {{ T "home"}}
       </a>
     </li>
 	{{else}}

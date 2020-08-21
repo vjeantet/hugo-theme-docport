@@ -37,7 +37,7 @@
         <a class="prev" href="{{.RelPermalink}}" title="{{.Title}}"> 
             <i class="material-icons">arrow_back</i>
             <div>
-                <p>Previous page :</p>
+                <p>{{T "previous-section"}}</p>
                 <label>{{.Title}}</label>
             </div>
 
@@ -47,7 +47,7 @@
     {{- with ($.Scratch.Get "nextPage") -}}
         <a class="next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-right: 0px;">
             <div>
-                <p>Next page :</p>
+                <p>{{T "next-section"}}</p>
                 <label>{{.Title}}</label>
             </div>
             <i class="material-icons">arrow_forward</i></a>

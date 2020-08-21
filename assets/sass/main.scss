@@ -274,6 +274,22 @@ article section.page {
     }
 
 
+    div.jump-to-section{
+        font-size: smaller;
+        color:$c_dark2;
+        ul{
+            li a{
+                color:$c_saturate3;
+            }
+        }
+
+        nav{
+            background-color: white;
+        }
+    }
+            
+            
+
 
     div.chevrons {
         &.simple, &.full{
