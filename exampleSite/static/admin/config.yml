@@ -27,6 +27,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', default: '' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Order', name: 'weight', widget: 'number',required: false }
       - { label: 'Display As', name: 'layout', widget: 'select',required: false, hint: 'Choose how to layout your content', options: [{ label: "Default (empty value)", value: "" },{ label: "Simple - hide right bar and breadcrumb ", value: "simple" }, { label: "Full - hide left nav, right nav and breadcrumb", value: "full" }, { label: "Raw - only the content will be displayed (usefull for homepage)", value: "raw" }]}
       - { label: 'Is Subpage ?', name: 'subpage', widget: 'boolean',required: false, default: false, hint: 'Display this page as subcontent' }
       - { label: 'Is Hidden ?', name: 'hidden', widget: 'boolean',required: false, default: false, hint: 'Hide this page from any menu' }
