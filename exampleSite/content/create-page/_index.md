@@ -18,9 +18,9 @@ tags:
 ---
 
 
-Hugo-theme-docport defines two types of pages. _Default_ and _Slide_.
+Hugo-theme-docport uses two types of pages. _Default_ and [_Slide_]({{%relref "create-page/page-slide/_index.md"%}}).
 
-## Page layout
+## Page params
 Each page may define a Front Matter in yaml, toml or json.
 
 Hugo-theme-docport uses the following parameters on top of the existing ones :
@@ -28,16 +28,20 @@ Hugo-theme-docport uses the following parameters on top of the existing ones :
 ```toml
 +++
 title="Create Page"
-layout = "full"
-# - <empty> will show left navigation, table of content, breadcrumb 
-# - "simple" - will hide right bar and breadcrumb 
-# - "full" will hide left nav, right nav and breadcrumb
-# - "raw" - only the page content will display (usefull for homepage)
-#
-# other keys exists to control how to render this page in navigations (see "Navigation Appearance")
-#
+
+subpage = false # When a page is a subpage, it will be displayed bellow the parent page title, and not in the left menu
+
+
+# Ajust layout for your page
+hide_header=false # set true to hide site header
+hide_nav=false # set true to hide the left navigation menu
+hide_breadcrumb=false # set true to hide the breadcrumb
+hide_toc=false # set true to hide the right menu (table of contents)
+hide_footer=false #set true to hide the website footer
 +++
 ```
+
+
 
 ## Ordering
 
@@ -53,16 +57,7 @@ weight = 10
 
 [{{%icon play_circle_filled%}}Read more on content organization]({{%relref "content-organisation/_index.md"%}})
 
-## Page as a slidedeck
-* **Slide** is a page that use the full screen to display its markdown content as a [reveals.js presentation](http://lab.hakim.se/reveal-js/).
 
-To tell Hugo-theme-docport to consider a page as a slide, just add a `type="slide"`in then frontmatter of your file. [{{%icon play_circle_filled%}}read more on page as slide]({{%relref "page-slide.md"%}})
-
-```toml
-+++
-type="slide"
-+++
-```
 
 
 

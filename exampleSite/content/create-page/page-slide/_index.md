@@ -5,8 +5,6 @@ date = "2017-04-24T18:36:24+02:00"
 weight = 90
 subpage = true
 
-
-
 hide_header=false
 hide_nav=false
 hide_breadcrumb=false
@@ -15,14 +13,28 @@ hide_footer=false
 
 +++
 
-A basic md content page can be rendered as a reveal.js presentation full screen.
+A basic .md file can be rendered as a reveal.js presentation full screen.
 
-* [{{%icon aspect_ratio%}} click here to view an example]({{%relref "myslide.md"%}})
+{{% notice %}}
+**Page As a SlideDeck** is a page that use the full screen to display its markdown content as a [reveals.js presentation](http://lab.hakim.se/reveal-js/).
+\
+[{{%icon aspect_ratio%}} click here to view an example]({{%relref "myslide.md"%}})
 
-{{%alert info%}}You can, also, **embed presentation in a page** as a small box, using the [revealjs]({{% relref "shortcodes/revealjs/_index.md"%}}) shortcode in your md file.{{%/alert%}}
+{{%/notice%}}
+
+To tell Hugo-theme-docport to consider a page as a slide, just add a `type="slide"`in then frontmatter of your file.
+
+```toml
++++
+type="slide"
++++
+```
 
 
-## Formating
+{{%alert success%}}**Tip :** You can, also, **embed presentation in a page** as a small box, using the [revealjs]({{% relref "shortcodes/revealjs/_index.md"%}}) shortcode in your md file.{{%/alert%}}
+
+
+## Formating your content
 Use your common Markdown syntax you use in Hugo, don't forget, you can put html tags too.
 
 {{%notice info %}} Special syntax (in html comment) is available for adding attributes to Markdown elements. This is useful for fragments, amongst other things.
@@ -31,7 +43,7 @@ Use your common Markdown syntax you use in Hugo, don't forget, you can put html 
 Please read the [{{%icon book%}} doc from hakimel](https://github.com/hakimel/reveal.js/#instructions)
 
 
-## Options
+## Presentation options
 In the frontmatter of your page file, set **type** and **revealOptions** params
 
 Your content will be served as a fullscreen revealjs presentation and revealOptions will be used to ajust its behaviour.

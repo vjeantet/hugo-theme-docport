@@ -6,7 +6,8 @@ div.notices p {
   margin-top: 0px;
   box-sizing: border-box;
   box-shadow: inset 4px 0 0 black;
-  background-color: #e6e6e6; }
+  background-color: #e6e6e6;
+  font-size: smaller; }
 
 div.notices label {
   font-size: 0.5em;

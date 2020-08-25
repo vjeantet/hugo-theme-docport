@@ -27,10 +27,12 @@ Create empty directory, which will be root of your Hugo project. Navigate there 
 ```
 $ hugo new site .
 ```
-AFTER that, initialize this as git directory where to track further changes
+After that, initialize this as git directory where to track further changes
 ```
 $ git init
 ```
+
+### Install DocPort
 
 Next, there are at least three ways to install DocPort (first recommended):
 
@@ -40,7 +42,7 @@ Next, there are at least three ways to install DocPort (first recommended):
 
 Navigate to your themes folder in your Hugo site and use perform one of following scenarios.
 
-### 1. Install DocPort as git submodule
+#### 1. Install DocPort as git submodule
 
 DocPort will be added like a dependency repo to original project. When using CI tools like Netlify, Jenkins etc., submodule method is required, or you will get `theme not found` issues. Same applies when building site on remote server trough SSH.
 
@@ -62,7 +64,7 @@ Now you are ready to add content and customize looks. Do not change any file ins
 
 If you want to freeze changes to DocPort theme itself and use still submodules, fork private copy of DocPort and use that as submodule. When you are ready to update theme, just pull changes from origin to your private fork.
 
-### 2. Install DocPort simply as git clone
+#### 2. Install DocPort simply as git clone
 
 This method results that files are checked out locally, but won't be visible from parent git repo. Probably you will build site locally with `hugo` command and use result from `public/` on your own.
 
@@ -71,7 +73,7 @@ $ git clone https://github.com/vjeantet/hugo-theme-docport.git themes/docport
 ```
 
 
-### 3. Install DocPort from ZIP
+#### 3. Install DocPort from ZIP
 
 All files from theme will be tracked inside parent repo, to update it, have to override files in theme. [{{%icon cloud_download%}} download zip](https://github.com/vjeantet/hugo-theme-docport/archive/master.zip) and extract inside `themes/`.
 

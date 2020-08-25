@@ -1,8 +1,10 @@
 +++
-title="Navigation appearance"
+title="Navigation entries"
 pre = "👻&nbsp;&nbsp;"
 post = "&nbsp;&nbsp;👋"
 subpage = true
+hidden = false
+weight = 300
 +++
 
 Each page is displayed on navigation bars
@@ -25,11 +27,10 @@ pre = "👻"
 post = "👋"
 
 # LEFT MENU ONLY (Sections)
-# Show a "MY SECTION" text before menu entry
-# as an exemple, on the Create Page a head="<hr/>" is set
-head = "MY SECTION"
+# as an exemple, on the Getting started Page a head="<hr/>" is set
+head = "<hr/>"
 
-# Menu opened by default
+# Menu opened by default (like the Getting started menu entry)
 alwaysopen = false
 
 +++

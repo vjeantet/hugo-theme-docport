@@ -33,14 +33,14 @@ To link pages to each other, place them in a folders hierarchy
 **other.md** files are considered as "subpages"
 {{%/alert%}}
 
-### Subpages ⊷
+## Subpages ⊷
 
 Each other **.md** found in a section folder will be considered "subpages", for example, in the `content-organisation` folder there is 1 _index.md (the one your are currently reading) and 1 more files named "extramenu.md", they appear just under this page's title, look upper.
 
 
 ![agence](subpages.png?height=80px&classes=border,shadow)
 
-### Add header to a menu entry
+## Add header to a menu entry
 
 in the page frontmatter, add a `head` param to insert any HTML code before the menu entry:
 
@@ -53,7 +53,7 @@ example to display a "Hello"
 	+++
 ```
 
-### Order sibling menu/page entries
+## Order sibling menu/page entries
 
 in your frontmatter add `weight` param with a number to order.
 
@@ -63,9 +63,9 @@ in your frontmatter add `weight` param with a number to order.
 	weight = 4
 	+++
 ```
-{{%info%}}add `ordersectionsby = "title"` in your config.toml to order menu entries by title{{%/info%}}
+{{%notice tip%}} you can order pages by title by adding `ordersectionsby = "title"` in your config.toml {{%/notice%}}
 
-### Hide a menu entry
+## Hide a menu entry
 
 in your frontmatter add `hidden=true` param.
 ```toml
@@ -75,7 +75,7 @@ in your frontmatter add `hidden=true` param.
 	+++
 ```
 
-### Unfolded menu entry by default
+## Keep menu entry opened by default
 
 One or more menuentries can be displayed unfolded by default. (like the "Getting start" menu entry  in this website)
 
@@ -89,12 +89,8 @@ example :
 	alwaysopen = true
 ```
 
-### Folder structure and file name
 
-Content organization **is** your `content` folder structure.
-
-
-### Homepage
+## Homepage
 
 Find out how to [customize homepage]({{%relref "create-page/set-your-homepage/_index.md"%}}) 
 

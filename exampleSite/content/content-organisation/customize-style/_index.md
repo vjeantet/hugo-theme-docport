@@ -8,7 +8,7 @@ You can change the style and behavior of the theme without touching its source c
 * inject your own html, css or js into the page
 * overide existing css or js with your own files
 
-{{%notice note %}}
+{{%notice warning %}}
 No needs to copy the entire theme to customize some parts 
 Bellow are solutions to avoid copying the entire theme into your own codebase.
 {{%/notice%}}
@@ -24,7 +24,7 @@ Create a file as `layouts/partials/head.html`
 		└──	head.html
 ```
 
-write your own content like (an example from @nzbart):
+write your own content like :
 ```html
 <link rel="stylesheet" href="/css/custom.css">
 <script src="/js/custom.js"></script>
@@ -48,9 +48,9 @@ $(tweakPage)
 
 now feel free to add the JS, CSS code you want :)
 
-## Add custom HTML before and after key elements of this theme :
+## Add custom HTML before and after key elements of this theme
 
-* @see [site placehors]({{%relref "content-organisation/placeholders/_index.md"%}})
+* @see [site placeholders]({{%relref "content-organisation/placeholders/_index.md"%}})
 
 ## Overide existing CSS or JS
 
