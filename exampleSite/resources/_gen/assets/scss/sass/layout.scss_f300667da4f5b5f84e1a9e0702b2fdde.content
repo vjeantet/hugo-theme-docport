@@ -139,7 +139,8 @@ body.hideheader article {
   body header div.burger {
     display: none; }
   body article {
-    padding-left: 0px; }
+    padding-left: 0px;
+    padding-right: 0px; }
     body article aside {
       margin-right: 0px; }
     body article aside.responsive {
@@ -149,11 +150,12 @@ body.hideheader article {
     body article section.right-menu {
       display: none; } }
 
-@media (max-width: 600px) {
+@media (max-width: 769px) {
   body header div.burger {
     display: block; }
   body article {
-    padding: 0px 0px; }
+    padding-left: 0px;
+    padding-right: 0px; }
     body article aside {
       display: none;
       flex: 0 0 100%; }

@@ -200,6 +200,7 @@ body {
 		}
 		article {
 			padding-left: 0px ;
+			padding-right: 0px;
 			aside{
 				margin-right: 0px;
 			}
@@ -217,7 +218,7 @@ body {
 	}
 }
 
-@media(max-width:600px) {
+@media(max-width:769px) {
 	body{
 		header{
 			div.burger{
@@ -225,7 +226,8 @@ body {
 			}
 		}
 		article {
-			padding: 0px 0px;
+			padding-left: 0px;
+			padding-right: 0px;
 			aside{
 				display: none;
 				flex: 0 0 100%;
