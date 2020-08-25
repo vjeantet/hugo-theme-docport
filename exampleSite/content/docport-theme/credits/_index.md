@@ -2,6 +2,7 @@
 title = "Credits"
 description = "Contributors and packages used by hugo-theme-docport"
 subpage = true
+hide_toc=true
 +++
 
 
