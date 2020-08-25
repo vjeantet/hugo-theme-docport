@@ -1,63 +1,132 @@
-	div.notices {
-	  margin: 2rem 0;
-	  position: relative; 
+$color_primary : #007bff ;
+$color_secondary : #6c757d ;
+$color_success : #28a745 ;
+$color_danger : #dc3545 ;
+$color_warning : #ffc107 ;
+$color_info : #17a2b8 ;
+$color_light : #f8f9fa ;
+$color_dark : #343a40 ;
+$color_white : #fff ;
+$color_transparent : transparent ;
 
-		border-radius: .2rem;
-	    color: #fff;
-	    padding: .5rem 1rem .5rem 2rem;
-	    position: relative
-	}
 
 	div.notices p {
-	  padding: 0px;
-	  display: block;
-	  font-size: 1rem;
-	  margin-top: 0rem;
-	  margin-bottom: 0rem; }
+		/*box-shadow: inset 4px 0 0 black;*/
+		/*border-radius: .2rem;*/
+	    background: white;
+	    padding: .5rem 1rem .5rem 1rem;
+	    margin-top: 0px;
+	    box-sizing: border-box;
+	    box-shadow: inset 4px 0 0 black;
+	    background-color: lighten(black,90%)
+	}
 
-	div.notices p:first-child:before {
-	  position: absolute;
-	  top: -27px;
-	  color: #fff;
-	  font-family: sans-serif;
-	  content: '☆';
-	  left: 10px; }
 
-	div.notices p:first-child:after {
-	  position: absolute;
-	  top: -27px;
-	  color: #fff;
-	  left: 2rem; }
-
-	div.notices.info p:first-child:after {
-	  content: 'Info'; }
-
-	div.notices.warning p:first-child:after {
-	  content: 'Warning'; }
-
-	div.notices.note p:first-child:after {
-	  content: 'Note'; }
-
-	div.notices.tip p:first-child:after {
-	  content: 'Tip'; }
+	div.notices label{
+		font-size: 0.5em;
+		position: absolute;
+		margin-left: 0em;
+		margin-top: -1.8em;
+		font-weight: bold;
+		font-variant: small-caps;
+		letter-spacing: 0.6em;
+	}
 
 	div.notices.note {
-	  border-top: 30px solid #6bb1e0;
-	  background: #e6f3fb;
-	  color: rgba(47, 103, 141, 0.995) !important; }
+		p {
+			box-shadow: inset 4px 0 0 $color_primary;
+			background: transparentize($color_primary, 0.95);
+			color: darken($color_primary,20%) !important; 
+		}
+		label{color: $color_primary;}
+	}
 
-	div.notices.info {
-	  border-top: 30px solid #f1b37e;
-	  background: #fefaf5;
-	  color: rgba(150, 90, 38, 0.995) !important; }
+div.notices.primary {
+	p {
+		box-shadow: inset 4px 0 0 $color_primary;
+		background: transparentize($color_primary, 0.95);
+		color: darken($color_primary,20%) !important; 
+	}
+	label{color: $color_primary;}
+}
 
-	div.notices.tip {
-	  border-top: 30px solid #84c578;
-	  background: #e8f7e6;
-	  color: rgba(72, 125, 63, 0.995) !important; }
+div.notices.secondary {
+	p {
+		box-shadow: inset 4px 0 0 $color_secondary;
+		background: transparentize($color_secondary, 0.95);
+		color: darken($color_secondary,20%) !important; 
+	}
+	label{color: $color_secondary;}
+}
 
-	div.notices.warning {
-	  border-top: 30px solid #d58181;
-	  background: #fbeded;
-	  color: rgba(132, 56, 56, 0.995) !important; }
+div.notices.success, div.notices.tip {
+	p {
+		box-shadow: inset 4px 0 0 $color_success;
+		background: transparentize($color_success, 0.95);
+		color: darken($color_success,20%) !important; 
+	}
+	label{color: $color_success;}
+}
 
+div.notices.danger {
+	p {
+		box-shadow: inset 4px 0 0 $color_danger;
+		background: transparentize($color_danger, 0.95);
+		color: darken($color_danger,20%) !important; 
+	}
+	label{color: $color_danger;}
+}
+
+div.notices.warning {
+	p {
+		box-shadow: inset 4px 0 0 $color_warning;
+		background: transparentize($color_warning, 0.95);
+		color: darken($color_warning,20%) !important; 
+	}
+	label{color: $color_warning;}
+}
+
+div.notices.info {
+	p {
+		box-shadow: inset 4px 0 0 $color_info;
+		background: transparentize($color_info, 0.95);
+		color: darken($color_info,20%) !important; 
+	}
+	label{color: $color_info;}
+}
+
+div.notices.light {
+	p {
+		box-shadow: inset 4px 0 0 $color_light;
+		background: transparentize($color_light, 0.95);
+		color: darken($color_light,20%) !important; 
+	}
+	label{color: $color_light;}
+}
+div.notices.dark {
+	p {
+		box-shadow: inset 4px 0 0 $color_dark;
+		background: transparentize($color_dark, 0.95);
+		color: darken($color_dark,20%) !important; 
+	}
+	label{color: $color_dark;}
+}
+div.notices.white {
+	p {
+		box-shadow: inset 4px 0 0 $color_white;
+		background: transparentize($color_white, 0.95);
+		color: whiteen($color_white,20%) !important; 
+	}
+	label{color: $color_white;}
+}
+div.notices.transparent {
+	p {
+		box-shadow: inset 4px 0 0 $color_transparent;
+		background: transparentize($color_transparent, 0.95);
+		color: transparenten($color_transparent,20%) !important; 
+	}
+	label{color: $color_transparent;}
+}
+
+
+	

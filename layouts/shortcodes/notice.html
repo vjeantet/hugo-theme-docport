@@ -1,3 +1,8 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 <link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/notice.scss" | toCSS).Permalink }}'>
-<div class="notices {{ .Get 0 }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}><p>{{ .Inner }}</p></div>
+<div class="notices {{ with .Get 0 -}}{{.}}{{else}}primary{{end}}">
+	{{- if len .Params | eq 2 -}}
+	<label>{{- with .Get 1 -}}{{.}}{{- end -}}</label>
+	{{- end -}}
+	{{if in  .Inner "\n" }}{{.Inner}}{{else}}<p>{{.Inner}}</p>{{end}}
+</div>
