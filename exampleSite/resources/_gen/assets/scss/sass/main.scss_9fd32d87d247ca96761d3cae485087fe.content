@@ -12,33 +12,26 @@ body {
     background-color: #333333;
     border-bottom: 2px solid gray;
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
     color: #e6e6e6; }
     body header a {
       color: #cccccc; }
-    body header .logo {
+    body header > div {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: stretch;
-      font-size: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-      body header .logo * {
-        vertical-align: middle; }
-      body header .logo img {
+      white-space: nowrap; }
+      body header > div img {
         height: 32px;
         margin-right: 0.5rem; }
-      body header .logo .burger {
+      body header > div .burger {
         margin-right: 1rem; }
     body header nav.shortcuts {
-      margin-left: 24px;
+      margin-left: auto;
+      position: relative;
       display: flex;
       justify-content: flex-start;
       list-style-type: none;
@@ -173,14 +166,11 @@ article section.page div.chevrons {
   align-items: stretch;
   -webkit-box-pack: end !important;
   justify-content: flex-end !important; }
-  article section.page div.chevrons.simple, article section.page div.chevrons.full {
-    display: none; }
   article section.page div.chevrons a {
     display: flex;
     align-items: center !important;
     -webkit-box-align: center !important;
     justify-content: flex-end !important;
-    width: 50%;
     max-width: 22.5rem;
     padding: 24px; }
     article section.page div.chevrons a.prev {
@@ -203,7 +193,7 @@ article section.page {
   line-height: 24px; }
   article section.page h1:first-of-type {
     font-size: 2.6rem;
-    margin-top: 3rem !important;
+    margin-top: 1.5rem !important;
     color: #333333;
     margin-bottom: 0px;
     line-height: 1.05;

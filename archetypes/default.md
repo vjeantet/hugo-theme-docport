@@ -4,6 +4,14 @@ date= {{ .Date }}
 description = ""
 draft = true
 subpage = false
+
+
+hide_header=false
+hide_nav=false
+hide_breadcrumb=false
+hide_toc=false
+hide_footer=false
+
 +++
 
 Lorem Ipsum.

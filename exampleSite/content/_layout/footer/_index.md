@@ -12,7 +12,7 @@ description: Footer
 
 .footer-custom {
   font: normal normal 12px/1.4 sans-serif;
-  max-width: 1008px;
+  /*max-width: 1008px;*/
   box-sizing: border-box;
   margin: 0 auto;
   padding: 24px;

@@ -51,9 +51,6 @@ body{
         border-bottom: 2px solid gray ;
         box-shadow: 0 0 0.2rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.2);
         
-        display: flex; 
-        flex-direction: row;
-        flex-wrap: nowrap;
         justify-content: space-between;
         align-items: stretch ;
 
@@ -61,21 +58,15 @@ body{
         a {
             color:invert($c_dark2);
         }
-        .logo {
+        > div {
             display: flex; 
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
             align-items: stretch ;
-            font-size: 100%;
 
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            *{
-                vertical-align: middle;
-            }
+            
 
             img {
                 height: 32px;
@@ -91,12 +82,15 @@ body{
 
 
         nav.shortcuts {
-            margin-left: 24px;
+            margin-left: auto;
+            position: relative;
+
             display: flex;
             justify-content: flex-start;
             list-style-type: none;
             flex-direction: row;
             flex-wrap: nowrap;
+
             li {
 
                 margin: 0px;
@@ -292,9 +286,6 @@ article section.page {
 
 
     div.chevrons {
-        &.simple, &.full{
-            display: none ;
-        }
         margin-top: 3rem;
         border-top: 1px solid $c_light2;
         border-bottom: 1px solid $c_light2;
@@ -302,15 +293,15 @@ article section.page {
         display: flex;
         flex-direction: row;
         align-items: stretch;
-            -webkit-box-pack: end!important;
-            justify-content: flex-end!important;
+        -webkit-box-pack: end!important;
+        justify-content: flex-end!important;
 
         a{
             display: flex;
             align-items: center!important;
             -webkit-box-align: center!important;
             justify-content: flex-end!important;
-            width: 50%;
+            
             max-width: 22.5rem;
             
             padding: 24px;
@@ -346,7 +337,7 @@ article section.page {
 
      h1:first-of-type {
         font-size: 2.6rem;
-        margin-top: 3rem!important;
+        margin-top: 1.5rem!important;
         color:$c_dark2;
         margin-bottom: 0px;
         line-height: 1.05;
