@@ -13,7 +13,8 @@ $color_second : saturate($color_main, 0%);
 $c_light1 : lighten($color_main, 15%);  
 $c_light2 : lighten($color_main, 45%);  
 $c_light3 : lighten($color_main, 50%);  
-$c_light4 : lighten($color_main, 60%);  
+$c_light4 : lighten($color_main, 80%);  
+
 
 $c_dark1 : darken($color_main, 15%);  
 $c_dark2 : darken($color_main, 25%);  
@@ -113,6 +114,7 @@ body{
 
 
     article {
+        background-color: $c_light4 ;
         aside {
             #close_menu{
                 display: none;
@@ -193,6 +195,7 @@ body{
 
 
 article section.page {
+    background-color: inherit;
     #breadcrumb{
         display: block;
         font-size: 1rem;
@@ -235,6 +238,17 @@ article section.page {
     }
 
     nav.subpages{
+        margin-right: -1.5rem;
+        margin-left: -1.5rem;
+        padding-left: 1.5em;
+        
+        position: -webkit-sticky;
+        position: sticky;
+        overflow-y: auto;
+        top: 45px;
+        background-color: inherit;
+        
+
         flex: 1;
         display: flex;
         justify-content: flex-start;
