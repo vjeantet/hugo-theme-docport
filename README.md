@@ -1,7 +1,7 @@
 # Hugo docPort Theme
 
 DocPort, a professional documentation theme built for [Hugo](https://gohugo.io/). 
-it provides a simple navigation, automatic search engine, a high level of configuration and a bunch of [shortcodes](https://docport.netlify.app/shortcodes/) crafted for documentation (attachment, presentations, children, notice, alers, diagrams...).
+it provides a simple navigation, automatic search engine, a high level of configuration and a bunch of [shortcodes](https://docport.netlify.app/shortcodes/) crafted for documentation (attachment, presentations, child pages, notice, alerts, diagrams...).
 
 This project is actively being maintained, and integrate easily with netlify CMS for static content authoring without leaving the browser.
 
