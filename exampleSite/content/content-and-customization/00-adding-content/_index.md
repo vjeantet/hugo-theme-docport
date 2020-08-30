@@ -1,0 +1,102 @@
+---
+lastmodifierdisplayname: Valere JEANTET
+title: Adding content
+description: This page tells you how to use the theme to add and structure your site content.
+
+date: 2017-04-24T18:36:24+02:00
+layout: ""
+hidden: false
+head: ""
+creatordisplayname: Valere JEANTET
+pre: ""
+lastmodifieremail: valere.jeantet@gmail.com
+creatoremail: valere.jeantet@gmail.com
+weight: 1
+tags:
+  - tag1
+  - tag2
+---
+
+{{% notice %}}This page tells you how to use the theme to add and structure your site content.{{% /notice %}}
+
+
+## Content root directory
+You add content for your site under the `content` root directory of your Hugo site project. 
+The files in your content root directory are typically grouped in subdirectories corresponding to your site’s sections.
+
+We’ll look at in the following chapter.
+
+## Content sections
+With docport, **Each content page composes the site and navigation structure**, they shape the structure of your website.
+
+Create a folder for each section and their sub sections, and a `_index.md` in each folder which will act as the section's content.
+{{%notice%}}You can add any other page.md in section folder, they will be treated as "[subpages]({{< ref "#subpages" >}})"{{%/notice%}}
+
+
+To link pages to each other, place them in a folders hierarchy.
+
+```text
+	content
+	└── section-one/			
+	    ├── _index.md
+	    └── section-one-two/ 	
+	        ├── _index.md 		
+	        ├── section-one-two-three-A/	
+	        │   ├── _index.md
+	        └── section-one-two-three-B/ 	
+	            ├── _index.md 	<-- section's page 
+	            ├── pageA.md  <-- "subpages"
+	            └── pageB.md  <-- "subpages"
+
+```
+
+## Subpages
+Subpages are contents which belong to the section, and are displayed bellow section's title in the page. \
+Subpages are not displayed in left menu.
+
+If you look at the current page title, you will see 3 links which reference its 3 subpages.
+![](subpages.png?height=60px&classes=border,shadow)
+
+
+## Page frontmatter
+Each page file in a Hugo site has metadata frontmatter that tells Hugo about the page. You specify page frontmatter in TOML, YAML, or JSON. \
+Use the frontmatter to specify the page title, description, creation date, link title, template, menu weighting, and even any resources such as images used by the page. You can see a complete list of possible page frontmatter in [Front Matter](https://gohugo.io/content-management/front-matter/).
+
+On top of the [existing ones](https://gohugo.io/content-management/front-matter/), DocPort comes with additional params to control what and how to display your content, their entry in left menu or behaviour.
+
+```toml
++++
+	title="Adding content"
+
+	# order sections
+	weight=10 
+
+	# Hide some theme components
+	hide_header=false # set true to hide site header
+	hide_nav=false # set true to hide the left navigation menu
+	hide_breadcrumb=false # set true to hide the breadcrumb
+	hide_toc=false # set true to hide the right menu (table of contents)
+	hide_footer=false #set true to hide the website footer
+
+	# subpage
+	subpage = false # usefull when you want to force a sub section to be considered as a subpage
+
+	# Redirect to another content
+	# Set a full URL or a .md path
+	# examples : 
+	#  redirect = "https://github.com/vjeantet" 
+	#  redirect = "folder" 
+	#  redirect = "folder/_index.md" 
+	redirect = "folder/_index.md"
+
++++
+```
+
+{{%alert success%}}More frontmatter params exists to control how to display you content in the navigation, see [Navigation & Search]({{%relref "02-navigation-search" %}}) in the left menu.{{%/alert%}}
+
+* render page as a slidedeck
+* 
+
+
+
+

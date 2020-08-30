@@ -24,9 +24,9 @@ setting only the name as argument works too : `{{</*icon film*/>}}` instead of `
 {{%/alert%}}
 
 ## Demo
-	
+```
 	{{</* icon name="save" size="64px" */>}}
-
+```
 {{<icon name="save" size="64px">}}
 
 .

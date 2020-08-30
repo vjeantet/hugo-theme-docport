@@ -46,9 +46,9 @@ For example:
 
 ## Demo
 ### List of attachments ending in pdf or mp4
-
+```
     {{%/*attachments title="Related files" pattern=".*(pdf|mp4)"/*/%}}
-
+```
 renders as
 
 {{%attachments title="Related files" pattern=".*(pdf|mp4)"/%}}

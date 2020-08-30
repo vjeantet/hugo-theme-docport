@@ -15,7 +15,7 @@ The Excerpt shortcode is used to mark a part of a page's content for re-use. Def
 | hidden | "false" | Controls whether the page content contained in the Excerpt shortcode placeholder is displayed on the page.{{%alert warning%}}Note that this option affects only the page that contains the Excerpt shortcode. It does not affect any pages where the content is reused.{{%/alert%}} |
 
 ## Demo
-
+```
 	{{%/*excerpt*/%}}
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -24,6 +24,7 @@ The Excerpt shortcode is used to mark a part of a page's content for re-use. Def
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	{{%/* /excerpt*/%}}
+```
 
 {{%excerpt%}}
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

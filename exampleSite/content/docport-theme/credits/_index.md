@@ -61,7 +61,7 @@ hide_toc=true
 <div style="margin:7px">
 	<img src="https://avatars2.githubusercontent.com/u/3520706?v=3" class="inline" width="32" height="32" style="height: 32px;height: 32px; vertical-align:middle; ">
 	<span>
-		<a href="https://github.com/bep">@matcornic</a>
+		<a href="https://github.com/matcornic">@matcornic</a>
 		<label>inspiration and support</label>
 	</span>
 </div>
