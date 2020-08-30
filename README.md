@@ -5,7 +5,7 @@ it provides a simple navigation, automatic search engine, a high level of config
 
 This project is actively being maintained, and integrate easily with netlify CMS for static content authoring without leaving the browser.
 
-![Overview](https://github.com/vjeantet/hugo-theme-docport/raw/master/images/tn.png)
+![Overview](https://github.com/vjeantet/hugo-theme-docport/raw/master/images/tn2.png)
 
 # Demo
 

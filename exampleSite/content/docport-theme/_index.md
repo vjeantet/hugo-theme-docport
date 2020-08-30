@@ -4,20 +4,21 @@ description = ""
 weight = 1
 +++
 
-[Hugo-theme-docport](https://github.com/vjeantet/hugo-theme-docport) is a theme for Hugo, a fast and modern static website engine. Hugo is often used for blogs.
+[DocPort](https://github.com/vjeantet/hugo-theme-docport), a professional documentation theme built for Hugo. \
+It provides a simple navigation, automatic search engine, a high level of configuration and a bunch of shortcodes crafted for documentation (attachment, presentations, child pages, notice, alerts, diagrams...).
 
-**This theme is fully designed for documentation.** and a port of the [docDock theme](https://github.com/vjenatet/hugo-theme-docdock) which is a fork of [hugo-theme-learn from matCornic](https://github.com/matcornic/hugo-theme-learn)
+	
 
-{{%notice%}}DocPort works with a "page tree structure" to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "content-organisation/_index.md"%}}).  {{%/notice%}}
+{{%notice%}}DocPort works with a "page tree structure" to organize content : All contents are pages, which belong to other pages. [read more about this]({{%relref "content-and-customization"%}}).  {{%/notice%}}
 
 ## Main features
 
-* [Search Engine]({{%relref "search/_index.md" %}})
-* **Unlimited menu levels**
-* [Placeholders]({{%relref "content-organisation/placeholders/_index.md" %}}) to inject HTML, CSS, JS in theme without modifying it.
-* Responsive, [Customizable look and feel, colors]({{%relref "content-organisation/customize-style/_index.md" %}})
-* [RevealJS presentation]({{%relref "page-slide/_index.md"%}}) from markdown (embededed or fullscreen page)
-* [Image resizing, shadow...]({{%relref "create-page/page-images/_index.md" %}})
+* [Search Engine]({{%relref "content-and-customization/02-navigation-search/search" %}})
+* **Unlimited menu levels**, [subpages]({{%relref "content-and-customization/00-adding-content/#subpages"%}})
+* [Placeholders]({{%relref "content-and-customization/02-navigation-search/" %}}) to inject HTML, CSS, JS in theme without modifying it.
+* Responsive, [Customizable look and feel, colors]({{%relref "content-and-customization/03-look-and-feel/colors/" %}})
+* [RevealJS presentation]({{%relref "content-and-customization/00-adding-content/page-slide/"%}}) from markdown (embededed or fullscreen page)
+* [Image resizing, shadow...]({{%relref "content-and-customization/00-adding-content/page-images/" %}})
 * A bunch of shortcodes
 	* [Mermaid diagram]({{%relref "shortcodes/mermaid/_index.md" %}}) (flowchart, sequence, gantt)
 	* [Attachments files]({{%relref "shortcodes/attachments/_index.md" %}}), [Icons]({{%relref "shortcodes/icon/_index.md" %}}), [Buttons]({{%relref "shortcodes/button/_index.md" %}}), [Alerts]({{%relref "shortcodes/alert/_index.md" %}}), [Panels]({{%relref "shortcodes/panel/_index.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice/_index.md" %}}), [Expand]({{%relref "shortcodes/expand/_index.md" %}}), [List child pages]({{%relref "shortcodes/children/_index.md" %}})
@@ -25,15 +26,15 @@ weight = 1
 
 
 ## Contribute to this documentation
-Feel free to update this content, just click the **Edit this page** link displayed on top right of each page, and pullrequest it
-{{%alert%}}Your modification will be deployed automatically when merged !{{%/alert%}}
+Feel free to open issue, pull request ...\
+{{%alert%}}Your modification will be deployed automatically when merged in git repo!{{%/alert%}}
 
 
 ## Documentation website
-This current documentation has been statically generated with Hugo with a simple command : `hugo -t docport` -- source code is [available here at GitHub](https://github.com/vjeantet/hugo-theme-docPort)
+This current documentation has been statically generated with Hugo with a simple command : `hugo -t docport` -- source code is [available here at GitHub](https://github.com/vjeantet/hugo-theme-docPort).
 
 ## Static + content management
+I author this current documentation via Netlify CMS.\
 Docport theme seamless works with [Netlify CMS](https://www.netlifycms.org/)
-{{%notice%}}Use Netlify CMS with hugo and this theme for a faster and more flexible web project.{{%/notice%}}
 
 
