@@ -94,9 +94,5 @@ On top of the [existing ones](https://gohugo.io/content-management/front-matter/
 
 {{%alert success%}}More frontmatter params exists to control how to display you content in the navigation, see [Navigation & Search]({{%relref "02-navigation-search" %}}) in the left menu.{{%/alert%}}
 
-* render page as a slidedeck
-* 
-
-
 
 
