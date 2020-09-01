@@ -1,91 +1,90 @@
-{{if not .IsHome}}
-	    <!-- FIL D'ARIANE -->
-	    {{if not .Params.layout }}
-	    <nav id="breadcrumb" aria-label="breadcrumb">
-	      <ol class="breadcrumb">
-	        {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
-	      </ol>
-	    </nav>
-	    {{end}}
-	    <!-- FIN FIL D'ARIANE -->
 
-	    <!-- TITRE -->
-		{{if not .Params.layout }}	
-			{{$pagetitle := .Title}}
-	        {{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
-			
-			{{ $cPage := .}}
-			{{ $elements := (where .Sections "NONONO" false) }}
-			{{ $isSubPage := .Params.subpage }}
-			{{ $subpages := (where (where (where .Sections.ByWeight "Params.subpage" true) "Params.hidden" "ne" true ) "Kind" "section")}}
-			{{ $pages := (where (where .CurrentSection.Pages.ByWeight "Kind" "page") "Params.hidden" "ne" true ) }}
+    <!-- FIL D'ARIANE -->
+    {{if not .Params.hide_breadcrumb}}
+    <nav id="breadcrumb" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+      </ol>
+    </nav>
+    {{end}}
+    <!-- FIN FIL D'ARIANE -->
 
-			{{if $isSubPage }}
-	        	<h1>{{.Parent.Title}}<span>{{$pagetitle}}</span></h1>
-	        {{else}}
-				<h1>{{.CurrentSection.Title}}{{if .IsPage }}<span>{{$pagetitle}}</span>{{end}}</h1>
-	        {{end}}
-
-			{{if gt (len $subpages) 0}} 	<!-- section has subpage -->
-				{{ $elements = $subpages }}
-			{{else if $isSubPage }}			<!-- Section is subpage -->
-				{{ $elements = (where (where .Parent.Sections.ByWeight "Params.subpage" true) "Params.hidden" "ne" true ) }}
-			{{else if gt (len $pages) 0}}	<!-- Section has pages	 -->
-				{{ $elements = $pages }}
-			{{else}}
-											<!-- section has no subpage and is not subpage -->
-			{{end}}
-
-			{{ if gt (len $elements) 0}}
-					<nav class="subpages">
-				 	{{- range $elements}}
-			            {{- if not .Params.hidden }}
-		            		{{$pagetitle := .Title}}
-		        			{{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
-		            	<li {{if eq . $cPage}}class="active"{{- end}}>
-		            		<a title="$pagetitle" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$pagetitle}}{{safeHTML .Params.Post}}</a>
-		            	</li>
-			            {{- end}}
-		        	{{- end}}
-		        	</nav> 
-			{{ end }}
-
-
-		{{else}}
-			<h1>{{.Title}}</h1>
-		{{end}}
-		<!-- FIN TITRE -->
-
-		<!-- JUMP TO SECTION -->
-		<div class="jump-to-section">
-    		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'material-icons expand_more' : 'material-icons chevron_right';});});">
-      			{{ T "jump-to-section"}}
-      			<i style=";" class="material-icons chevron_right"></i>
-    		</span>
-    		{{ .TableOfContents }}
-    	</div>
-		<!-- / JUMP TO SECTION -->
-
-
-
-
-{{end}}
-		<div class="content">
-	    {{- with .Content -}}
-	      {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1}${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
-	    {{- else -}}
-	      {{with index .Pages 0}}
-	      <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
-	      {{- else -}}
-	      	No content
-	      {{- end -}}
-	    {{- end -}}
-		</div>
-
+    <!-- TITRE -->
+	{{if not .Params.layout }}
+		{{$pagetitle := .Title}}
+        {{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
 		
-		<div class="chevrons {{.Params.layout}}">
-			{{ partial "_next-prev-page.html" .CurrentSection }}
-		</div>
+		{{ $cPage := .}}
+		{{ $elements := (where .Sections "NONONO" false) }}
+		{{ $isSubPage := .Params.subpage }}
+		{{ $subpages := (where (where (where .Sections.ByWeight "Params.subpage" true) "Params.hidden" "ne" true ) "Kind" "section")}}
+		{{ $pages := (where (where .CurrentSection.Pages.ByWeight "Kind" "page") "Params.hidden" "ne" true ) }}
+
+		{{if $isSubPage }}
+        	<h1>{{.Parent.Title}}<span>{{$pagetitle}}</span></h1>
+        {{else}}
+			<h1>{{.CurrentSection.Title}}{{if .IsPage }}<span>{{$pagetitle}}</span>{{end}}</h1>
+        {{end}}
+
+		{{if gt (len $subpages) 0}} 	<!-- section has subpage -->
+			{{ $elements = $subpages }}
+		{{else if $isSubPage }}			<!-- Section is subpage -->
+			{{ $elements = (where (where .Parent.Sections.ByWeight "Params.subpage" true) "Params.hidden" "ne" true ) }}
+		{{else if gt (len $pages) 0}}	<!-- Section has pages	 -->
+			{{ $elements = $pages }}
+		{{else}}
+										<!-- section has no subpage and is not subpage -->
+		{{end}}
+
+		{{ if gt (len $elements) 0}}
+				<nav class="subpages">
+			 	{{- range $elements}}
+		            {{- if not .Params.hidden }}
+	            		{{$pagetitle := .Title}}
+	        			{{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
+	            	<li {{if eq . $cPage}}class="active"{{- end}}>
+	            		<a title="$pagetitle" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$pagetitle}}{{safeHTML .Params.Post}}</a>
+	            	</li>
+		            {{- end}}
+	        	{{- end}}
+	        	</nav> 
+		{{ end }}
+
+
+	{{else}}
+		<h1>{{.Title}}</h1>
+	{{end}}
+	<!-- FIN TITRE -->
+
+	<!-- JUMP TO SECTION -->
+	{{if not .Params.hide_toc}}
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'material-icons expand_more' : 'material-icons chevron_right';});});">
+  			{{ T "jump-to-section"}}
+  			<i style=";" class="material-icons chevron_right"></i>
+		</span>
+		{{ .TableOfContents }}
+	</div>
+	{{end}}
+	<!-- / JUMP TO SECTION -->
+
+	<div class="content">
+    {{- with .Content -}}
+      {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1}${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
+    {{- else -}}
+      {{with index .Pages 0}}
+      <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
+      {{- else -}}
+      	No content
+      {{- end -}}
+    {{- end -}}
+	</div>
+
+	{{if not .Params.hide_nextpage}} 
+	<div class="chevrons {{.Params.layout}}">
+		{{ partial "_next-prev-page.html" .CurrentSection }}
+	</div>
+	{{end -}}
 
 	
 

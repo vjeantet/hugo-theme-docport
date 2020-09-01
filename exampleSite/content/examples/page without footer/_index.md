@@ -4,6 +4,17 @@ weight: 20
 hide_footer: true
 ---
 
+
+{{%panel header="page's frontmatter"%}}
+```yaml
+---
+title: A page without footer
+hide_footer: true
+---
+```
+{{%/panel%}}
+
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

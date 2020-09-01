@@ -1,9 +1,17 @@
 ---
 title: A page without header
-weight: 20
+weight: 10
 hide_header: true
 
 ---
+{{%panel header="page's frontmatter"%}}
+```yaml
+---
+title: A page without header
+hide_header: true
+---
+```
+{{%/panel%}}
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

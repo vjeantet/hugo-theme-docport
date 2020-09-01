@@ -31,7 +31,7 @@ $c_saturate5 : saturate($color_second, 60%);
 $c_saturate6 : saturate($color_second, 75%);  
 $c_saturate7 : saturate($color_second, 90%);  
   
-body{
+body:not(.render_raw){
 	font-family:"Montserrat",sans-serif;
 
 

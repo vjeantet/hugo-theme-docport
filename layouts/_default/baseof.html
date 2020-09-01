@@ -19,12 +19,13 @@
   <body data-url="{{ .RelPermalink }}"
 
   class="
-  {{- with .Params.layout}}layout_{{.}} {{end -}}
+  {{- with .Params.render}}render_{{.}} {{end -}}
   {{if .Params.hide_header}}hideheader {{end -}}
   {{if .Params.hide_nav}}hidenav {{end -}}
   {{if .Params.hide_breadcrumb}}hidebreadcrumb {{end -}}
   {{if .Params.hide_toc}}hidetoc {{end -}}
   {{if .Params.hide_footer}}hidefooter {{end -}}
+  {{if .Params.hide_nextpage}}hidenextpage {{end -}}
   ">
 <!--
 <style type="text/css">
@@ -59,18 +60,22 @@
       window.location = '{{ $redirectURL }}'
     </script>
     <a href="{{ $redirectURL }}">go to {{ $redirectURL }}</a>
-{{ else if eq .Params.layout "raw" }}
+{{ else if eq .Params.render "raw" }}
       {{- .Content -}}
 {{ else }}
+    
+    {{if not .Params.hide_header}}
     <header style="">
         {{ partial "body-header.html" . }}
     </header>
+    {{end}}
 
     <article>
-
+      {{if not .Params.hide_nav}}
       <aside class="{{.Params.layout }}">
         {{ partial "body-sidebar.html" . }}
       </aside>
+      {{end}}
 
       <section class="page {{.Params.layout }}">
       {{ block "main" . }}
@@ -78,17 +83,21 @@
       </section>
 
       <!-- NAVIGATION DROITE TOC -->
+      {{if not .Params.hide_toc}}
       <section class="right-menu {{.Params.layout }}">
       {{ block "sidepage" . }}
       {{ end }}
       </section>
+      {{end -}}
       <!-- FIN NAVIGATION DROITE TOC -->
-
     </article>
-
+    
+    {{if not .Params.hide_footer}}
     <footer>
       {{ partial "body-footer.html" . }}
     </footer>
+    {{end}}
+
 {{end}}
 
   </body>

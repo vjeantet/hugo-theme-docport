@@ -1,35 +1,35 @@
 @charset "UTF-8";
-body {
+body:not(.render_raw) {
   font-family: "Montserrat",sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: black; }
-  body a {
+  body:not(.render_raw) a {
     color: black;
     text-decoration: none;
     background-color: transparent; }
-  body header {
+  body:not(.render_raw) header {
     background-color: #333333;
     border-bottom: 2px solid gray;
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
     justify-content: space-between;
     align-items: stretch;
     color: #e6e6e6; }
-    body header a {
+    body:not(.render_raw) header a {
       color: #cccccc; }
-    body header > div {
+    body:not(.render_raw) header > div {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: stretch;
       white-space: nowrap; }
-      body header > div img {
+      body:not(.render_raw) header > div img {
         height: 32px;
         margin-right: 0.5rem; }
-      body header > div .burger {
+      body:not(.render_raw) header > div .burger {
         margin-right: 1rem; }
-    body header nav.shortcuts {
+    body:not(.render_raw) header nav.shortcuts {
       margin-left: auto;
       position: relative;
       display: flex;
@@ -37,32 +37,32 @@ body {
       list-style-type: none;
       flex-direction: row;
       flex-wrap: nowrap; }
-      body header nav.shortcuts li {
+      body:not(.render_raw) header nav.shortcuts li {
         margin: 0px; }
-        body header nav.shortcuts li .fa {
+        body:not(.render_raw) header nav.shortcuts li .fa {
           font-size: 1.5rem;
           margin-right: 0.5rem; }
-        body header nav.shortcuts li a {
+        body:not(.render_raw) header nav.shortcuts li a {
           color: #d6d6d6;
           padding: 0 1rem;
           font-weight: bold;
           font-size: 90%; }
-  body article {
+  body:not(.render_raw) article {
     background-color: white; }
-    body article aside #close_menu {
+    body:not(.render_raw) article aside #close_menu {
       display: none;
       float: right;
       margin-right: 2rem; }
-    body article aside.responsive #close_menu {
+    body:not(.render_raw) article aside.responsive #close_menu {
       display: block; }
-    body article section.right-menu {
+    body:not(.render_raw) article section.right-menu {
       padding: 3.5rem 0 3.5rem 0;
       font-size: 14px;
       line-height: 20px;
       padding-left: 2px; }
-      body article section.right-menu .TableOfContents > * {
+      body:not(.render_raw) article section.right-menu .TableOfContents > * {
         margin-left: 5px; }
-      body article section.right-menu .TableOfContents label {
+      body:not(.render_raw) article section.right-menu .TableOfContents label {
         font-weight: 700;
         letter-spacing: -1px;
         display: block;
@@ -70,29 +70,29 @@ body {
         border-bottom: 1px dotted #999999;
         color: #333333;
         font-variant: small-caps; }
-      body article section.right-menu .TableOfContents nav > ul {
+      body:not(.render_raw) article section.right-menu .TableOfContents nav > ul {
         padding: 0px 0px 0px 0px;
         margin: 0px 0px 0px 0px; }
-        body article section.right-menu .TableOfContents nav > ul ul {
+        body:not(.render_raw) article section.right-menu .TableOfContents nav > ul ul {
           padding: 0px 0px 0px 14px;
           margin: 0px 0px 0px 0px;
           border-left: 1px solid #e6e6e6; }
-          body article section.right-menu .TableOfContents nav > ul ul li {
+          body:not(.render_raw) article section.right-menu .TableOfContents nav > ul ul li {
             font-size: 90%; }
-      body article section.right-menu .TableOfContents ul {
+      body:not(.render_raw) article section.right-menu .TableOfContents ul {
         list-style-type: none; }
-      body article section.right-menu .TableOfContents li {
+      body:not(.render_raw) article section.right-menu .TableOfContents li {
         padding: 8px 0px 8px 0px; }
-        body article section.right-menu .TableOfContents li a {
+        body:not(.render_raw) article section.right-menu .TableOfContents li a {
           font-weight: 300;
           /*padding-left: 2px;*/ }
-          body article section.right-menu .TableOfContents li a.active {
+          body:not(.render_raw) article section.right-menu .TableOfContents li a.active {
             font-weight: 500; }
-  body footer {
+  body:not(.render_raw) footer {
     background-color: #333333;
     color: #cccccc;
     padding: 3rem; }
-    body footer a {
+    body:not(.render_raw) footer a {
       color: #cccccc; }
 
 article section.page {

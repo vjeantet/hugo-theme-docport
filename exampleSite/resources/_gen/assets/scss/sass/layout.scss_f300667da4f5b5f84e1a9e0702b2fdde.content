@@ -5,7 +5,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   border: 0;
   vertical-align: baseline; }
 
-body {
+body:not(.render_raw) {
   margin: 0px 0px;
   display: -webkit-box;
   display: flex;
@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   text-rendering: optimizeLegibility; }
-  body header {
+  body:not(.render_raw) header {
     flex-shrink: 0;
     min-height: 45px;
     max-height: 45px;
@@ -24,14 +24,14 @@ body {
     z-index: 9999;
     -webkit-transform: translateZ(0);
     transform: translateZ(0); }
-    body header > * {
+    body:not(.render_raw) header > * {
       max-width: 1400px;
       width: 100%;
       padding: 0 20px;
       margin: 0 auto; }
-    body header div.burger {
+    body:not(.render_raw) header div.burger {
       display: none; }
-  body article {
+  body:not(.render_raw) article {
     -webkit-box-flex: 1;
     flex-grow: 1;
     display: -webkit-box;
@@ -57,9 +57,9 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 1400px; }
-    body article > * {
+    body:not(.render_raw) article > * {
       margin: 0 24px; }
-    body article aside {
+    body:not(.render_raw) article aside {
       transition: max-height .2s ease-out;
       -webkit-box-flex: 0;
       flex: 0 0 20em;
@@ -71,18 +71,18 @@ body {
       position: sticky;
       overflow-y: auto;
       top: 45px; }
-    body article section.page {
+    body:not(.render_raw) article section.page {
       -webkit-box-flex: 1;
       flex: 1 auto;
       max-width: 100%;
       min-width: 0; }
-      body article section.page .jump-to-section {
+      body:not(.render_raw) article section.page .jump-to-section {
         display: none;
         margin-top: 0.5em;
         margin-left: 0.2em; }
-        body article section.page .jump-to-section ul {
+        body:not(.render_raw) article section.page .jump-to-section ul {
           padding-left: 20px; }
-        body article section.page .jump-to-section nav {
+        body:not(.render_raw) article section.page .jump-to-section nav {
           display: none;
           position: absolute;
           z-index: 5;
@@ -92,7 +92,7 @@ body {
           min-width: 25%;
           max-width: 50%;
           box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25); }
-    body article section.right-menu {
+    body:not(.render_raw) article section.right-menu {
       margin-right: 0;
       align-self: flex-start;
       display: block;
@@ -104,64 +104,49 @@ body {
       position: sticky;
       top: 45px;
       margin-bottom: 40px; }
-  body footer > * {
+  body:not(.render_raw) footer > * {
     max-width: 1400px;
     width: 100%;
     padding: 0 20px;
     margin: 0 auto; }
 
 /* hideheader hidenav hidebreadcrumb hidetoc hidefooter */
-body.hidenav article aside {
-  display: none !important; }
-
-body.hidebreadcrumb article section.page nav#breadcrumb {
-  display: none !important; }
-
-body.hidetoc article section.right-menu {
-  display: none !important; }
-
-body.hidefooter footer {
-  display: none !important; }
-
-body.hideheader header {
-  display: none !important; }
-
-body.hideheader article {
+body:not(.render_raw).hideheader article {
   padding-top: 0px; }
-  body.hideheader article aside {
+  body:not(.render_raw).hideheader article aside {
     top: 0px;
     height: calc(100vh); }
-  body.hideheader article section.right-menu {
+  body:not(.render_raw).hideheader article section.right-menu {
     top: 0px;
     max-height: calc(100vh); }
 
 @media (max-width: 1160px) {
-  body header div.burger {
+  body:not(.render_raw) header div.burger {
     display: none; }
-  body article {
+  body:not(.render_raw) article {
     padding-left: 0px;
     padding-right: 0px; }
-    body article aside {
+    body:not(.render_raw) article aside {
       margin-right: 0px; }
-    body article aside.responsive {
+    body:not(.render_raw) article aside.responsive {
       display: block; }
-    body article section.page .jump-to-section {
+    body:not(.render_raw) article section.page .jump-to-section {
       display: block; }
-    body article section.right-menu {
+    body:not(.render_raw) article section.right-menu {
       display: none; } }
 
 @media (max-width: 769px) {
-  body header div.burger {
+  body:not(.render_raw) header div.burger {
     display: block; }
-  body article {
+  body:not(.render_raw) article {
     padding-left: 0px;
     padding-right: 0px; }
-    body article aside {
+    body:not(.render_raw) article aside {
       display: none;
       flex: 0 0 100%; }
-    body article aside.responsive {
+    body:not(.render_raw) article aside.responsive {
       display: block; }
-    body article section.page .jump-to-section {
+    body:not(.render_raw) article section.page .jump-to-section {
       display: block; }
-    body article section.right-menu {
+    body:not(.render_raw) article section.right-menu {
       display: none; } }

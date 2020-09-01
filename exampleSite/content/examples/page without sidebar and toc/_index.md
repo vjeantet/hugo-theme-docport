@@ -5,6 +5,17 @@ hide_toc: true
 hide_nav: true
 ---
 
+{{%panel header="page's frontmatter"%}}
+```yaml
+---
+title: A page without sidebar and toc
+hide_toc: true
+hide_nav: true
+---
+
+```
+{{%/panel%}}
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

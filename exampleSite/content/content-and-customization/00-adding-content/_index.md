@@ -77,6 +77,7 @@ On top of the [existing ones](https://gohugo.io/content-management/front-matter/
 	hide_breadcrumb=false # set true to hide the breadcrumb
 	hide_toc=false # set true to hide the right menu (table of contents)
 	hide_footer=false #set true to hide the website footer
+	hide_nextpage=false #set true to hide the "next page" chevron
 
 	# subpage
 	subpage = false # usefull when you want to force a sub section to be considered as a subpage
