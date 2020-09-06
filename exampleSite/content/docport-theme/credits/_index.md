@@ -53,7 +53,15 @@ hide_toc=true
 <div>
 	<img src="https://avatars2.githubusercontent.com/u/394382?v=3" class="inline" width="32" height="32" style="height: 32px;height: 32px; vertical-align:middle; ">
 	<span>
-		<a href="https://github.com/bep">@bep</a>	
+		<a href="https://github.com/bep">@bep</a>
+		<label class="contributions">support and advices</label>
+	</span>
+</div>
+
+<div>
+	<img src="https://avatars2.githubusercontent.com/u/7010165?v=3" class="inline" width="32" height="32" style="height: 32px;height: 32px; vertical-align:middle; ">
+	<span>
+		<a href="https://github.com/digitalcraftsman">@digitalcraftsman</a>	
 		<label class="contributions">support and advices</label>
 	</span>
 </div>
