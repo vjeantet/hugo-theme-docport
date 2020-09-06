@@ -2,6 +2,7 @@
 title = "Navigation & Search"
 description = ""
 weight = 30
+hide_toc = true
 +++
 
 Docport allow you to easily customize header, left & righ sidebars and footer.
