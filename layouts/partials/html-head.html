@@ -62,5 +62,9 @@ i.expand_more:before {
       var baseurl = "{{.Site.BaseURL}}";
 </script>
 
+
+{{ template "_internal/google_analytics.html" . }}
+
+
 {{- partial "head.html" . }}
 

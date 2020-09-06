@@ -12,6 +12,8 @@ pygmentsStyle = "monokai"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
+# googleanalytics = "UA-123-45"
+
 # Keep this as is
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
