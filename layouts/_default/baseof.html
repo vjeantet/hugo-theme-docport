@@ -3,7 +3,7 @@
   {{ if or (hasPrefix . "http:") (hasPrefix . "https:") }}
     {{ $redirectURL = . }}
   {{ else }}
-    {{ $redirectURL = relref $ .}}
+    {{ $redirectURL = ref $ .}}
   {{ end }}
 {{ end }}
 <!DOCTYPE html>

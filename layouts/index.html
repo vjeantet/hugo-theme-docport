@@ -7,7 +7,7 @@
 		{{ partial "body-article-content.html" . }}
 	{{else}}
   	  {{with index .Site.Sections 0}}
-	    <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
+	    <meta http-equiv = "refresh" content = "0; url = {{.Permalink}}"/>
 	  {{else}}
 	  	 no file found in content folder :(
 	  {{end}}
