@@ -1,0 +1,9 @@
+<!-- https://github.com/alex-shpak/hugo-book/blob/master/layouts/shortcodes/columns.html -->
+<link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/columns.scss" | toCSS).Permalink }}'>
+<div class="columns">
+  {{ range split .Inner "<--->" }}
+  <div class="column">
+    {{ . | markdownify }}
+  </div>
+  {{ end }}
+</div>
