@@ -24,7 +24,9 @@ The inner text you place in short code will be displayed as the _button text_
 	{{</* button href="https://google.com" theme="info" */>}} Info {{</* /button */>}}
 	{{</* button href="https://google.com" theme="warning" */>}} Warning {{</* /button */>}}
 	{{</* button href="https://google.com" theme="danger" */>}} Danger ! {{</* /button */>}}
-	{{</* button href="https://google.com" theme="default" */>}} Danger ! {{</* /button */>}}
+	{{</* button href="https://google.com" theme="dark" */>}} Dark ! {{</* /button */>}}
+	{{</* button href="https://google.com" theme="light" */>}} Light ! {{</* /button */>}}
+	{{</* button href="https://google.com" theme="secondary" */>}} Secondary{{</*/button*/>}}
 ``` 
 
 {{<button href="https://google.com" >}} go to google {{< /button >}}
@@ -32,7 +34,11 @@ The inner text you place in short code will be displayed as the _button text_
 {{<button href="https://google.com" theme="info">}} Info {{< /button >}}
 {{<button href="https://google.com" theme="warning">}} Warning {{< /button >}}
 {{<button href="https://google.com" theme="danger">}} Danger ! {{< /button >}}
-{{<button href="https://google.com" theme="default">}} Danger ! {{< /button >}}
+
+{{<button href="https://google.com" theme="dark">}} Dark ! {{< /button >}}
+{{<button href="https://google.com" theme="light">}} Light ! {{< /button >}}
+{{<button href="https://google.com" theme="secondary">}} Secondary ! {{< /button >}}
+
 
 
 

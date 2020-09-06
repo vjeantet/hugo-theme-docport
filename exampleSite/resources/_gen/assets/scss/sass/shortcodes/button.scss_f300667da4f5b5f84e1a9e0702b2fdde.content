@@ -8,27 +8,41 @@ button.btn {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff; }
-  button.btn.info {
+  button.btn a {
+    color: inherit !important; }
+  button.btn.primary {
     color: white;
     background-color: #007bff;
     border-color: #007bff; }
-    button.btn.info a {
-      color: white; }
+  button.btn.info {
+    color: white;
+    background-color: #17a2b8;
+    border-color: #17a2b8; }
   button.btn.success {
     color: white;
     background-color: #28a745;
     border-color: #28a745; }
-    button.btn.success a {
-      color: white; }
   button.btn.warning {
     color: black;
     background-color: #ffc107;
     border-color: #ffc107; }
-    button.btn.warning a {
-      color: black; }
   button.btn.danger {
     color: white;
     background-color: #dc3545;
     border-color: #dc3545; }
-    button.btn.danger a {
-      color: white; }
+  button.btn.danger {
+    color: white;
+    background-color: #dc3545;
+    border-color: #dc3545; }
+  button.btn.secondary {
+    color: white;
+    background-color: #6c757d;
+    border-color: #6c757d; }
+  button.btn.light {
+    color: black;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa; }
+  button.btn.dark {
+    color: white;
+    background-color: #343a40;
+    border-color: #343a40; }

@@ -474,16 +474,23 @@ article section.page div.content{
     }
 
     code  {
-        
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+        font-size: 85%;
+        color: #e83e8c;
+        word-wrap: break-word;
+
         padding: 0.5px;
         font-weight: 600;
         white-space: pre-wrap;
     }
+
     div.highlight{
         pre{
             display:block; 
             white-space: pre-wrap;
             code{
+                color:inherit!important;
+                font-size: 75%;
                 display: block;
                 margin-left:-1.5rem;
                 margin-right:-1.5rem;

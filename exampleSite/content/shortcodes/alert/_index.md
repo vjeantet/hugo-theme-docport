@@ -10,7 +10,7 @@ The `alert` shortcode allow you to highlight information in your page. They crea
 
 | Parameter | Default | Description |
 |:--|:--|:--|
-| theme | `info` | `success`, `info`,`warning`,`danger` |
+| theme | `info` | `primary`,`success`, `info`,`warning`,`danger`,`dark`,`light`,`secondary` |
 
 {{%alert info%}}
 **Tips :** setting only the theme as argument works too : 
@@ -20,12 +20,20 @@ The `alert` shortcode allow you to highlight information in your page. They crea
 ## Basic examples
 
 ```
+	{{%/* alert primary */%}}**this** is a primary{{%/* /alert */%}}
 	{{%/* alert theme="info" */%}}**this** is a text{{%/* /alert */%}}
 	{{%/* alert theme="success" */%}}**Yeahhh !** is a text{{%/* /alert */%}}
 	{{%/* alert theme="warning" */%}}**Be carefull** is a text{{%/* /alert */%}}
-	{{%/* alert theme="danger" */%}}**Beware !** is a text{{%/* /alert */%}}
+	{{%/* alert danger */%}}**Beware !** is a text{{%/* /alert */%}}
+	{{%/* alert dark */%}}**Dark !** is a dark{{%/* /alert */%}}
+	{{%/* alert light */%}}**oooh !** is a light{{%/* /alert */%}}
+	{{%/* alert secondary */%}}**Wait !** is a secondary{{%/* /alert */%}}
 ```
+{{% alert primary %}}**this** is an primary{{% /alert %}}
 {{% alert theme="info"%}}**this** is an info{{% /alert %}}
-{{% alert theme="success" %}}**Yeahhh !** is an success{{% /alert %}}
+{{% alert theme="success" %}}**Yeahhh !** is a success{{% /alert %}}
 {{% alert theme="warning" %}}**Be carefull** is a warning{{% /alert %}}
-{{% alert theme="danger" %}}**Beware !** is a danger{{% /alert %}}
+{{% alert danger %}}**Beware !** is a danger{{% /alert %}}
+{{% alert dark %}}**Dark !** is a dark{{% /alert %}}
+{{% alert light %}}**oooh !** is a light{{% /alert %}}
+{{% alert secondary %}}**Wait !** is a secondary{{% /alert %}}

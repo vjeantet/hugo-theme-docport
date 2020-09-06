@@ -22,16 +22,18 @@ You may add a label to your notice which will be displayed on top of it.
 ## Examples
 
 {{% notice success %}}Lorem ipsum dolor sit amet, consectetur.{{% /notice %}}
-{{% notice %}}Lorem ipsum dolor sit amet, consectetur.{{% /notice %}}
-{{% notice warning %}}Lorem ipsum dolor sit amet, consectetur{{% /notice %}}
-{{% notice danger Attention %}}Lorem ipsum dolor sit amet, consectetur{{% /notice %}}
+{{% notice %}}**Lorem !**\
+ ipsum dolor sit amet, consectetur.{{% /notice %}}
+{{% notice warning %}}**Lorem** ipsum dolor sit amet, consectetur{{% /notice %}}
+{{% notice danger Attention %}}ipsum dolor sit amet{{% /notice %}}
 
 {{% expand "Show shortcode markups..." %}}
 ```
 	{{%/* notice success %}}Lorem ipsum dolor sit amet, consectetur{{% /notice %}}
-	{{% notice  %}}Lorem ipsum dolor sit amet, consectetur{{% /notice %}}
-	{{% notice warning %}}Lorem ipsum dolor sit amet, consectetur{{% /notice %}}
-	{{% notice danger Attention %}}Lorem ipsum dolor sit amet, consectetur{{% /notice */%}}
+	{{% notice  %}}**Lorem !**\
+ ipsum dolor sit amet, consectetur.{{% /notice %}}
+	{{% notice warning Warning%}}**Lorem** ipsum dolor sit amet, consectetur{{% /notice %}}
+	{{% notice danger Attention %}}ipsum dolor sit amet{{% /notice{{% /notice */%}}
 ```
 {{% /expand %}}
 
@@ -56,7 +58,7 @@ You may add a label to your notice which will be displayed on top of it.
 | Type | code |
 |:--|--:|
 | {{% notice primary %}}This is a notice without label.{{% /notice %}} | <small>{{%/* notice primary %}}This is a notice without label.{{% /notice */%}}</small> |
-| {{% notice primary toto %}}This is a notice with "toto" label.{{% /notice %}} | <small>{{%/* notice primary toto %}}This is a notice with "toto" label.{{% /notice */%}}</small> |
-| {{% notice primary "my label" %}}This is a with "my label".{{% /notice %}} | <small>{{%/* notice primary "my label" %}}This is a with "my label".{{% /notice */%}}</small> |
+| {{% notice primary toto %}}This is a notice with "toto" label.{{% /notice %}} | <small>{{%/* notice primary **toto** %}}This is a notice with "toto" label.{{% /notice */%}}</small> |
+| {{% notice primary "my label" %}}This is a with "my label".{{% /notice %}} | <small>{{%/* notice primary **"my label"** %}}This is a with "my label".{{% /notice */%}}</small> |
 
 

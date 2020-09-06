@@ -15,35 +15,52 @@ div.alert{
 	border: 1px solid transparent;
 	border-radius: .25rem;
 	
+	a{color:inherit!important;}
+
 	&.primary{
     	color: white;
-    	a{color: white; }
-    	background-color: $color_primary;
+       	background-color: $color_primary;
     	border-color: $color_primary;   
   	}
 	&.info{
 		color: white;
-		a{color: white;	}
 		background-color: $color_info;
 		border-color: $color_info;		
 	}
 	&.success{
 		color: white;
-		a{color: white;	}
 		background-color: $color_success;
 		border-color: $color_success;		
 	}
 	&.warning{
 		color: black;
-		a{color: black;	}
 		background-color: $color_warning;
 		border-color: $color_warning;		
 	}
 	&.danger{
 		color: white;
-		a{color: white;	}
 		background-color: $color_danger;
 		border-color: $color_danger;		
+	}
+	&.danger{
+		color: white;
+		background-color: $color_danger;
+		border-color: $color_danger;		
+	}
+	&.secondary{
+		color: white;
+		background-color: $color_secondary;
+		border-color: $color_secondary;		
+	}
+	&.light{
+		color: black;
+		background-color: $color_light;
+		border-color: $color_light;		
+	}
+	&.dark{
+		color: white;
+		background-color: $color_dark;
+		border-color: $color_dark;		
 	}
 	
 	
