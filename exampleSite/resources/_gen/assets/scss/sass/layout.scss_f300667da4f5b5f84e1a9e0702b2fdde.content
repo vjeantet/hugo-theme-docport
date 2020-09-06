@@ -135,7 +135,7 @@ body:not(.render_raw).hideheader article {
     body:not(.render_raw) article section.right-menu {
       display: none; } }
 
-@media (max-width: 769px) {
+@media (max-width: 936px) {
   body:not(.render_raw) header div.burger {
     display: block; }
   body:not(.render_raw) article {
