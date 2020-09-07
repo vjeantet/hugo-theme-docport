@@ -1,7 +1,7 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 <link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/attachments.scss" | toCSS).Permalink }}'>
 <section class="attachments">
-<i class="material-icons">attach_file</i>	
+<i class="fas fa-paperclip"></i>	
 
 <label>
 {{with .Get "title"}}{{.}}{{else}}{{T "Attachments-label"}}{{end}}

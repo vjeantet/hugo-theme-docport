@@ -9,55 +9,22 @@
 
 <title>{{ .Title }} :: {{ .Site.Title }}</title>
 
-
 <link rel="shortcut icon" href='{{"images/favicon.png" | relURL}}' type="image/x-icon" />
- 
 
+<!--load all styles -->
 <link rel="preload" as="style" href='{{"/fonts/Montserrat/Montserrat.css" | relURL}}'>
 <link rel="stylesheet" href='{{ (resources.Get "sass/layout.scss" | toCSS).Permalink }}'>
 <link rel="stylesheet" href='{{ (resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS).Permalink }}'>
 <link rel="stylesheet" href='{{ (resources.Get "sass/menu.scss" | resources.ExecuteAsTemplate "style.menu.scss" . | toCSS).Permalink }}'>
-
-
-<!-- <link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/button.scss" | toCSS).Permalink }}'> -->
+<link href='{{"vendor/FontAwesome/fontawesome-free-5.14.0-web/css/all.min.css" | relURL}}' rel="stylesheet"> 
+<link rel="stylesheet" href='{{"/css/docport.css" | relURL}}'>
 
 <!-- <link rel="stylesheet" href='{{"vendor/bootstrap/bootstrap-4.5.0-dist/css/bootstrap.min.css" | relURL}}'  crossorigin="anonymous"> -->
 
-<!-- <link href='{{"vendor/FontAwesome/fontawesome-free-5.13.1-web/css/all.css" | relURL}}' rel="stylesheet">  -->
-<!--load all styles -->
 
-<link rel="stylesheet" href="{{"/vendor/materialize/material-icons.css"|relURL}}" type="text/css">
-
-
-<link rel="stylesheet" href='{{"/css/docport.css" | relURL}}'>
-<style type="text/css">
-
-.ddexp{
-cursor: pointer;
-}
-
-i.keyboard_arrow_right:before {
-  content: "chevron_right"
-}
-
-i.keyboard_arrow_down:before {
-  content: "expand_more"
-}
-
-i.chevron_right:before {
-  content: "chevron_right"
-}
-
-i.expand_more:before {
-  content: "expand_more"
-}
-
-</style>
-
-
+<!--load all js -->
 <script src='{{"vendor/jquery/jquery-3.5.1.min.js" | relURL}}'></script>
 <script src='{{"js/docport.js" | relURL}}'></script>
-
 <script type="text/javascript">
       var baseurl = "{{.Site.BaseURL}}";
 </script>

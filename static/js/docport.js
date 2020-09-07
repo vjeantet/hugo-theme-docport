@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
 	// Open/Close left menu elements
     jQuery('article aside i.ddexp').on('click', function() {
     	console.log($(this))
-        $( this ).toggleClass("keyboard_arrow_right keyboard_arrow_down") ;
+        $( this ).toggleClass("fa-chevron-right fa-chevron-down") ;
         $( this ).parent().children('ul').toggle() ;
         return false;
     });

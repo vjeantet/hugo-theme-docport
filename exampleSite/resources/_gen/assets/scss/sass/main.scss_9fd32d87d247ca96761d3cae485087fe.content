@@ -40,7 +40,6 @@ body:not(.render_raw) {
       body:not(.render_raw) header nav.shortcuts li {
         margin: 0px; }
         body:not(.render_raw) header nav.shortcuts li .fa {
-          font-size: 1.5rem;
           margin-right: 0.5rem; }
         body:not(.render_raw) header nav.shortcuts li a {
           color: #d6d6d6;
@@ -126,6 +125,8 @@ article section.page {
           padding-left: .75rem;
           content: ""; }
   article section.page nav.subpages {
+    flex-wrap: wrap;
+    display: flex;
     margin-right: -1.5rem;
     margin-left: -1.5rem;
     padding-left: 1.5em;
@@ -134,8 +135,7 @@ article section.page {
     overflow-y: auto;
     top: 45px;
     background-color: inherit;
-    flex: 1;
-    display: flex;
+    opacity: 0.85;
     justify-content: flex-start;
     list-style-type: none; }
     article section.page nav.subpages li {
@@ -143,14 +143,15 @@ article section.page {
       overflow: hidden;
       text-overflow: ellipsis;
       margin: 0px;
-      padding-right: .75rem;
+      padding-right: .4rem;
       min-width: 50px; }
       article section.page nav.subpages li a {
         font-size: 90%;
         color: #ad3a3a; }
       article section.page nav.subpages li:not(:first-child):before {
         display: inline-block;
-        padding-right: .75rem;
+        margin-left: 0.4em;
+        padding-right: .4rem;
         color: #965151;
         content: "|"; }
       article section.page nav.subpages li.active {

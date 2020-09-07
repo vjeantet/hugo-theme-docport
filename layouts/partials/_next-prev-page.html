@@ -33,24 +33,13 @@
 
     
 {{- if not $.Site.Params.disableNavChevron -}}
-    {{- with ($.Scratch.Get "prevPage") -}}
-        <a class="prev" href="{{.RelPermalink}}" title="{{.Title}}"> 
-            <i class="material-icons">arrow_back</i>
-            <div>
-                <p>{{T "previous-section"}}</p>
-                <label>{{.Title}}</label>
-            </div>
-
-        </a>    
-        
-    {{ end -}}
     {{- with ($.Scratch.Get "nextPage") -}}
         <a class="next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-right: 0px;">
             <div>
                 <p>{{T "next-section"}}</p>
                 <label>{{.Title}}</label>
             </div>
-            <i class="material-icons">arrow_forward</i></a>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
     {{- end }}
 {{- end -}}
 

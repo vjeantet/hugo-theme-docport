@@ -25,16 +25,20 @@ article > aside {
     margin-top: 2rem; }
     article > aside .menu ul {
       display: none; }
+    article > aside .menu .ddexp {
+      cursor: pointer; }
     article > aside .menu > .dd-item {
       margin-top: 24px; }
       article > aside .menu > .dd-item > a {
         font-weight: 700;
-        font-size: 16px;
-        color: black; }
+        font-size: 16px; }
       article > aside .menu > .dd-item > i {
+        color: #646464;
         position: absolute;
-        left: 15px;
-        font-size: 2em; }
+        left: 21px;
+        font-size: 1em;
+        font-size: 20px;
+        line-height: inherit; }
     article > aside .menu .dd-item {
       padding: 10px 0px 10px 16px;
       list-style: none; }
@@ -45,6 +49,8 @@ article > aside {
         font-size: 14px;
         /*color: rgb(110, 119, 122);*/
         /*color:$color_main;*/
+        color: #646464; }
+      article > aside .menu .dd-item > i {
         color: #646464; }
       article > aside .menu .dd-item ul {
         padding-inline-start: 0px; }

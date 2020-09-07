@@ -96,7 +96,6 @@ body:not(.render_raw){
 
                 margin: 0px;
                 .fa {
-                    font-size: 1.5rem;
                     margin-right: 0.5rem
                 }
 
@@ -238,6 +237,10 @@ article section.page {
     }
 
     nav.subpages{
+        
+        flex-wrap: wrap;
+        display: flex;
+
         margin-right: -1.5rem;
         margin-left: -1.5rem;
         padding-left: 1.5em;
@@ -247,11 +250,9 @@ article section.page {
         overflow-y: auto;
         top: 45px;
         background-color: inherit;
-        
-        
+        opacity: 0.85;
 
-        flex: 1;
-        display: flex;
+        
         justify-content: flex-start;
         list-style-type: none;
         li {
@@ -259,7 +260,7 @@ article section.page {
             overflow: hidden;
             text-overflow: ellipsis;
             margin: 0px;
-            padding-right: .75rem;
+            padding-right: .4rem;
             min-width: 50px;
             
             a {
@@ -268,7 +269,8 @@ article section.page {
             }
             &:not(:first-child):before{
                         display: inline-block;
-                        padding-right: .75rem;
+                        margin-left: 0.4em;
+                        padding-right: .4rem;
                         color: $c_saturate2;
                         content: "|";
             }

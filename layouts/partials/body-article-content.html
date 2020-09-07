@@ -59,9 +59,9 @@
 	<!-- JUMP TO SECTION -->
 	{{if not .Params.hide_toc}}
 	<div class="jump-to-section">
-		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'material-icons expand_more' : 'material-icons chevron_right';});});">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
   			{{ T "jump-to-section"}}
-  			<i style=";" class="material-icons chevron_right"></i>
+  			<i style=";" class="fas fa-chevron-right"></i>
 		</span>
 		{{ .TableOfContents }}
 	</div>

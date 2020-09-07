@@ -43,19 +43,23 @@ article>aside {
         ul {
             display: none;
         } 
-
+        .ddexp{
+            cursor: pointer;
+        }
         // first menu level
         >.dd-item {
             margin-top: 24px;
                 >a{
                     font-weight: 700;
                     font-size: 16px;
-                    color:black;
                 }
                 > i {
+                    color:darken($color_main,6);
                     position: absolute;
-                    left:15px;
-                    font-size: 2em;
+                    left:21px;
+                    font-size: 1em;
+                    font-size: 20px;
+                    line-height: inherit;
 
                 }
         } 
@@ -77,6 +81,9 @@ article>aside {
                 color: darken($color_main,6);
                 
                 
+            }
+            > i {
+                    color:darken($color_main,6);
             }
             ul {
                 padding-inline-start: 0px;

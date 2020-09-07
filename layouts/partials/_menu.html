@@ -40,9 +40,9 @@
       
       {{- if and (ne $numberOfPages 0) (lt (add $level 1) $maxlevel) }}
         {{- if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
-          <i class="material-icons ddexp keyboard_arrow_down"></i>
+          <i class="fas fa-chevron-down ddexp"></i>
         {{- else -}}
-          <i class="material-icons ddexp keyboard_arrow_right"></i>
+          <i class="fas fa-chevron-right ddexp"></i>
         {{- end}}
       {{- end}}
         
