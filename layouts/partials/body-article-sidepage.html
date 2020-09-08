@@ -23,9 +23,9 @@
 		    </li>
 		    {{end}}	
 		    
-		    {{ if .Site.Params.editWithNetlifyCMSCollection }}
+		    {{ if .Site.Params.editWithNetlifyCMSURL }}
 		    <li>
-		        <a href="{{.Site.BaseURL}}/admin/#/collections/{{ .Site.Params.editWithNetlifyCMSCollection }}/entries/{{with .File}}{{ replace .Dir "\\" "/" | safeURL }}{{ .BaseFileName }}{{end}}" target="blank">
+		        <a href="{{ .Site.Params.editWithNetlifyCMSURL }}{{with .File}}{{ replace .Dir "\\" "/" | safeURL }}{{ .BaseFileName }}{{end}}" target="blank">
 		        <i class="fab fa-github"></i>
 		        {{T "Edit-this-page"}}</a>
 		    </li>
@@ -37,18 +37,13 @@
 		      </li>
 		    {{end}}
 		    {{with .GitInfo}}
-		      <li title="{{.AuthorDate}}">
+		      <li title="">
 		          <i class='fas fa-user'></i>
 		          {{T "last-update-by"}} {{ .AuthorName }}
 		      </li>
 		    {{end}}
 
-    
-
-
-
-
-		</ul>
+    	</ul>
 	</nav>
     
 </div>
