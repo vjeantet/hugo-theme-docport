@@ -1,6 +1,7 @@
 +++
 title = "icon"
 description = "Display an icon."
+date = 2020-09-08T20:40:23.389Z
 +++
 
 Display one of the 2 298 icons like 

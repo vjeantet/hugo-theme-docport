@@ -49,3 +49,6 @@ other= "Contenu suivant"
 
 [table-of-contents]
 other= "Contenu de la page"
+
+[last-update-by]
+other = "Dernière modification par "

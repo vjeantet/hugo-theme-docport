@@ -49,3 +49,6 @@ other= "Next page"
 
 [table-of-contents]
 other= "What's on this page"
+
+[last-update-by]
+other = "Last update by"

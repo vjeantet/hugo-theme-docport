@@ -133,9 +133,9 @@ body:not(.render_raw){
             font-size:14px;
             line-height:20px;
             padding-left:2px;
-
-            .TableOfContents {
-                
+            
+            > div {
+                margin-bottom: 2em;
                 > *{
                     margin-left:5px;
                 }
@@ -166,8 +166,8 @@ body:not(.render_raw){
                 }
                 li{
                     padding: 8px 0px 8px 0px;
+                    font-weight:300;
                     a {
-                        font-weight:300;
                         /*padding-left: 2px;*/
                         &.active{
                             font-weight:500;
@@ -175,10 +175,13 @@ body:not(.render_raw){
                     }
                     
                 }
-                
             }
-        }
 
+            .Actions{
+                font-size: 75%;
+            }
+
+        }
     }
 
     footer {

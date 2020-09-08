@@ -59,34 +59,38 @@ body:not(.render_raw) {
       font-size: 14px;
       line-height: 20px;
       padding-left: 2px; }
-      body:not(.render_raw) article section.right-menu .TableOfContents > * {
-        margin-left: 5px; }
-      body:not(.render_raw) article section.right-menu .TableOfContents label {
-        font-weight: 700;
-        letter-spacing: -1px;
-        display: block;
-        margin-bottom: 14px;
-        border-bottom: 1px dotted #999999;
-        color: #333333;
-        font-variant: small-caps; }
-      body:not(.render_raw) article section.right-menu .TableOfContents nav > ul {
-        padding: 0px 0px 0px 0px;
-        margin: 0px 0px 0px 0px; }
-        body:not(.render_raw) article section.right-menu .TableOfContents nav > ul ul {
-          padding: 0px 0px 0px 14px;
-          margin: 0px 0px 0px 0px;
-          border-left: 1px solid #e6e6e6; }
-          body:not(.render_raw) article section.right-menu .TableOfContents nav > ul ul li {
-            font-size: 90%; }
-      body:not(.render_raw) article section.right-menu .TableOfContents ul {
-        list-style-type: none; }
-      body:not(.render_raw) article section.right-menu .TableOfContents li {
-        padding: 8px 0px 8px 0px; }
-        body:not(.render_raw) article section.right-menu .TableOfContents li a {
-          font-weight: 300;
-          /*padding-left: 2px;*/ }
-          body:not(.render_raw) article section.right-menu .TableOfContents li a.active {
-            font-weight: 500; }
+      body:not(.render_raw) article section.right-menu > div {
+        margin-bottom: 2em; }
+        body:not(.render_raw) article section.right-menu > div > * {
+          margin-left: 5px; }
+        body:not(.render_raw) article section.right-menu > div label {
+          font-weight: 700;
+          letter-spacing: -1px;
+          display: block;
+          margin-bottom: 14px;
+          border-bottom: 1px dotted #999999;
+          color: #333333;
+          font-variant: small-caps; }
+        body:not(.render_raw) article section.right-menu > div nav > ul {
+          padding: 0px 0px 0px 0px;
+          margin: 0px 0px 0px 0px; }
+          body:not(.render_raw) article section.right-menu > div nav > ul ul {
+            padding: 0px 0px 0px 14px;
+            margin: 0px 0px 0px 0px;
+            border-left: 1px solid #e6e6e6; }
+            body:not(.render_raw) article section.right-menu > div nav > ul ul li {
+              font-size: 90%; }
+        body:not(.render_raw) article section.right-menu > div ul {
+          list-style-type: none; }
+        body:not(.render_raw) article section.right-menu > div li {
+          padding: 8px 0px 8px 0px;
+          font-weight: 300; }
+          body:not(.render_raw) article section.right-menu > div li a {
+            /*padding-left: 2px;*/ }
+            body:not(.render_raw) article section.right-menu > div li a.active {
+              font-weight: 500; }
+      body:not(.render_raw) article section.right-menu .Actions {
+        font-size: 75%; }
   body:not(.render_raw) footer {
     background-color: #333333;
     color: #cccccc;
