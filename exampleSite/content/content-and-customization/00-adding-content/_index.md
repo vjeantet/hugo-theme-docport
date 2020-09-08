@@ -30,7 +30,7 @@ We’ll look at in the following chapter.
 With docport, **Each content page composes the site and navigation structure**, they shape the structure of your website.
 
 Create a folder for each section and their sub sections, and a `_index.md` in each folder which will act as the section's content.
-{{%notice%}}You can add any other page.md in section folder, they will be treated as "\[subpages]({{< ref "#subpages" >}})"{{%/notice%}}
+{{%notice%}}You can add any other page.md in section folder, they will be treated as "[subpages]({{< ref "#subpages" >}})"{{%/notice%}}
 
 To link pages to each other, place them in a folders hierarchy.
 
@@ -87,4 +87,4 @@ On top of the [existing ones](https://gohugo.io/content-management/front-matter/
 +++
 ```
 
-{{%alert success%}}More frontmatter params exists to control how to display you content in the navigation, see \[Navigation & Search]({{%relref "02-navigation-search" %}}) in the left menu.{{%/alert%}}
+{{%alert success%}}More frontmatter params exists to control how to display you content in the navigation, see [Navigation & Search]({{%relref "02-navigation-search" %}}) in the left menu.{{%/alert%}}
