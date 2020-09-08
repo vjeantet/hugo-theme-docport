@@ -4,13 +4,6 @@ description = ""
 date = "2017-04-24T18:36:24+02:00"
 weight = 90
 
-
-hide_header=false
-hide_nav=false
-hide_breadcrumb=false
-hide_toc=false
-hide_footer=false
-
 +++
 
 A basic .md file can be rendered as a reveal.js presentation full screen.

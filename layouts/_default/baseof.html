@@ -20,14 +20,14 @@
 
   class="
   {{- with .Params.render}}render_{{.}} {{end -}}
-  {{if .Params.hide_header}}hideheader {{end -}}
-  {{if .Params.hide_nav}}hidenav {{end -}}
-  {{if .Params.hide_breadcrumb}}hidebreadcrumb {{end -}}
-  {{if .Params.hide_toc}}hidetoc {{end -}}
-  {{if .Params.hide_footer}}hidefooter {{end -}}
-  {{if .Params.hide_nextpage}}hidenextpage {{end -}}
+  {{if (in .Params.hide "header")}}hideheader {{end -}}
+  {{if (in .Params.hide "nav")}}hidenav {{end -}}
+  {{if (in .Params.hide "breadcrumb")}}hidebreadcrumb {{end -}}
+  {{if (in .Params.hide "toc")}}hidetoc {{end -}}
+  {{if (in .Params.hide "footer")}}hidefooter {{end -}}
+  {{if (in .Params.hide "nextpage")}}hidenextpage {{end -}}
   ">
-<!--
+
 <style type="text/css">
   #debug{
     display: -webkit-box;
@@ -50,10 +50,12 @@
     overflow: auto;
   }
 </style>
+ <!-- 
  <pre id="debug">
-  {{ printf "%#v" $redirectURL }}
+  {{ printf "%#v" .Params.hide }}
+  {{ printf "%#v" (in .Params.hide "breadcrumb") }}
 </pre> 
- -->
+  -->
 
 {{ if ne $redirectURL ""}}
     <script type="text/javascript">
@@ -64,14 +66,14 @@
       {{- .Content -}}
 {{ else }}
     
-    {{if not .Params.hide_header}}
+    {{if not (in .Params.hide "header")}}
     <header style="">
         {{ partial "body-header.html" . }}
     </header>
     {{end}}
 
     <article>
-      {{if not .Params.hide_nav}}
+      {{if not (in .Params.hide "nav")}}
       <aside class="{{.Params.layout }}">
         {{ partial "body-sidebar.html" . }}
       </aside>
@@ -83,7 +85,7 @@
       </section>
 
       <!-- NAVIGATION DROITE TOC -->
-      {{if not .Params.hide_toc}}
+      {{if not (in .Params.hide "toc")}}
       <section class="right-menu {{.Params.layout }}">
       {{ block "sidepage" . }}
       {{ end }}
@@ -92,7 +94,7 @@
       <!-- FIN NAVIGATION DROITE TOC -->
     </article>
     
-    {{if not .Params.hide_footer}}
+    {{if not (in .Params.hide "footer")}}
     <footer>
       {{ partial "body-footer.html" . }}
     </footer>

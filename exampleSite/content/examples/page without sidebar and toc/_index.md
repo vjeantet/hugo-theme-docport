@@ -1,16 +1,14 @@
 ---
 title: A page without sidebar and toc
 weight: 20
-hide_toc: true
-hide_nav: true
+hide: toc, nav
 ---
 
 {{%panel header="page's frontmatter"%}}
 ```yaml
 ---
 title: A page without sidebar and toc
-hide_toc: true
-hide_nav: true
+hide: toc, nav
 ---
 
 ```

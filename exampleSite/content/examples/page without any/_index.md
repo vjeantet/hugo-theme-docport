@@ -3,13 +3,10 @@ title: A page with only TOC and next page
 description: hide everything
 weight: 90
 
-hide_nextpage: false
-hide_toc: false
 
-hide_header: true
-hide_nav: true
-hide_breadcrumb: true
-hide_footer: true
+hide: header, nav, breadcrumb, footer
+
+
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -22,10 +19,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```yaml
 ---
 title: A page with only TOC and next page
-hide_header: true
-hide_nav: true
-hide_breadcrumb: true
-hide_footer: true
+hide: header, nav, breadcrumb, footer
 ---
 
 ```

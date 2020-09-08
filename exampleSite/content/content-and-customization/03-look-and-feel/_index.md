@@ -1,7 +1,7 @@
 +++
 title = "Look and feel"
 Weight=40
-hide_toc=true
+hide = "toc"
 +++
 
 You can change the style and behavior of the theme without touching its source code.

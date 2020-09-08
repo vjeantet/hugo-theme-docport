@@ -1,7 +1,7 @@
 ---
 title: A page without footer
 weight: 20
-hide_footer: true
+hide: footer
 ---
 
 
@@ -9,7 +9,7 @@ hide_footer: true
 ```yaml
 ---
 title: A page without footer
-hide_footer: true
+hide: footer
 ---
 ```
 {{%/panel%}}

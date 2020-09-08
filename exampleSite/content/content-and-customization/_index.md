@@ -2,7 +2,7 @@
 title = "Content and Customization"
 description = ""
 weight = 30
-hide_toc = true
+hide = "toc"
 +++
 
 {{%children style="h2" description="true" %}}

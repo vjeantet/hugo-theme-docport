@@ -58,4 +58,4 @@ Its content is what you get in the header (site shortscurs remains)
 This allow you to define a localized header content.
 
 ## Hide site header
-Set `hide_header=true` in your page's frontmatter, see [an example here]({{%relref "examples/page without header"%}})
+Set `hide: header` in your page's frontmatter, see [an example here]({{%relref "examples/page without header"%}})

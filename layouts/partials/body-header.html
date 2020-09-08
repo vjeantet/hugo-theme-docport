@@ -1,5 +1,5 @@
 <div>
-    {{if not .Params.hide_nav}}
+    {{if not (in .Params.hide "nav")}}
     <div class="burger {{.Params.layout }}">
         <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
     </div>

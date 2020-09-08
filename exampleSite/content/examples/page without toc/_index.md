@@ -1,14 +1,14 @@
 ---
 title: A page without table of contents
 weight: 20
-hide_toc: true
+hide: toc
 ---
 
 {{%panel header="page's frontmatter"%}}
 ```yaml
 ---
 title: A page without table of contents
-hide_toc: true
+hide: toc
 ---
 
 ```

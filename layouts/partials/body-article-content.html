@@ -1,6 +1,6 @@
 
     <!-- FIL D'ARIANE -->
-    {{if not .Params.hide_breadcrumb}}
+    {{if not (in .Params.hide "breadcrumb")}}
     <nav id="breadcrumb" aria-label="breadcrumb">
       <ol class="breadcrumb">
         {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
@@ -57,7 +57,7 @@
 	<!-- FIN TITRE -->
 
 	<!-- JUMP TO SECTION -->
-	{{if not .Params.hide_toc}}
+	{{if not (in .Params.hide "toc")}}
 	<div class="jump-to-section">
 		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
   			{{ T "jump-to-section"}}
@@ -81,7 +81,7 @@
 	</div>
 
 
-	{{if not .Params.hide_nextpage}} 
+	{{if not (in .Params.hide "nextpage")}} 
 	<div class="chevrons {{.Params.layout}}">
 		{{ partial "_next-prev-page.html" .CurrentSection }}
 	</div>

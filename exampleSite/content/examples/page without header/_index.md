@@ -1,14 +1,14 @@
 ---
 title: A page without header
 weight: 10
-hide_header: true
+hide: header
 
 ---
 {{%panel header="page's frontmatter"%}}
 ```yaml
 ---
 title: A page without header
-hide_header: true
+hide: header
 ---
 ```
 {{%/panel%}}

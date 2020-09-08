@@ -2,7 +2,7 @@
 title: A page without "NEXT PAGE"
 description: hide everything
 weight: 80
-hide_nextpage: true
+hide: nextpage
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -15,7 +15,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```yaml
 ---
 title: A page without "NEXT PAGE"
-hide_nextpage: true
+hide: nextpage
 ---
 ```
 {{%/panel%}}

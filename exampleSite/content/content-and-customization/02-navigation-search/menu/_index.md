@@ -81,5 +81,5 @@ Create a `_index.md` page in `_layout/_sidepage-after` folder.
 
 
 ## Hide site menu
-Set `hide_nav=true` in your page's frontmatter, see [an example here]({{%relref "examples/page without sidebar and toc"%}})
+Set `hide: nav` in your page's frontmatter, see [an example here]({{%relref "examples/page without sidebar and toc"%}})
 

@@ -18,7 +18,7 @@ Create a `_index.md` in `content` root folder.
 
 ## Landing page appearance
 Remove navigation components from your landing page by setting options in its page frontmatter. You will be able to hide header, breadcrum, toc or footer...
-* see hide_xxxx options [here]({{%relref "00-adding-content#page-frontmatter"%}})
+* see `hide` options [here]({{%relref "00-adding-content#page-frontmatter"%}})
 * see [examples of pages]({{%relref "/examples"%}}) rendered with theses options 
 
 {{%notice success%}}

@@ -27,5 +27,5 @@ This allow you to define a localized footer content.
 {{%alert info%}}**Tip :** You can put a full HTML content in your `_index.md` file{{%/alert%}}
 
 ## Hide site footer
-Set `hide_footer=true` in your page's frontmatter, see [an example here]({{%relref "examples/page without footer"%}})
+Set `hide: footer` in your page's frontmatter, see [an example here]({{%relref "examples/page without footer"%}})
 

@@ -1,7 +1,7 @@
 ---
 title: Examples
 weight: 50
-hide_toc: true
+hide: toc
 ---
 
 some examples

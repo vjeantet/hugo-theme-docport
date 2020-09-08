@@ -44,4 +44,4 @@ Create a `_index.md` page in `_layout/_sidepage-after` folder.
 
 
 ## Hide right sidebar
-Set `hide_toc=true` in your page's frontmatter, see [an example here]({{%relref "examples/page without toc"%}})
+Set `hide: toc` in your page's frontmatter, see [an example here]({{%relref "examples/page without toc"%}})
