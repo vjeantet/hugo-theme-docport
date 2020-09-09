@@ -4,7 +4,11 @@ description: hide everything
 weight: 90
 
 
-hide: header, nav, breadcrumb, footer
+hide: 
+  - header
+  - nav
+  - breadcrumb
+  - footer
 
 
 ---
