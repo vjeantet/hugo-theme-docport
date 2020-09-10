@@ -37,7 +37,7 @@ collections:
       - { label: 'Order', name: 'weight', widget: 'number', default: 10,required: false }
       - { label: "Body", name: "body", widget: "markdown"}
       - { label: 'Is Hidden ?', name: 'hidden', widget: 'boolean',required: false, default: false, hint: 'Hide this page from any menu' }
-      - { label: 'Hide page components', name: 'hide', widget: 'select',required: false, multiple: true, hint: 'Choose how to layout your content', options: [{ label: "Header", value: "header" },{ label: "Left menu ", value: "nav" }, { label: "breadcrumb", value: "breadcrumb" }, { label: "right bar with table of content", value: "breadcrumb" }, { label: "Next Page Helper", value: "nextpage" }, { label: "footer", value: "footer" }]}
+      - { label: 'Hide page components', name: 'hide', widget: 'select',required: false, multiple: true, hint: 'Choose how to layout your content', options: [{ label: "Header", value: "header" },{ label: "Left menu ", value: "nav" }, { label: "breadcrumb", value: "breadcrumb" }, { label: "right bar with table of content", value: "toc" }, { label: "Next Page Helper", value: "nextpage" }, { label: "footer", value: "footer" }]}
       - { label: 'Render', name: 'render', widget: 'select',required: false, hint: 'Choose how to layout your content', options: [{ label: "Default (empty value)", value: "" },{ label: "Raw - Full HTML", value: "raw" }]}
       - { label: 'Force display as a subpage ?', name: 'subpage', widget: 'boolean',required: false, default: false, hint: 'Display this page as subcontent' }
       - { label: 'Menu Entry Head', name: 'head', widget: 'string', required: false, hint: 'Display something before menu entry' }
