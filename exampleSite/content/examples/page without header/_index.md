@@ -1,5 +1,6 @@
 ---
-hide: header
+hide:
+  - header
 title: A page without header
 weight: 10
 ---

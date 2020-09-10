@@ -1,5 +1,6 @@
 ---
-hide: footer
+hide:
+  - footer
 title: A page without footer
 weight: 20
 ---

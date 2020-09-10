@@ -1,6 +1,7 @@
 ---
 Weight: 40
-hide: toc
+hide:
+  - toc
 title: Look and feel
 ---
 

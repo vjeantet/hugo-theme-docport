@@ -1,6 +1,7 @@
 ---
 description: hide everything
-hide: nextpage
+hide:
+  - nextpage
 title: A page without "NEXT PAGE"
 weight: 80
 ---

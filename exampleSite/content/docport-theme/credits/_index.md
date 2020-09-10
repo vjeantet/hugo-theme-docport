@@ -1,6 +1,7 @@
 ---
 description: Contributors and packages used by hugo-theme-docport
-hide: toc
+hide:
+  - toc
 subpage: true
 title: Credits
 ---

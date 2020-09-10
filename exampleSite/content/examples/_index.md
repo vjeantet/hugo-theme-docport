@@ -1,5 +1,6 @@
 ---
-hide: toc
+hide:
+  - toc
 title: Examples
 weight: 50
 ---

@@ -1,5 +1,6 @@
 ---
-hide: toc
+hide:
+  - toc
 title: A page without table of contents
 weight: 20
 ---

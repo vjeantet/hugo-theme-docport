@@ -1,5 +1,7 @@
 ---
-hide: toc, nav
+hide:
+  - toc
+  - nav
 title: A page without sidebar and toc
 weight: 20
 ---

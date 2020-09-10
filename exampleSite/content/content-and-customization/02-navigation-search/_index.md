@@ -1,6 +1,7 @@
 ---
 description: ""
-hide: toc
+hide:
+  - toc
 title: Navigation & Search
 weight: 30
 ---
