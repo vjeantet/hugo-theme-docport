@@ -1,7 +1,7 @@
-+++
-title = "tabs"
-description = "Tabs let you organize content by context with multiple tab."
-+++
+---
+description: Tabs let you organize content by context with multiple tab.
+title: tabs
+---
 
 Tabs let you organize content by context with multiple tab, for example HelloWorld instructions for each language.
 

@@ -1,9 +1,8 @@
-+++
-title = "Installation"
-description = ""
-weight = 1
-
-+++
+---
+description: ""
+title: Installation
+weight: 1
+---
 
 {{% alert theme="warning" %}}HUGO **v0.50** minimum required to use this theme (prefer extended version if you want to modify this theme source{{%/alert%}}
 

@@ -1,7 +1,7 @@
-+++
-title = "attachments"
-description = "The Attachments shortcode displays a list of files attached to a page."
-+++
+---
+description: The Attachments shortcode displays a list of files attached to a page.
+title: attachments
+---
 
 The Attachments shortcode displays a list of files attached to a page.
 Example :

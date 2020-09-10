@@ -1,7 +1,7 @@
-+++
-title = "panel"
-description = "Allow you to highlight information or put it in a box."
-+++
+---
+description: Allow you to highlight information or put it in a box.
+title: panel
+---
 
 
 

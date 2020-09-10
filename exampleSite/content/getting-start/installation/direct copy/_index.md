@@ -1,9 +1,9 @@
-+++
-title = "from zip archive"
-description = ""
-weight = 1
-subpage = true 
-+++
+---
+description: ""
+subpage: true
+title: from zip archive
+weight: 1
+---
 
 ## Install DocPort from a zip archive
 

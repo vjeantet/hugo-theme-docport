@@ -1,9 +1,8 @@
-+++
-title = "Header"
-description = ""
-weight = 10
-
-+++
+---
+description: ""
+title: Header
+weight: 10
+---
 
 Docport's Header displays Site Title and Site shortcuts.
 

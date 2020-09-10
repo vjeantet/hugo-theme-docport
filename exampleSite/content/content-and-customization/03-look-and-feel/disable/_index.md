@@ -1,7 +1,7 @@
-+++
-title = "Disable features"
-subpage=true
-+++
+---
+subpage: true
+title: Disable features
+---
 
 You can disable feature in docport by changing some params in `config.toml`
 

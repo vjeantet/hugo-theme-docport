@@ -1,8 +1,8 @@
-+++
-title="Home page"
-description = "Control how the home page should be rendered"
-weight=10
-+++
+---
+description: Control how the home page should be rendered
+title: Home page
+weight: 10
+---
 
 {{% alert theme="success" %}}By default, this theme use the first section (folder) available in your content folder as a homepage.{{%/alert%}}
 

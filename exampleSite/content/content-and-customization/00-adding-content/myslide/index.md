@@ -1,17 +1,16 @@
-+++
-title = "My Slide ! fullscreen"
-date = "2017-04-24T18:36:24+02:00"
-type="slide"
-hidden=true
-
-theme = "league"
-[revealOptions]
-transition= 'concave'
-controls= true
-progress= true
-history= false
-center= true
-+++
+---
+date: "2017-04-24T18:36:24+02:00"
+hidden: true
+revealOptions:
+  center: true
+  controls: true
+  history: false
+  progress: true
+  transition: concave
+theme: league
+title: My Slide ! fullscreen
+type: slide
+---
 
 # In the morning
 

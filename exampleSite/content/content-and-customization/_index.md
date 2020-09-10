@@ -1,8 +1,8 @@
-+++
-title = "Content and Customization"
-description = ""
-weight = 30
-hide = "toc"
-+++
+---
+description: ""
+hide: toc
+title: Content and Customization
+weight: 30
+---
 
 {{%children style="h2" description="true" %}}

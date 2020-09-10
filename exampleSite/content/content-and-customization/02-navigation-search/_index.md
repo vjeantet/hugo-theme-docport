@@ -1,9 +1,9 @@
-+++
-title = "Navigation & Search"
-description = ""
-weight = 30
-hide = "toc"
-+++
+---
+description: ""
+hide: toc
+title: Navigation & Search
+weight: 30
+---
 
 Docport allow you to easily customize header, left & righ sidebars and footer.
 

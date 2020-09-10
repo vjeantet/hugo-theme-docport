@@ -1,8 +1,7 @@
-+++
-title="CSS & JS"
-subpage=true
-
-+++
+---
+subpage: true
+title: CSS & JS
+---
 
 ## Add custom CSS and JS into the \<head\> part of each page :
 

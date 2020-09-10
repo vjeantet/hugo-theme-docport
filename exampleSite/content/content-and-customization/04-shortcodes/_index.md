@@ -1,9 +1,9 @@
-+++
-title = "Shortcodes"
-description = "Use DocPort Hugo shortcodes to quickly build site pages."
-weight = 50
-redirect = "shortcodes"
-+++
+---
+description: Use DocPort Hugo shortcodes to quickly build site pages.
+redirect: shortcodes
+title: Shortcodes
+weight: 50
+---
 
 
 

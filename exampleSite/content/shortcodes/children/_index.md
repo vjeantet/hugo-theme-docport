@@ -1,7 +1,7 @@
-+++
-title = "children"
-description = "List the child pages of a page"
-+++
+---
+description: List the child pages of a page
+title: children
+---
 
 
 Use the children shortcode to list the child pages of a page and the further descendants (children's children). By default, the shortcode displays links to the child pages.

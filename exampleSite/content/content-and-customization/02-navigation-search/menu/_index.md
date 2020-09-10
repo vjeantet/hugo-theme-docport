@@ -1,9 +1,8 @@
-+++
-title = "Menu"
-description = ""
-weight = 20
-
-+++
+---
+description: ""
+title: Menu
+weight: 20
+---
 
 
 Docport's Menu displays your content structure on left.

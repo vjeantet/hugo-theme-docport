@@ -1,10 +1,9 @@
-+++
-title = "As a SlideDeck"
-description = ""
-date = "2017-04-24T18:36:24+02:00"
-weight = 90
-
-+++
+---
+date: "2017-04-24T18:36:24+02:00"
+description: ""
+title: As a SlideDeck
+weight: 90
+---
 
 A basic .md file can be rendered as a reveal.js presentation full screen.
 

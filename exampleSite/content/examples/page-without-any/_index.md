@@ -1,16 +1,12 @@
 ---
-title: A page with only TOC and next page
 description: hide everything
+hide:
+- header
+- nav
+- breadcrumb
+- footer
+title: A page with only TOC and next page
 weight: 90
-
-
-hide: 
-  - header
-  - nav
-  - breadcrumb
-  - footer
-
-
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

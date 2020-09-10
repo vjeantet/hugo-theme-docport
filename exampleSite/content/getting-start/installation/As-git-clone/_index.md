@@ -1,9 +1,9 @@
-+++
-title = "with git clone"
-description = ""
-subpage = true 
-weight = 1
-+++
+---
+description: ""
+subpage: true
+title: with git clone
+weight: 1
+---
 
 ## Install DocPort with a git clone
 

@@ -1,7 +1,7 @@
-+++
-title = "Notice"
-description = "Disclaimers to help you structure your page"
-+++
+---
+description: Disclaimers to help you structure your page
+title: Notice
+---
 
 {{% notice primary summary %}}
 The **notice** shortcode highlights a text with a solid vertical line in front of your text.

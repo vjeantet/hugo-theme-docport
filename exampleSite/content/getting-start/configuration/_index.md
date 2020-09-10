@@ -1,8 +1,8 @@
-+++
-title = "Configuration"
-description = ""
-weight = 2
-+++
+---
+description: ""
+title: Configuration
+weight: 2
+---
 
 
 There are a few configuration options that you can add to your `config.toml` file.

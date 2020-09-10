@@ -1,9 +1,8 @@
-+++
-title = "Footer"
-description = ""
-weight = 100
-
-+++
+---
+description: ""
+title: Footer
+weight: 100
+---
 
 Docport's Footer displays what you want !
 

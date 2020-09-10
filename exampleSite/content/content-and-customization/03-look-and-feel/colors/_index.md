@@ -1,8 +1,7 @@
-+++
-title="Colors"
-subpage=true
-
-+++
+---
+subpage: true
+title: Colors
+---
 
 By default, a site using docPort has the theme’s default color.\
 However, if you want your own color scheme (and you probably will!) you can very easily override the theme defaults with your own project-specific values - Hugo will look in your project files first when looking for information to build your site. 

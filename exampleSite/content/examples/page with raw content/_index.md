@@ -1,7 +1,7 @@
 ---
-title: A page with raw content
-render: raw
 description: Nothing but your content ! usefull for special pages
+render: raw
+title: A page with raw content
 weight: 99
 ---
 <head>

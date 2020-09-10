@@ -1,9 +1,8 @@
-+++
-title = "Content right bar"
-description = ""
-weight = 50
-
-+++
+---
+description: ""
+title: Content right bar
+weight: 50
+---
 
 With each page, a sidebar is displayed on the right side, with the current table of content.
 * the 2 dashed rectangles are 2 position where you can inject custom content, see bellow

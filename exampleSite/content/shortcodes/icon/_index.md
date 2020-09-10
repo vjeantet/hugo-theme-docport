@@ -1,8 +1,8 @@
-+++
-title = "icon"
-description = "Display an icon."
-date = 2020-09-08T20:40:23.389Z
-+++
+---
+date: "2020-09-08T20:40:23Z"
+description: Display an icon.
+title: icon
+---
 
 Display one of the 2 298 icons like 
 {{% icon name="fa-address-card" size="64px" %}}

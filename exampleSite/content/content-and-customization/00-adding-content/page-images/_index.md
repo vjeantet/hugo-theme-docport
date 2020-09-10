@@ -1,10 +1,10 @@
-+++
-title = "images"
-date = "2017-04-24T18:36:24+02:00"
-weight = 10
-hidden = false
-subpage = true
-+++
+---
+date: "2017-04-24T18:36:24+02:00"
+hidden: false
+subpage: true
+title: images
+weight: 10
+---
 
 Images have a similar syntax to markdown links but include a preceding exclamation point.
 ```

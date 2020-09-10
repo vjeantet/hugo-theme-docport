@@ -1,8 +1,8 @@
-+++
-title = "Look and feel"
-Weight=40
-hide = "toc"
-+++
+---
+Weight: 40
+hide: toc
+title: Look and feel
+---
 
 You can change the style and behavior of the theme without touching its source code.
 * Change base colors

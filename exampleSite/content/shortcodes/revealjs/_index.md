@@ -1,8 +1,8 @@
-+++
-title = "revealjs"
-slug = "revealjs"
-description = "present content as a reveal.js slide"
-+++
+---
+description: present content as a reveal.js slide
+slug: revealjs
+title: revealjs
+---
 
 This shortcode will format the enclosed markdow to render it with [reveal.js](http://lab.hakim.se/reveal-js/) at runtime (client-side)
 

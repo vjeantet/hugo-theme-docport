@@ -1,7 +1,7 @@
 ---
+hide: toc, nav
 title: A page without sidebar and toc
 weight: 20
-hide: toc, nav
 ---
 
 {{%panel header="page's frontmatter"%}}

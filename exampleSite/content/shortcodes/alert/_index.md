@@ -1,7 +1,7 @@
-+++
-title = "alert"
-description = "The alert shortcode allows you to highlight information in your page."
-+++
+---
+description: The alert shortcode allows you to highlight information in your page.
+title: alert
+---
 
 The `alert` shortcode allow you to highlight information in your page. They create a colored box surrounding your text, like this:
 

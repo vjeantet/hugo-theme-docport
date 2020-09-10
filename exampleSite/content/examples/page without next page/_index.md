@@ -1,8 +1,8 @@
 ---
-title: A page without "NEXT PAGE"
 description: hide everything
-weight: 80
 hide: nextpage
+title: A page without "NEXT PAGE"
+weight: 80
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

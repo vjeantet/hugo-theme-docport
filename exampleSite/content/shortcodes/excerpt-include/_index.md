@@ -1,7 +1,8 @@
-+++
-title = "excerpt-include"
-description = "The Excerpt Include shortcode is used to display ‘excerpted’ (that is, a segment of) content from one page in another."
-+++
+---
+description: The Excerpt Include shortcode is used to display ‘excerpted’ (that is,
+  a segment of) content from one page in another.
+title: excerpt-include
+---
 
 The Excerpt Include shortcode is used to display 'excerpted' (that is, a segment of) content from one page in another.
 Before you can use this shortcode, the excerpt must have been defined using the Excerpt shortcode. {{%alert info%}}Note that you can have more than one Excerpt Include shortcode on a page (although you can have only one Excerpt shortcode on a page).{{%/alert%}}

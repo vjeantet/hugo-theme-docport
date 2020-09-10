@@ -1,9 +1,9 @@
-+++
-title = "Credits"
-description = "Contributors and packages used by hugo-theme-docport"
-subpage = true
-hide = "toc"
-+++
+---
+description: Contributors and packages used by hugo-theme-docport
+hide: toc
+subpage: true
+title: Credits
+---
 
 
 ## Contributors

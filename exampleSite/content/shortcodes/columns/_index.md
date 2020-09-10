@@ -1,7 +1,7 @@
-+++
-title = "columns"
-description = "display elements side by side"
-+++
+---
+description: display elements side by side
+title: columns
+---
 
 the `{{</*column*/>}}` shortcode display content side by side
 

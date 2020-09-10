@@ -1,20 +1,20 @@
 ---
-lastmodifierdisplayname: Valere JEANTET
-title: Adding content
-description: This page tells you how to use the theme to add and structure your
-  site content.
-date: 2020-09-08T22:49:36.481Z
-head: ""
 creatordisplayname: Valere JEANTET
-weight: 1
-hidden: false
-pre: ""
-layout: ""
-lastmodifieremail: valere.jeantet@gmail.com
 creatoremail: valere.jeantet@gmail.com
+date: "2020-09-08T22:49:36.481Z"
+description: This page tells you how to use the theme to add and structure your site
+  content.
+head: ""
+hidden: false
+lastmodifierdisplayname: Valere JEANTET
+lastmodifieremail: valere.jeantet@gmail.com
+layout: ""
+pre: ""
 tags:
-  - tag1
-  - tag2
+- tag1
+- tag2
+title: Adding content
+weight: 1
 ---
 {{% notice %}}This page tells you how to use the theme to add and structure your site content.{{% /notice %}}
 

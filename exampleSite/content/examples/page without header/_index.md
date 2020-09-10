@@ -1,8 +1,7 @@
 ---
+hide: header
 title: A page without header
 weight: 10
-hide: header
-
 ---
 {{%panel header="page's frontmatter"%}}
 ```yaml
