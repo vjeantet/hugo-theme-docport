@@ -30,17 +30,7 @@ menushortcutsnewtab = false # set true to open shortcuts links to a new tab/wind
 #editURL = "https://github.com/vjeantet/hugo-theme-docport/edit/master/exampleSite/content/"
 enableGitInfo = true
 
-# NetlifyCMS Options
-#editWithNetlifyCMSURL = "admin/#/collections/pages/entries/"
-#netlifycms_backend_name = "github"
-#netlifycms_backend_repo = "vjeantet/hugo-theme-docport"
-#netlifycms_backend_branch = "master"
-#netlifycms_backend_open_authoring = true
-#netlifycms_backend_authtype = " implicit"
-#netlifycms_backend_api_id = "L4M2L3K4ML23K4ML3K42LK342L3M4K23MLK42L3MK4"
-#netlifycms_backend_api_root = " https://xxxxxxxxxx/api/v4"
-#netlifycms_backend_base_url = "https://xxxxxxxxxxxxx"
-#netlifycms_backend_auth_endpoint = "oauth/authorize"
+
 
 [mediaTypes]
   [mediaTypes."application/netlifyconfig"]

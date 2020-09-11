@@ -1,29 +1,9 @@
-media_folder: "static/images/uploads" # Media files will be stored in the repo under images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
-publish_mode: editorial_workflow
-backend:
-  {{if ne nil .Site.Params.netlifycms_backend_name}}name: {{.Site.Params.netlifycms_backend_name}}{{end}}
-  {{- if ne nil .Site.Params.netlifycms_backend_repo}}
-  repo: {{.Site.Params.netlifycms_backend_repo}}{{end}}
-  {{- if ne nil .Site.Params.netlifycms_backend_branch}}
-  branch: {{.Site.Params.netlifycms_backend_branch}}{{end}}
-  {{- if ne nil .Site.Params.netlifycms_backend_authtype}}
-  auth_type: {{.Site.Params.netlifycms_backend_authtype}}{{end}}
-  {{- if ne nil .Site.Params.netlifycms_backend_api_id}}
-  app_id: {{.Site.Params.netlifycms_backend_api_id}}{{end}}
-  {{- if ne nil .Site.Params.netlifycms_backend_api_root}}
-  api_root: {{.Site.Params.netlifycms_backend_api_root}}{{end}}
-  {{- if ne nil .Site.Params.netlifycms_backend_base_url}}
-  base_url: {{.Site.Params.netlifycms_backend_base_url}}{{end}}
-  {{- if ne nil .Site.Params.netlifycms_backend_auth_endpoint}}
-  auth_endpoint: {{.Site.Params.netlifycms_backend_auth_endpoint}}{{end}}
-  {{- if ne nil .Site.Params.netlifycms_backend_open_authoring}}
-  open_authoring: {{.Site.Params.netlifycms_backend_open_authoring}}{{end}}
+{{.RawContent}}
 
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "{{.Params.netlifycms_content_folder}}"
+    folder: "{{with .Params.netlifycms_content_folder}}{{.}}{{else}}content{{end}}"
     create: true
     media_folder: ''
     public_folder: ''
