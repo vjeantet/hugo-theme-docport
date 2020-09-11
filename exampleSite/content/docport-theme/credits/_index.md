@@ -1,9 +1,10 @@
 ---
+title: Credits
 description: Contributors and packages used by hugo-theme-docport
+date: 2020-09-10T19:54:04.751Z
 hide:
   - toc
 subpage: true
-title: Credits
 ---
 
 
@@ -80,7 +81,6 @@ title: Credits
 
 
 ## Packages and libraries
-* [bootstrap](https://getbootstrap.com/) - popular front-end open source toolkit
 * [jQuery](https://jquery.com) - The Write Less, Do More, JavaScript Library
 * [mermaid](https://knsv.github.io/mermaid) - generation of diagram and flowchart from text in a similar manner as markdown
 * [reveal-js](http://lab.hakim.se/reveal-js) - The HTML Presentation Framework
