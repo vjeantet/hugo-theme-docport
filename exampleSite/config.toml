@@ -24,6 +24,10 @@ enableMissingTranslationPlaceholders = false
 # weight = 2
 # languageName = "Français"
 
+
+
+disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS"]
+
 [params]
 ordersectionsby = "weight" # ordersectionsby = "title"
 color_main = "#737373"

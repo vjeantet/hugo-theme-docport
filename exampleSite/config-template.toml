@@ -14,6 +14,8 @@ enableMissingTranslationPlaceholders = false
 
 # googleanalytics = "UA-123-45"
 
+disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS"]
+
 # Keep this as is
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
