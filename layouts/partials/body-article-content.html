@@ -10,9 +10,10 @@
     <!-- FIN FIL D'ARIANE -->
 
     <!-- TITRE -->
-	{{if not .Params.layout }}
 		{{$pagetitle := .Title}}
-        {{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
+        {{if eq $pagetitle ""}}
+        	{{with .File}}{{$pagetitle = .BaseFileName}}{{end}}
+        {{end}}
 		
 		{{ $cPage := .}}
 		{{ $elements := (where .Sections "NONONO" false) }}
@@ -49,11 +50,6 @@
 	        	{{- end}}
 	        	</nav> 
 		{{ end }}
-
-
-	{{else}}
-		<h1>{{.Title}}</h1>
-	{{end}}
 	<!-- FIN TITRE -->
 
 	<!-- JUMP TO SECTION -->
@@ -82,7 +78,7 @@
 
 
 	{{if not (in .Params.hide "nextpage")}} 
-	<div class="chevrons {{.Params.layout}}">
+	<div class="chevrons">
 		{{ partial "_next-prev-page.html" .CurrentSection }}
 	</div>
 	{{end -}}

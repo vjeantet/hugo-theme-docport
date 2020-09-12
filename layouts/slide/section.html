@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<link rel="stylesheet" href="{{"/vendor/revealjs/reveal.js-master/dist/reset.css"|relURL}}">
+		<link rel="stylesheet" href="{{"/vendor/revealjs/reveal.js-master/dist/reveal.css"|relURL}}">
+		<link rel="stylesheet" href="{{"/vendor/revealjs/reveal.js-master/dist/theme/black.css"|relURL}}" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="{{"/vendor/revealjs/reveal.js-master/plugin/highlight/monokai.css"|relURL}}" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown
+				         data-separator="^---"
+					 data-separator-vertical="^___"
+					 data-separator-notes="^Note:">
+				{{ .RawContent }}
+				</section>
+			</div>
+		</div>	
+
+		<script src="{{"/vendor/revealjs/reveal.js-master/dist/reveal.js"|relURL}}"></script>
+		<script src="{{"/vendor/revealjs/reveal.js-master/plugin/notes/notes.js"|relURL}}"></script>
+		<script src="{{"/vendor/revealjs/reveal.js-master/plugin/markdown/markdown.js"|relURL}}"></script>
+		<script src="{{"/vendor/revealjs/reveal.js-master/plugin/highlight/highlight.js"|relURL}}"></script>
+
+		<script>
+			Reveal.initialize({
+					plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+			      });
+		</script>
+
+
+	</body>
+</html>

@@ -24,12 +24,14 @@
 		    {{end}}	
 		    
 		    {{ if .Site.Params.editWithNetlifyCMSURL }}
+		    {{with .Page.File}}
 		    <li>
 		    	{{$dir := (replace .Dir "\\" "/")  }}{{if eq $dir "/" }}{{$dir = ""}}{{end}}
-		        <a href="{{ .Site.BaseURL }}{{ .Site.Params.editWithNetlifyCMSURL }}{{with .File}}{{ replace .Dir "\\" "/" | safeURL }}{{ .BaseFileName }}{{end}}" target="blank">
+		        <a href="{{ $.Site.BaseURL }}{{ $.Site.Params.editWithNetlifyCMSURL }}{{ $dir | safeURL }}{{ .BaseFileName }}" target="blank">
 		        <i class="fab fa-github"></i>
 		        {{T "Edit-this-page"}}</a>
 		    </li>
+		    {{end}}
 		    {{end}}
 			{{ if not .Page.Lastmod.IsZero }}
 		      <li>
