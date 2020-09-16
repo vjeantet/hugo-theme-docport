@@ -18,9 +18,10 @@ It provides a simple navigation, automatic search engine, a high level of config
 * [RevealJS presentation]({{%relref "content-and-customization/00-adding-content/page-slide/"%}}) from markdown (embededed or fullscreen page)
 * [Image resizing, shadow...]({{%relref "content-and-customization/00-adding-content/page-images/" %}})
 * A bunch of shortcodes
-  		 *[Mermaid diagram]({{%relref "shortcodes/mermaid/_index.md" %}}) (flowchart, sequence, gantt)*
-  		 [Attachments files]({{%relref "shortcodes/attachments/_index.md" %}}), [Icons]({{%relref "shortcodes/icon/_index.md" %}}), [Buttons]({{%relref "shortcodes/button/_index.md" %}}), [Alerts]({{%relref "shortcodes/alert/_index.md" %}}), [Panels]({{%relref "shortcodes/panel/_index.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice/_index.md" %}}), [Expand]({{%relref "shortcodes/expand/_index.md" %}}), [List child pages]({{%relref "shortcodes/children/_index.md" %}})
-  		 *[Excerpt]({{%relref "shortcodes/excerpt/_index.md"%}}) ! Include segment of content from one page in another*
+	* [Mermaid diagram]({{%relref "shortcodes/mermaid/_index.md" %}}) (flowchart, sequence, gantt)*
+  	 [Attachments files]({{%relref "shortcodes/attachments/_index.md" %}}), [Icons]({{%relref "shortcodes/icon/_index.md" %}}), [Buttons]({{%relref "shortcodes/button/_index.md" %}}), [Alerts]({{%relref "shortcodes/alert/_index.md" %}}), [Panels]({{%relref "shortcodes/panel/_index.md" %}}), [Tip/Note/Info/Warning boxes]({{%relref "shortcodes/notice/_index.md" %}}), [Expand]({{%relref "shortcodes/expand/_index.md" %}}), [List child pages]({{%relref "shortcodes/children/_index.md" %}}), \
+  	 [Badges]({{%relref "shortcodes/badge/_index.md" %}}) {{% badge success%}}new{{% /badge %}}
+  	* [Excerpt]({{%relref "shortcodes/excerpt/_index.md"%}}) ! Include segment of content from one page in another*
   		 [columns]({{%relref "shortcodes/columns/_index.md"%}}), [tabs]({{%relref "shortcodes/tabs/_index.md"%}})
 
 ## Contribute to this documentation
@@ -37,4 +38,4 @@ This current documentation has been statically generated with Hugo with a simple
 I author this current documentation via Netlify CMS.\
 Docport theme seamless works with [Netlify CMS](https://www.netlifycms.org/)
 
-Try the improve this page button on the right side of each page
+{{% badge %}}Help{{% /badge %}} Try the improve this page button on the right side of each page

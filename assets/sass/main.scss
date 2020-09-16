@@ -30,6 +30,12 @@ $c_saturate4 : saturate($color_second, 50%);
 $c_saturate5 : saturate($color_second, 60%);  
 $c_saturate6 : saturate($color_second, 75%);  
 $c_saturate7 : saturate($color_second, 90%);  
+
+
+
+    
+
+
   
 body:not(.render_raw){
 	font-family:"Montserrat",sans-serif;
@@ -198,7 +204,7 @@ body:not(.render_raw){
 
 article section.page {
     background-color: inherit;
-    #breadcrumb{
+    #ariane{
         display: block;
         font-size: 1rem;
         line-height: 1.5;
@@ -206,6 +212,7 @@ article section.page {
         font-weight: 500;
 
         ol{
+            margin-top: 1em!important;
             padding: 0px;
             display: flex;
             flex-wrap: wrap;
@@ -394,16 +401,19 @@ article section.page div.content{
 
     h1 {
         color:$c_dark1;
-        font-size:30px;
+        
         font-variant-ligatures:none;
-        font-weight:700;
-        height:88px;
+        font-weight:800;
+
         letter-spacing:-0.75px;
         line-height:32px;
    }
 
     h2 {
-        
+        margin-top: 0.5em;
+        font-weight:700;
+        letter-spacing:-0.95px;
+
     } // TABLE
     table {
         width: 100%;
@@ -478,21 +488,11 @@ article section.page div.content{
         }
     }
 
-    code  {
-        font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-        font-size: 85%;
-        color: #e83e8c;
-        word-wrap: break-word;
-
-        padding: 0.5px;
-        font-weight: 600;
-        white-space: pre-wrap;
-    }
-
     div.highlight{
         pre{
             display:block; 
             white-space: pre-wrap;
+            overflow: inherit!important;
             code{
                 color:inherit!important;
                 font-size: 75%;

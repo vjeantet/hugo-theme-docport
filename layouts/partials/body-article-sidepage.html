@@ -1,6 +1,7 @@
 {{- partial "_mdinclude.html" (dict "name" "_layout/article-sidebar-before/_index" "context" .) -}}
 <div class="TableOfContents">
-    <label>{{T "table-of-contents"}}</label>
+    
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;{{T "table-of-contents"}}</label>
     <nav>
         <ul >
             <li><a href="{{ .RelPermalink }}">{{.Title}}</a></li>
