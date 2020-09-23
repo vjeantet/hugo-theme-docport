@@ -15,27 +15,27 @@ This is a demo of a [checklist page]({{%ref "content-and-customization/00-adding
 {{%/notice %}}
 
 ## Application Metadata
-{{%include "01_appmetadata.md"%}}
+{{%include "webappsec/01_appmetadata.md"%}}
 
 
 ## Vulnerability Reporting and Management
-{{%include "02_vulnerabilityreporting.md"%}}
+{{%include "webappsec/02_vulnerabilityreporting.md"%}}
 
 
 ## HTTPS and Mixed-Content Risks
-{{%include "03_https.md"%}}
+{{%include "webappsec/03_https.md"%}}
 
 
 ## Authentication and Authorization
-{{%include "04_authz.md"%}}
+{{%include "webappsec/04_authz.md"%}}
 
 
 ## Common Web Vulnerabilities
-{{%include "05_commonvuln.md"%}}
+{{%include "webappsec/05_commonvuln.md"%}}
 
 
 ## Testing, QA, and Monitoring
-{{%include "06_testing.md"%}}
+{{%include "webappsec/06_testing.md"%}}
 
 ## Additional Notes
 Provide any additional information about the security of your application:

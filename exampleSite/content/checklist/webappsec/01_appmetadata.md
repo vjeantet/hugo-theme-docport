@@ -1,5 +1,4 @@
 ---
-title: App Metadata
 hidden: true
 ---
 
