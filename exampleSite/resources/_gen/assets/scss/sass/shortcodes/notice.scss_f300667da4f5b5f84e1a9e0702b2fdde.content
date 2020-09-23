@@ -1,13 +1,20 @@
-div.notices p {
-  /*box-shadow: inset 4px 0 0 black;*/
-  /*border-radius: .2rem;*/
+div.notices {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+div.notices > * {
   background: white;
-  padding: .5rem 1rem .5rem 1rem;
-  margin-top: 0px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
   box-sizing: border-box;
   box-shadow: inset 4px 0 0 black;
   background-color: #e6e6e6;
   font-size: smaller; }
+
+div.notices > *:not(ul) {
+  /*box-shadow: inset 4px 0 0 black;*/
+  /*border-radius: .2rem;*/
+  padding: .5rem 1rem .5rem 1rem; }
 
 div.notices label {
   font-size: 0.5em;
@@ -58,7 +65,7 @@ div.notices.danger p {
 div.notices.danger label {
   color: #dc3545; }
 
-div.notices.warning p {
+div.notices.warning > * {
   box-shadow: inset 4px 0 0 #ffc107;
   background: rgba(255, 193, 7, 0.05);
   color: #a07800 !important; }

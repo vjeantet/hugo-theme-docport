@@ -18,7 +18,7 @@
 {{- end}}
 
 
-{{- partial "_mdinclude.html" (dict "name" "_layout/sidebar-before/_index" "context" .) -}}
+{{- partial "_mdinclude.html" (dict "name" "sidebar-before" "context" .) -}}
 
 <div id="close_menu">
   <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
@@ -30,4 +30,4 @@
   {{- partial "_menu.html" . }}
 </ul>
 
-{{- partial "_mdinclude.html" (dict "name" "_layout/sidebar-after/_index" "context" .) -}}
+{{- partial "_mdinclude.html" (dict "name" "sidebar-after" "context" .) -}}

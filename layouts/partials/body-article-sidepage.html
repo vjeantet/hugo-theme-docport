@@ -1,6 +1,5 @@
-{{- partial "_mdinclude.html" (dict "name" "_layout/article-sidebar-before/_index" "context" .) -}}
+{{- partial "_mdinclude.html" (dict "name" "article-sidebar-before" "context" .) -}}
 <div class="TableOfContents">
-    
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;{{T "table-of-contents"}}</label>
     <nav>
         <ul >
@@ -9,7 +8,7 @@
     </nav>
     {{ .TableOfContents }}
 </div>
-{{- partial "_mdinclude.html" (dict "name" "_layout/article-sidebar-after/_index" "context" .) -}}
+{{- partial "_mdinclude.html" (dict "name" "article-sidebar-after" "context" .) -}}
 
 
 <div class="Actions">

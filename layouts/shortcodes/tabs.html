@@ -1,6 +1,6 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 <!-- https://github.com/alex-shpak/hugo-book/blob/master/layouts/shortcodes/tabs.html   -->
-<link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/tabs.scss" | toCSS).Permalink }}'>
+
 {{ if .Inner }}{{ end }}
 {{ $group := printf "tabs-%d" .Ordinal }}
 

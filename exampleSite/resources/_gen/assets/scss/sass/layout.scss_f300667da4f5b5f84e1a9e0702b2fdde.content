@@ -81,13 +81,13 @@ body:not(.render_raw) {
         margin-top: 0.5em;
         margin-left: 0.2em; }
         body:not(.render_raw) article section.page .jump-to-section ul {
-          padding-left: 20px; }
+          padding-left: 10px; }
         body:not(.render_raw) article section.page .jump-to-section nav {
           display: none;
           position: absolute;
           z-index: 5;
           border: 1px solid;
-          padding: 3px 30px;
+          padding: 1em 30px;
           border-radius: 3px;
           min-width: 25%;
           max-width: 50%;

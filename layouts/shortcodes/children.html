@@ -15,7 +15,7 @@
 
 {{- $cpage := (.Scratch.Get "current") }}
 
-<link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/children.scss" | toCSS).Permalink }}'>
+
 
 <ul class="children children-{{$style}}">
 	{{- .Scratch.Set "pages" $cpage.Pages }}

@@ -1,0 +1,16 @@
+{{if .Params.checklist}}
+	{{ $formID := .File.UniqueID }}
+	<link rel="stylesheet" href='{{ (resources.Get "sass/checklist.scss" | resources.ExecuteAsTemplate "css/checklist.main.scss" . | toCSS).Permalink }}'>
+	<form name="{{$formID}}" id="6d2ab01b-fad4-4e70-83a8-b910ca848fec" ref="{{with $.Params.Ref}}{{.}}{{else}}{{printf "%s-%s" $.CurrentSection.Title $formID}}{{end}}">
+		<script src='{{"js/checklist.js" | relURL}}'></script>
+		<script type="text/javascript">
+			$( document ).ready(function() {
+				listenFormChange('6d2ab01b-fad4-4e70-83a8-b910ca848fec')
+			});
+		</script>
+
+		<div class="form-group checklist-header">
+			<label class="sr-only" for="inputFile">File Upload</label>
+			<input type="file" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="application/json" onchange="onChooseFile(event,fillForm('6d2ab01b-fad4-4e70-83a8-b910ca848fec'))" data-title="{{T "checklist-load-answers"}}">
+		</div>
+{{end}}

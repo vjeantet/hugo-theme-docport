@@ -299,6 +299,8 @@ article section.page {
         font-size: smaller;
         color:$c_dark2;
         ul{
+            padding-left-left: 0px;
+            list-style-type: none;
             li a{
                 color:$c_saturate3;
             }
@@ -306,6 +308,7 @@ article section.page {
 
         nav{
             background-color: white;
+            opacity: 0.95;
         }
     }
             
@@ -399,6 +402,11 @@ article section.page div.content{
         text-decoration: underline;
     }
 
+    p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+    }
+
     h1 {
         color:$c_dark1;
         
@@ -414,7 +422,13 @@ article section.page div.content{
         font-weight:700;
         letter-spacing:-0.95px;
 
-    } // TABLE
+    } 
+
+    h3,h4 {
+        margin-top: 0.5em;
+    }
+
+    // TABLE
     table {
         width: 100%;
         margin-bottom: 2em;

@@ -9,38 +9,48 @@ $color_dark : #343a40 ;
 $color_white : #fff ;
 $color_transparent : transparent ;
 
+div.notices {
+	margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
-	div.notices p {
-		/*box-shadow: inset 4px 0 0 black;*/
-		/*border-radius: .2rem;*/
-	    background: white;
-	    padding: .5rem 1rem .5rem 1rem;
-	    margin-top: 0px;
-	    box-sizing: border-box;
-	    box-shadow: inset 4px 0 0 black;
-	    background-color: lighten(black,90%);
-		font-size: smaller;
+div.notices > * {
+	background: white;
+	margin-top: 0px!important;
+    margin-bottom: 0px!important;
+    box-sizing: border-box;
+    box-shadow: inset 4px 0 0 black;
+    background-color: lighten(black,90%);
+	font-size: smaller;
+}
+div.notices > *:not(ul) {
+	/*box-shadow: inset 4px 0 0 black;*/
+	/*border-radius: .2rem;*/
+    padding: .5rem 1rem .5rem 1rem;
+}
+div.notices > ul {
+		
+}
+
+
+div.notices label{
+	font-size: 0.5em;
+	position: absolute;
+	margin-left: 0em;
+	margin-top: -1.8em;
+	font-weight: bold;
+	font-variant: small-caps;
+	letter-spacing: 0.6em;
+}
+
+div.notices.note {
+	p {
+		box-shadow: inset 4px 0 0 $color_primary;
+		background: transparentize($color_primary, 0.95);
+		color: darken($color_primary,20%) !important; 
 	}
-
-
-	div.notices label{
-		font-size: 0.5em;
-		position: absolute;
-		margin-left: 0em;
-		margin-top: -1.8em;
-		font-weight: bold;
-		font-variant: small-caps;
-		letter-spacing: 0.6em;
-	}
-
-	div.notices.note {
-		p {
-			box-shadow: inset 4px 0 0 $color_primary;
-			background: transparentize($color_primary, 0.95);
-			color: darken($color_primary,20%) !important; 
-		}
-		label{color: $color_primary;}
-	}
+	label{color: $color_primary;}
+}
 
 div.notices.primary {
 	p {
@@ -79,7 +89,7 @@ div.notices.danger {
 }
 
 div.notices.warning {
-	p {
+	>* {
 		box-shadow: inset 4px 0 0 $color_warning;
 		background: transparentize($color_warning, 0.95);
 		color: darken($color_warning,20%) !important; 

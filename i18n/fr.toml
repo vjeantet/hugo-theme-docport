@@ -52,3 +52,12 @@ other= "Contenu de la page"
 
 [last-update-by]
 other = "Dernière modification par "
+
+[checklist-load-answers]
+other = "Charger un fichier de réponse"
+
+[checklist-download-answers]
+other = "Télécharger les réponses"
+
+[checklist-post-answers]
+other = "Envoyer les réponses"

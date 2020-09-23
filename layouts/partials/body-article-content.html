@@ -20,6 +20,7 @@
 		{{ $isSubPage := .Params.subpage }}
 		{{ $subpages := (where (where (where .Sections.ByWeight "Params.subpage" true) "Params.hidden" "ne" true ) "Kind" "section")}}
 		{{ $pages := (where (where .CurrentSection.Pages.ByWeight "Kind" "page") "Params.hidden" "ne" true ) }}
+		
 
 		{{if $isSubPage }}
         	<h1>{{.Parent.Title}}<span>{{$pagetitle}}</span></h1>
@@ -40,7 +41,7 @@
 		{{ if gt (len $elements) 0}}
 				<nav class="subpages">
 			 	{{- range $elements}}
-		            {{- if not .Params.hidden }}
+		            {{- if and (not .Params.hidden) ( not (hasPrefix .File.BaseFileName "__")) }}
 	            		{{$pagetitle := .Title}}
 	        			{{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
 	            	<li {{if eq . $cPage}}class="active"{{- end}}>
@@ -65,9 +66,16 @@
 	{{end}}
 	<!-- / JUMP TO SECTION -->
 
+
+
+
+
+
 	<div class="content">
     {{- with .Content -}}
-      {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1}${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
+		{{ partial "_checklist-header.html" $ }}
+	    {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
+		{{ partial "_checklist-footer.html" $ }}      	
     {{- else -}}
       {{with index .Pages 0}}
       <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
@@ -76,6 +84,10 @@
       {{- end -}}
     {{- end -}}
 	</div>
+
+
+
+
 
 
 	{{if not (in .Params.hide "nextpage")}} 

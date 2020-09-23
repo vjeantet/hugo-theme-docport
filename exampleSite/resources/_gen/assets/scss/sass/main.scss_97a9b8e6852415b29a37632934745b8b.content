@@ -167,10 +167,14 @@ article section.page {
   article section.page div.jump-to-section {
     font-size: smaller;
     color: #333333; }
-    article section.page div.jump-to-section ul li a {
-      color: #a14545; }
+    article section.page div.jump-to-section ul {
+      padding-left-left: 0px;
+      list-style-type: none; }
+      article section.page div.jump-to-section ul li a {
+        color: #a14545; }
     article section.page div.jump-to-section nav {
-      background-color: white; }
+      background-color: white;
+      opacity: 0.95; }
   article section.page div.chevrons {
     margin-top: 3rem;
     border-top: 1px solid #e6e6e6;
@@ -234,6 +238,9 @@ article section.page div.content {
     color: #db0c0c;
     font-weight: 500;
     text-decoration: underline; }
+  article section.page div.content p {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
   article section.page div.content h1 {
     color: #4d4d4d;
     font-variant-ligatures: none;
@@ -244,6 +251,8 @@ article section.page div.content {
     margin-top: 0.5em;
     font-weight: 700;
     letter-spacing: -0.95px; }
+  article section.page div.content h3, article section.page div.content h4 {
+    margin-top: 0.5em; }
   article section.page div.content table {
     width: 100%;
     margin-bottom: 2em;

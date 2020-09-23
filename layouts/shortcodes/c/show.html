@@ -1,0 +1,12 @@
+{{ $formID := "6d2ab01b-fad4-4e70-83a8-b910ca848fec" }}
+{{ $random := delimit (shuffle (split (md5 $formID) "" )) "" }}
+{{ $id := printf "dp-show-%s" $random}}
+{{ $condition := trim (.Get 0) " "}}
+{{ $regFormValue := printf "formValue('%s','$1')" $formID}}
+{{ $conditionFix := replaceRE `{(\w+)}` $regFormValue $condition  }}
+{{ $conditionFix = replace $conditionFix ` and ` ` && `  }}
+{{ $conditionFix = replace $conditionFix ` or ` ` || `  }}
+{{ $conditionFix = replaceRE  `[^)]+has\s+('\w+')` ".includes($1)" $conditionFix }}
+
+<div id="{{$id}}" class="baz" style="display:none">{{.Inner | markdownify}}</div>
+<script type="text/javascript">$(registerShowIf('{{$id}}','{{$conditionFix}}'))</script>

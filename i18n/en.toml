@@ -52,3 +52,12 @@ other= "What's on this page"
 
 [last-update-by]
 other = "Last update by"
+
+[checklist-load-answers]
+other = "Load answers from file"
+
+[checklist-download-answers]
+other = "Download Answers"
+
+[checklist-post-answers]
+other = "Post Answers"
