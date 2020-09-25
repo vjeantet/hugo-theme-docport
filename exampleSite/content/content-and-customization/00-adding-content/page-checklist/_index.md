@@ -32,3 +32,4 @@ checklist: true
 * c/check - a checkbox
 * c/switch - a switch
 * c/show - display a part with a condition using user inputs
+* c/hidden - set a hidden value

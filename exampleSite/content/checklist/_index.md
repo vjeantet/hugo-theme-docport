@@ -10,6 +10,8 @@ weight: 99
 checklist: true
 ---
 
+
+
 {{%notice success%}}
 This is a demo of a [checklist page]({{%ref "content-and-customization/00-adding-content/page-checklist"%}})
 {{%/notice %}}

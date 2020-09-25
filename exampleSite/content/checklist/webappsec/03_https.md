@@ -13,6 +13,7 @@ ignoresearch: true
 {{</c/choices>}}
 
 {{<c/show `{https_exposition} == 'http_https' or {https_exposition} == 'http_only'` >}}
+{{<c/hidden warn_https_exposition `Unencrypted application network traffic`>}}
 {{%notice danger%}}
 **Warning — possible high-risk issue**\
 \
@@ -121,6 +122,7 @@ Because user traffic appears to transit networks behind your load balancer that 
 {{</c/choices>}}
 
 {{<c/show `{https_mixedcontent} == 'no'` >}}
+{{<c/hidden warn_https_mixedcontent `Mixed content issue`>}}
 {{%notice warning%}}
 **Warning — possible medium-risk issue**\
 \
