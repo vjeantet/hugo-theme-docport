@@ -41,6 +41,7 @@
 		{{ if gt (len $elements) 0}}
 				<nav class="subpages">
 			 	{{- range $elements}}
+			 	  {{- if .File -}}
 		            {{- if and (not .Params.hidden) ( not (hasPrefix .File.BaseFileName "__")) }}
 	            		{{$pagetitle := .Title}}
 	        			{{if eq $pagetitle ""}}{{$pagetitle = .File.BaseFileName}}{{end}}
@@ -48,6 +49,7 @@
 	            		<a title="$pagetitle" href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$pagetitle}}{{safeHTML .Params.Post}}</a>
 	            	</li>
 		            {{- end}}
+		          {{- end}}  
 	        	{{- end}}
 	        	</nav> 
 		{{ end }}
