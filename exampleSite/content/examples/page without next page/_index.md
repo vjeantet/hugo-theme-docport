@@ -16,7 +16,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```yaml
 ---
 title: A page without "NEXT PAGE"
-hide: nextpage
+hide:
+  - nextpage
 ---
 ```
 {{%/panel%}}

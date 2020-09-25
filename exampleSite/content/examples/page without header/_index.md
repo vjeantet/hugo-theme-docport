@@ -8,7 +8,8 @@ weight: 10
 ```yaml
 ---
 title: A page without header
-hide: header
+hide:
+  - header
 ---
 ```
 {{%/panel%}}

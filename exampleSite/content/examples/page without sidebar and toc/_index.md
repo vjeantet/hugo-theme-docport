@@ -10,7 +10,9 @@ weight: 20
 ```yaml
 ---
 title: A page without sidebar and toc
-hide: toc, nav
+hide:
+  - toc
+  - nav
 ---
 
 ```

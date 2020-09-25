@@ -9,7 +9,8 @@ weight: 20
 ```yaml
 ---
 title: A page without table of contents
-hide: toc
+hide:
+  - toc
 ---
 
 ```

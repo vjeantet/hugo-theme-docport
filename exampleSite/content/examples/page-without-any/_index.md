@@ -19,7 +19,11 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```yaml
 ---
 title: A page with only TOC and next page
-hide: header, nav, breadcrumb, footer
+hide:
+- header
+- nav
+- breadcrumb
+- footer
 ---
 
 ```

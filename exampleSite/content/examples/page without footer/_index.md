@@ -10,7 +10,8 @@ weight: 20
 ```yaml
 ---
 title: A page without footer
-hide: footer
+hide:
+  - footer
 ---
 ```
 {{%/panel%}}
