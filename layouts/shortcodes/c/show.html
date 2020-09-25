@@ -8,5 +8,10 @@
 {{ $conditionFix = replace $conditionFix ` or ` ` || `  }}
 {{ $conditionFix = replaceRE  `[^)]+has\s+('\w+')` ".includes($1)" $conditionFix }}
 
-<div id="{{$id}}" class="baz" style="display:none">{{.Inner | markdownify}}</div>
+<div id="{{$id}}" class="baz" style="display:none">
+{{with .Get 1}}
+<input type="hidden" value="true" name="{{.}}">
+{{end}}
+{{.Inner | markdownify}}</div>
 <script type="text/javascript">$(registerShowIf('{{$id}}','{{$conditionFix}}'))</script>
+
