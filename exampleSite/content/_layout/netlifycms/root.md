@@ -1,5 +1,5 @@
 ---
-render: raw
+type: raw
 title: Content Manager
 url: /admin/index.html
 ---

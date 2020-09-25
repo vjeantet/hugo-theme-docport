@@ -1,35 +1,35 @@
 @charset "UTF-8";
-body:not(.render_raw) {
+body {
   font-family: "Montserrat",sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: black; }
-  body:not(.render_raw) a {
+  body a {
     color: black;
     text-decoration: none;
     background-color: transparent; }
-  body:not(.render_raw) header {
+  body header {
     background-color: #333333;
     border-bottom: 2px solid gray;
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
     justify-content: space-between;
     align-items: stretch;
     color: #e6e6e6; }
-    body:not(.render_raw) header a {
+    body header a {
       color: #cccccc; }
-    body:not(.render_raw) header > div {
+    body header > div {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: stretch;
       white-space: nowrap; }
-      body:not(.render_raw) header > div img {
+      body header > div img {
         height: 32px;
         margin-right: 0.5rem; }
-      body:not(.render_raw) header > div .burger {
+      body header > div .burger {
         margin-right: 1rem; }
-    body:not(.render_raw) header nav.shortcuts {
+    body header nav.shortcuts {
       margin-left: auto;
       position: relative;
       display: flex;
@@ -37,33 +37,33 @@ body:not(.render_raw) {
       list-style-type: none;
       flex-direction: row;
       flex-wrap: nowrap; }
-      body:not(.render_raw) header nav.shortcuts li {
+      body header nav.shortcuts li {
         margin: 0px; }
-        body:not(.render_raw) header nav.shortcuts li .fa {
+        body header nav.shortcuts li .fa {
           margin-right: 0.5rem; }
-        body:not(.render_raw) header nav.shortcuts li a {
+        body header nav.shortcuts li a {
           color: #d6d6d6;
           padding: 0 1rem;
           font-weight: bold;
           font-size: 90%; }
-  body:not(.render_raw) article {
+  body article {
     background-color: white; }
-    body:not(.render_raw) article aside #close_menu {
+    body article aside #close_menu {
       display: none;
       float: right;
       margin-right: 2rem; }
-    body:not(.render_raw) article aside.responsive #close_menu {
+    body article aside.responsive #close_menu {
       display: block; }
-    body:not(.render_raw) article section.right-menu {
+    body article section.right-menu {
       padding: 3.5rem 0 3.5rem 0;
       font-size: 14px;
       line-height: 20px;
       padding-left: 2px; }
-      body:not(.render_raw) article section.right-menu > div {
+      body article section.right-menu > div {
         margin-bottom: 2em; }
-        body:not(.render_raw) article section.right-menu > div > * {
+        body article section.right-menu > div > * {
           margin-left: 5px; }
-        body:not(.render_raw) article section.right-menu > div label {
+        body article section.right-menu > div label {
           font-weight: 700;
           letter-spacing: -1px;
           display: block;
@@ -71,31 +71,31 @@ body:not(.render_raw) {
           border-bottom: 1px dotted #999999;
           color: #333333;
           font-variant: small-caps; }
-        body:not(.render_raw) article section.right-menu > div nav > ul {
+        body article section.right-menu > div nav > ul {
           padding: 0px 0px 0px 0px;
           margin: 0px 0px 0px 0px; }
-          body:not(.render_raw) article section.right-menu > div nav > ul ul {
+          body article section.right-menu > div nav > ul ul {
             padding: 0px 0px 0px 14px;
             margin: 0px 0px 0px 0px;
             border-left: 1px solid #e6e6e6; }
-            body:not(.render_raw) article section.right-menu > div nav > ul ul li {
+            body article section.right-menu > div nav > ul ul li {
               font-size: 90%; }
-        body:not(.render_raw) article section.right-menu > div ul {
+        body article section.right-menu > div ul {
           list-style-type: none; }
-        body:not(.render_raw) article section.right-menu > div li {
+        body article section.right-menu > div li {
           padding: 8px 0px 8px 0px;
           font-weight: 300; }
-          body:not(.render_raw) article section.right-menu > div li a {
+          body article section.right-menu > div li a {
             /*padding-left: 2px;*/ }
-            body:not(.render_raw) article section.right-menu > div li a.active {
+            body article section.right-menu > div li a.active {
               font-weight: 500; }
-      body:not(.render_raw) article section.right-menu .Actions {
+      body article section.right-menu .Actions {
         font-size: 75%; }
-  body:not(.render_raw) footer {
+  body footer {
     background-color: #333333;
     color: #cccccc;
     padding: 3rem; }
-    body:not(.render_raw) footer a {
+    body footer a {
       color: #cccccc; }
 
 article section.page {

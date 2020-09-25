@@ -6,7 +6,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     vertical-align: baseline;
 }
 
-body:not(.render_raw) {
+body {
 	margin: 0px 0px ;
     display: -webkit-box;
     display: flex;
@@ -69,7 +69,7 @@ body:not(.render_raw) {
 	    -webkit-box-direction: normal;
 	    flex-flow: row nowrap;
 	    
-	    padding: 0 20px;
+	    
 	    padding-top: 45px;
 		margin: 0 auto;
 	    width: 100%;
@@ -150,7 +150,7 @@ body:not(.render_raw) {
 }
 
 /* hideheader hidenav hidebreadcrumb hidetoc hidefooter */
-body:not(.render_raw) {
+body {
 	&.hideheader{
 		article{
 			padding-top: 0px ;
@@ -167,7 +167,7 @@ body:not(.render_raw) {
 }
 
 @media(max-width:1160px) {
-	body:not(.render_raw){
+	body{
 		header{
 			div.burger{
 				display: none;
@@ -194,7 +194,7 @@ body:not(.render_raw) {
 }
 
 @media(max-width:936px) {
-	body:not(.render_raw){
+	body{
 		header{
 			div.burger{
 				display: block;

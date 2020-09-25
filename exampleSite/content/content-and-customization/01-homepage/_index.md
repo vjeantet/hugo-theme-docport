@@ -24,7 +24,7 @@ Remove navigation components from your landing page by setting options in its pa
 {{%notice success%}}
 **Nothing but my content !**
 \
-set `render="raw"` in your home page frontmatter : only your content will be rendered, without menu, toc, headers, etc..... [example]({{%relref "/examples/page with raw content"%}})
+set `type="raw"` in your home page frontmatter : only your content will be rendered, without menu, toc, headers, etc..... [example]({{%relref "/examples/page with raw content"%}})
 {{%/notice%}}
 
 ## Use plain HTML for your homepage
@@ -34,7 +34,7 @@ Example
 ```toml
 +++
 title="Homepage"
-render="raw"
+type="raw"
 +++
 <div class="myHome">
 	Hello

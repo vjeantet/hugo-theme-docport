@@ -1,6 +1,6 @@
 ---
 description: Nothing but your content ! usefull for special pages
-render: raw
+type: raw
 title: A page with raw content
 weight: 99
 ---
@@ -13,7 +13,7 @@ weight: 99
 ```yaml
 ---
 title: A page with raw content
-render: raw
+type: raw
 ---
 ```
 {{%/panel%}}

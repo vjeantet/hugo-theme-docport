@@ -5,7 +5,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   border: 0;
   vertical-align: baseline; }
 
-body:not(.render_raw) {
+body {
   margin: 0px 0px;
   display: -webkit-box;
   display: flex;
@@ -14,7 +14,7 @@ body:not(.render_raw) {
   flex-direction: column;
   min-height: 100vh;
   text-rendering: optimizeLegibility; }
-  body:not(.render_raw) header {
+  body header {
     flex-shrink: 0;
     min-height: 45px;
     max-height: 45px;
@@ -24,14 +24,14 @@ body:not(.render_raw) {
     z-index: 9999;
     -webkit-transform: translateZ(0);
     transform: translateZ(0); }
-    body:not(.render_raw) header > * {
+    body header > * {
       max-width: 1400px;
       width: 100%;
       padding: 0 20px;
       margin: 0 auto; }
-    body:not(.render_raw) header div.burger {
+    body header div.burger {
       display: none; }
-  body:not(.render_raw) article {
+  body article {
     -webkit-box-flex: 1;
     flex-grow: 1;
     display: -webkit-box;
@@ -52,14 +52,13 @@ body:not(.render_raw) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-flow: row nowrap;
-    padding: 0 20px;
     padding-top: 45px;
     margin: 0 auto;
     width: 100%;
     max-width: 1400px; }
-    body:not(.render_raw) article > * {
+    body article > * {
       margin: 0 24px; }
-    body:not(.render_raw) article aside {
+    body article aside {
       transition: max-height .2s ease-out;
       -webkit-box-flex: 0;
       flex: 0 0 20em;
@@ -71,18 +70,18 @@ body:not(.render_raw) {
       position: sticky;
       overflow-y: auto;
       top: 45px; }
-    body:not(.render_raw) article section.page {
+    body article section.page {
       -webkit-box-flex: 1;
       flex: 1 auto;
       max-width: 100%;
       min-width: 0; }
-      body:not(.render_raw) article section.page .jump-to-section {
+      body article section.page .jump-to-section {
         display: none;
         margin-top: 0.5em;
         margin-left: 0.2em; }
-        body:not(.render_raw) article section.page .jump-to-section ul {
+        body article section.page .jump-to-section ul {
           padding-left: 10px; }
-        body:not(.render_raw) article section.page .jump-to-section nav {
+        body article section.page .jump-to-section nav {
           display: none;
           position: absolute;
           z-index: 5;
@@ -92,7 +91,7 @@ body:not(.render_raw) {
           min-width: 25%;
           max-width: 50%;
           box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25); }
-    body:not(.render_raw) article section.right-menu {
+    body article section.right-menu {
       margin-right: 0;
       align-self: flex-start;
       display: block;
@@ -104,49 +103,49 @@ body:not(.render_raw) {
       position: sticky;
       top: 45px;
       margin-bottom: 40px; }
-  body:not(.render_raw) footer > * {
+  body footer > * {
     max-width: 1400px;
     width: 100%;
     padding: 0 20px;
     margin: 0 auto; }
 
 /* hideheader hidenav hidebreadcrumb hidetoc hidefooter */
-body:not(.render_raw).hideheader article {
+body.hideheader article {
   padding-top: 0px; }
-  body:not(.render_raw).hideheader article aside {
+  body.hideheader article aside {
     top: 0px;
     height: calc(100vh); }
-  body:not(.render_raw).hideheader article section.right-menu {
+  body.hideheader article section.right-menu {
     top: 0px;
     max-height: calc(100vh); }
 
 @media (max-width: 1160px) {
-  body:not(.render_raw) header div.burger {
+  body header div.burger {
     display: none; }
-  body:not(.render_raw) article {
+  body article {
     padding-left: 0px;
     padding-right: 0px; }
-    body:not(.render_raw) article aside {
+    body article aside {
       margin-right: 0px; }
-    body:not(.render_raw) article aside.responsive {
+    body article aside.responsive {
       display: block; }
-    body:not(.render_raw) article section.page .jump-to-section {
+    body article section.page .jump-to-section {
       display: block; }
-    body:not(.render_raw) article section.right-menu {
+    body article section.right-menu {
       display: none; } }
 
 @media (max-width: 936px) {
-  body:not(.render_raw) header div.burger {
+  body header div.burger {
     display: block; }
-  body:not(.render_raw) article {
+  body article {
     padding-left: 0px;
     padding-right: 0px; }
-    body:not(.render_raw) article aside {
+    body article aside {
       display: none;
       flex: 0 0 100%; }
-    body:not(.render_raw) article aside.responsive {
+    body article aside.responsive {
       display: block; }
-    body:not(.render_raw) article section.page .jump-to-section {
+    body article section.page .jump-to-section {
       display: block; }
-    body:not(.render_raw) article section.right-menu {
+    body article section.right-menu {
       display: none; } }
