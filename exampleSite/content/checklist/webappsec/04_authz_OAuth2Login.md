@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 
 **Implementing OAuth2 Login / OpenID Connect from scratch is fairly complex and error-prone, and mistakes can result in security vulnerabilities. Select the option that best describes your implementation:**

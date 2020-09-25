@@ -89,6 +89,9 @@ subpage: false # usefull when you want to force a sub section to be considered a
 #  redirect = "folder" 
 #  redirect = "folder/_index.md" 
 redirect: "folder/_index.md"
+
+# Do not include this page in search results
+nosearch: true
 ---
 ```
 

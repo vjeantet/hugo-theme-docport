@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 
 Because your application uses a database or a similar back end to persist data, we need to make sure it's not vulnerable to injection attacks, such as [SQL injection](http://en.wikipedia.org/wiki/SQL_injection)

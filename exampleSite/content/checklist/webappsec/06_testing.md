@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 Security testing can be part of standard application tests. Here are some examples:
 

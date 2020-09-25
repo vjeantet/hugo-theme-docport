@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 #### Cross Site Request Forgery
 Applications must protect all state-changing actions against cross-site request forgery (XSRF). In this attack, a malicious user forces the victim to send a request to the application, for example by luring the user to a page under the attacker's control. Because the browser automatically attaches available authentication cookies, the request will appear to be authorized if the user is logged in to the application.

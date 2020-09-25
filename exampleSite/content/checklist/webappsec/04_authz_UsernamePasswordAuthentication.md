@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 **What username/password-based logins does the application use? For example, if there's a separate administrator authentication, mention that.**
 {{<c/text "Auths_handle_password_details" multi />}}

@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 **You mentioned that your application requires certain browser plugins to work correctly. Which of the following plugins are required?**
 {{<c/choices webvuln_plugin  multi >}}

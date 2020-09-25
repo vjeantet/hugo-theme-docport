@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 In most applications, certain information should only be accessible to certain users. For example, in most applications that require authentication, only the currently logged-in user should be able to change master data (such as the username, the associated email address, or the account password). When an application has data that should not be available to other users or should be restricted to certain roles, authorization must be enforced on the server side.
 

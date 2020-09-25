@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 
 **To get started, tell us a little about your application so we can ask you the right questions.**

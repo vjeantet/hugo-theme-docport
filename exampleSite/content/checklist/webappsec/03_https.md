@@ -1,5 +1,7 @@
 ---
 hidden: true
+ignoresearch: true
+
 ---
 
 

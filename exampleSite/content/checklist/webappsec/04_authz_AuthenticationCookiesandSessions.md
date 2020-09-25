@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 **Cookies can be decorated with a special keyword, `HttpOnly`. If this keyword is set, the browser will not allow JavaScript to access the cookie. Even if the application has a cross-site scripting vulnerability, this keyword makes it much harder for an attacker to steal the session cookie.**
 

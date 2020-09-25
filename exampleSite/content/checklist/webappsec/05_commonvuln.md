@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 
 **Certain features can result in security issues, if used incorrectly. To help us identify potential issues, select the statements that describe your application:**

@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 
 **You mentioned previously that your application allows users to upload files. Where does the application store those files?**

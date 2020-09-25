@@ -1,5 +1,6 @@
 ---
 hidden: true
+ignoresearch: true
 ---
 
 The name of the application: {{<c/text "app_name*" />}}
