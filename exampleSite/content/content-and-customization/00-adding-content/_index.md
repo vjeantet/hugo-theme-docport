@@ -63,28 +63,33 @@ Use the frontmatter to specify the page title, description, creation date, link 
 
 On top of the [existing ones](https://gohugo.io/content-management/front-matter/), DocPort comes with additional params to control what and how to display your content, their entry in left menu or behaviour.
 
-```toml
-+++
-	title="Adding content"
+```yaml
+---
+title: "Adding content"
 
-	# order sections
-	weight=10 
+# order sections
+weight: 10 
 
-	# Hide some page components
-	hide= header, nav, breadcrumb, toc, footer, nextpage
+# Hide some page components
+hide:
+- header
+- nav
+- breadcrumb
+- toc
+- nextpage
+- footer
 
-	# subpage
-	subpage = false # usefull when you want to force a sub section to be considered as a subpage
+# subpage
+subpage: false # usefull when you want to force a sub section to be considered as a subpage
 
-	# Redirect to another content
-	# Set a full URL or a .md path
-	# examples : 
-	#  redirect = "https://github.com/vjeantet" 
-	#  redirect = "folder" 
-	#  redirect = "folder/_index.md" 
-	redirect = "folder/_index.md"
-
-+++
+# Redirect to another content
+# Set a full URL or a .md path
+# examples : 
+#  redirect = "https://github.com/vjeantet" 
+#  redirect = "folder" 
+#  redirect = "folder/_index.md" 
+redirect: "folder/_index.md"
+---
 ```
 
 {{%alert success%}}More frontmatter params exists to control how to display you content in the navigation, see [Navigation & Search]({{%relref "02-navigation-search" %}}) in the left menu.{{%/alert%}}
