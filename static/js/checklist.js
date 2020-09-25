@@ -8,18 +8,11 @@ $( document ).ready(function() {
         $(this).parent().attr('id','toc-'+id)
         $(this).before('<input type="checkbox" disabled readonly>');
     });
-    // $.each(formConditions, function(i) {
-    //     console.log(this.id, this.condition)
-    // })
 });
 
-
-function registerShowIf(elmID, condition) {
-    formConditions.unshift({id:elmID, condition:condition});
-}
-
-
-function formValue(formID, fieldName) {
+function formValue(fieldName) {
+    var formID = "6d2ab01b-fad4-4e70-83a8-b910ca848fec"
+    // var formElm = $('[name='+fieldName+']').parents('form');
 	var val = ""
 	var field = $("#"+formID +' [name='+fieldName+']')
 	if (field.attr("multiple") !== undefined) {
@@ -148,7 +141,13 @@ function listenFormChange(id){
             newWrap = wrap(this, newWrap) 
         }
     });    
-        
+    
+    // Register Conditions
+    $.each($("#"+id+" div[cond]"), function(i) {
+         formConditions.unshift({id:$(this).attr('id'), condition:$(this).attr('cond')});
+    });
+
+
     // on form change update display
 	$("#"+id).bind('change', function(e) {
 	  formChange(id)
@@ -156,10 +155,6 @@ function listenFormChange(id){
 
     // initial update display
     formChange(id)
-}
-
-function formData(name){
-	return $("#"+name).serializeArray()
 }
 
 function slugify(a) { 
@@ -173,7 +168,8 @@ function downloadFile(formID){
     	at: new Date().toISOString(),
     	ref: "TODO",
     	url: document.location.protocol+"//"+document.location.host+document.location.pathname,
-    	data: formData(formID)};
+    	data: $("#"+id).serializeArray()
+    };
     var filename = fileName+".checklist.json";
     var blob = new Blob([JSON.stringify(obj)], {type: 'application/json'});
     if (window.navigator && window.navigator.msSaveOrOpenBlob) {
