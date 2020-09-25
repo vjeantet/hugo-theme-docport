@@ -8,6 +8,9 @@ body {
     color: black;
     text-decoration: none;
     background-color: transparent; }
+    body a:hover {
+      color: initial;
+      text-decoration: none; }
   body header {
     background-color: #333333;
     border-bottom: 2px solid gray;

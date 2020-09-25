@@ -11,16 +11,15 @@
 
 <link rel="shortcut icon" href='{{"images/favicon.png" | relURL}}' type="image/x-icon" />
 
+
+<link href='{{"vendor/bootstrap/bootstrap-4.5.2-dist/css/bootstrap.min.css" | relURL}}' rel="stylesheet"> 
+
 <!--load all styles -->
 <link rel="preload" as="style" href='{{"/fonts/Montserrat/Montserrat.css" | relURL}}'>
 <link rel="stylesheet" href='{{ (resources.Get "sass/layout.scss" | toCSS).Permalink }}'>
 <link rel="stylesheet" href='{{ (resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "css/style.main.scss" . | toCSS).Permalink }}'>
 <link rel="stylesheet" href='{{ (resources.Get "sass/menu.scss" | resources.ExecuteAsTemplate "css/style.menu.scss" . | toCSS).Permalink }}'>
 <link href='{{"vendor/FontAwesome/fontawesome-free-5.14.0-web/css/all.min.css" | relURL}}' rel="stylesheet"> 
-
-<link href='{{"vendor/bootstrap/bootstrap-4.5.2-dist/css/bootstrap.min.css" | relURL}}' rel="stylesheet"> 
-
-
 
 <link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/notice.scss" | toCSS).Permalink }}'>
 <link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/tabs.scss" | toCSS).Permalink }}'>
@@ -30,9 +29,7 @@
 <link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/attachments.scss" | toCSS).Permalink }}'>
 <link rel="stylesheet" type="text/css" href='{{ (resources.Get "sass/shortcodes/alert.scss" | toCSS).Permalink }}'>
 
-
 <link rel="stylesheet" href='{{"/css/docport.css" | relURL}}'>
-
 
 <!--load all js -->
 <script src='{{"vendor/jquery/jquery-3.5.1.min.js" | relURL}}'></script>
