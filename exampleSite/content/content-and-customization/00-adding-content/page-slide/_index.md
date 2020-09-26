@@ -16,10 +16,10 @@ A basic .md file can be rendered as a reveal.js presentation full screen.
 
 To tell Hugo to consider a page as a slidedeck, just add a `type="slide"`in then frontmatter of your page.
 
-```toml
-+++
-type="slide"
-+++
+```yaml
+---
+type: "slide"
+---
 ```
 
 
@@ -39,19 +39,19 @@ Please read the [{{%icon book%}} doc from hakimel](https://github.com/hakimel/re
 In the frontmatter of your page file, set **type** and **revealOptions** params
 
 Your content will be served as a fullscreen revealjs presentation and revealOptions will be used to ajust its behaviour.
-```toml
-	+++
-	title = "Test slide"
-	type="slide"
+```yaml
+---
+title: "Test slide"
+type: slide
 
-	theme = "league"
-	[revealOptions]
-	transition= 'concave'
-	controls= true
-	progress= true
-	history= true
-	center= true
-	+++
+theme: "league"
+revealOptions:
+  center: true
+  controls: true
+  history: false
+  progress: true
+  transition: concave
+---
 ```
 [read more about reveal options here](https://github.com/hakimel/reveal.js/#configuration)
 
@@ -80,20 +80,18 @@ By using a combination of horizontal and vertical slides you can customize the n
 For example, a very simple slideshow presentation can be created as follows
 
 ```md
-+++
+---
+title: "test"
+type: "slide"
 
-title = "test"
-date = "2017-04-24T18:36:24+02:00"
-type="slide"
-
-theme = "league"
-[revealOptions]
-transition= 'concave'
-controls= true
-progress= true
-history= true
-center= true
-+++
+theme: "league"
+revealOptions:
+  center: true
+  controls: true
+  history: false
+  progress: true
+  transition: concave
+---
 
 # In the morning
 

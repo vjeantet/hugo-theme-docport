@@ -31,11 +31,11 @@ set `type="raw"` in your home page frontmatter : only your content will be rende
 Remember that hugo allows you to write your content with HTML when markdown if not enough. very usefull for a landing page !
 
 Example
-```toml
-+++
-title="Homepage"
-type="raw"
-+++
+```yaml
+---
+title: Homepage
+type: raw
+---
 <div class="myHome">
 	Hello
 </div>

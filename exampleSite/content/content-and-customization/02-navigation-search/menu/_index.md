@@ -21,27 +21,27 @@ Reminder : [subpages]({{%relref "content-and-customization/00-adding-content#sub
 Bellow are all frontmatters options used to render a menu entry.\
 Example from the current "Getting start" section.
 
-```toml
-+++
+```yaml
+---
 # Menu label
-title = "Getting started"
+title: "Getting started"
 
 # Hide this page from menu
-hidden = false
+hidden: false
 
 # Prefix menu label with a text, an html...
-pre = ""
+pre: ""
 
 # Suffix menu label with a text, an html...
-post = "👋"
+post: "👋"
 
 # Display this before the menu entry
-head = "<hr/>"
+head: "<hr/>"
 
 # Keep this menu opened by default
-alwaysopen = true
+alwaysopen: true
 
-+++
+---
 ```
 
 
