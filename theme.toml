@@ -8,7 +8,7 @@ description = "Documentation theme for Hugo"
 homepage = "https://github.com/vjeantet/hugo-theme-docport"
 repo = "https://github.com/vjeantet/hugo-theme-docport"
 tags = ["documentation", "menu","slide","search"]
-features = ["documentation","menu","nested sections","search","slide","attachments"]
+features = ["documentation","menu","checklist","search","slide"]
 min_version = 0.50
 
 [author]
