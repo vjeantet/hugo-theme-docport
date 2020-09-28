@@ -4,6 +4,8 @@ description: Mermaid is a tool that generates diagrams and charts, from markdown
 title: mermaid
 ---
 
+
+
 ## Flowchart example
 {{%expand "Show code ..."%}}
 ```
@@ -159,5 +161,29 @@ gantt
         Add to mermaid                      :1d
 {{</mermaid>}}
 
+## State Diagram
+{{%expand "Show code ..."%}}
+```
+    {{</*mermaid*/>}}
+    stateDiagram-v2
+        [*] --> Still
+        Still --> [*]
 
+        Still --> Moving
+        Moving --> Still
+        Moving --> Crash
+        Crash --> [*]
+    {{</* /mermaid */>}}
+```
+{{%/expand%}}
+{{<mermaid align="left">}}
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+{{</mermaid>}}
 
