@@ -4,4 +4,4 @@
 {{- with .Get "theme" -}}{{.}}{{- else -}}info{{- end -}}
 {{- else -}}
 	{{- with .Get 0 -}}{{.}}{{- else -}}info{{- end -}}
-{{- end -}} " role="alert">{{- .Inner | safeHTML -}}</div>
+{{- end -}} " role="alert">{{- .Inner | safeHTML | markdownify  -}}</div>

@@ -1,7 +1,8 @@
+
 {{with .Get "hidden"}}
 	{{if eq . "false"}}
-		{{$.Inner}}			
+		{{$.Inner | safeHTML}}			
 	{{end}}
 {{else}}
-	{{.Inner}}
+	{{.Inner | safeHTML}}
 {{end}}
