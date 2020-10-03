@@ -168,7 +168,7 @@ function downloadFile(formID){
     	at: new Date().toISOString(),
     	ref: "TODO",
     	url: document.location.protocol+"//"+document.location.host+document.location.pathname,
-    	data: $("#"+id).serializeArray()
+    	data: $("#"+formID).serializeArray()
     };
     var filename = fileName+".checklist.json";
     var blob = new Blob([JSON.stringify(obj)], {type: 'application/json'});
