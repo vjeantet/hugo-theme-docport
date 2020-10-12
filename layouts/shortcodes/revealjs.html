@@ -2,11 +2,11 @@
 
 <div id="slideContent">
 	
-		<link rel="stylesheet" href="{{"/vendor/revealjs/reveal.js-master/dist/reset.css"|relURL}}">
-		<link rel="stylesheet" href="{{"/vendor/revealjs/reveal.js-master/dist/reveal.css"|relURL}}">
-		<link rel="stylesheet" href="{{"/vendor/revealjs/reveal.js-master/dist/theme/"|relURL}}{{with .Get "theme"}}{{.|safeHTML}}{{else}}black{{end}}.css" id="theme">
+		<link rel="stylesheet" defer href="https://unpkg.com/reveal.js@4.0.2/dist/reset.css">
+		<link rel="stylesheet" defer href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
+		<link rel="stylesheet" defer href="https://unpkg.com/reveal.js@4.0.2/dist/theme/{{with .Get "theme"}}{{.|safeHTML}}{{else}}black{{end}}.css" id="theme">
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="{{"/vendor/revealjs/reveal.js-master/plugin/highlight/monokai.css"|relURL}}" id="highlight-theme">
+		<link rel="stylesheet" defer href="https://unpkg.com/reveal.js@4.0.2/plugin/highlight/monokai.css" id="highlight-theme">
 
 
 	<div class="reveal">
@@ -22,10 +22,10 @@
 	</div>
 
 
-	<script async src="{{"/vendor/revealjs/reveal.js-master/dist/reveal.js"|relURL}}"></script>
-	<script async src="{{"/vendor/revealjs/reveal.js-master/plugin/notes/notes.js"|relURL}}"></script>
-	<script async src="{{"/vendor/revealjs/reveal.js-master/plugin/markdown/markdown.js"|relURL}}"></script>
-	<script async src="{{"/vendor/revealjs/reveal.js-master/plugin/highlight/highlight.js"|relURL}}"></script>
+	<script async src="https://unpkg.com/reveal.js@4.0.2/dist/reveal.js"></script>
+	<script async src="https://unpkg.com/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+	<script async src="https://unpkg.com/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+	<script async src="https://unpkg.com/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
 
 	<script>
 	function initSlides() {

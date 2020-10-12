@@ -10,8 +10,7 @@ url: /admin/index.html
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
-  <!-- <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script> -->
-  <script src="{{< static "/vendor/netlify-cms/2.10.56-dist/netlify-cms.js" >}}"></script>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script src="./shortcode/alert.js"></script>
   <script src="./shortcode/expand.js"></script>
   <script src="./shortcode/panel.js"></script>
