@@ -512,15 +512,21 @@ article section.page div.content{
             overflow: inherit!important;
             code{
                 color:inherit!important;
-                font-size: 75%;
+                font-size: 95%;
                 display: block;
-                margin-left:-1.5rem;
-                margin-right:-1.5rem;
+                line-height: 1.2em;
                 padding: 10px;
                 border:0px;
                 font-weight: inherit;
                 background-color: inherit;
             }
+        }
+    }
+
+    >div.highlight{
+        pre code{
+            margin-left:-1.5rem;
+            margin-right:-1.5rem;
         }
     }
 }

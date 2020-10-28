@@ -49,7 +49,7 @@ div.notices {
 		label{color: $color_primary;}	
 	}
 	&.primary {
-		p {
+		> *:not(label) {
 			box-shadow: inset 4px 0 0 $color_primary;
 			background: transparentize($color_primary, 0.95);
 			color: darken($color_primary,20%) !important; 
@@ -67,7 +67,7 @@ div.notices {
 	}
 
 	&.success, &.tip {
-		p {
+		> *:not(label) {
 			box-shadow: inset 4px 0 0 $color_success;
 			background: transparentize($color_success, 0.95);
 			color: darken($color_success,20%) !important; 
@@ -76,7 +76,7 @@ div.notices {
 	}
 
 	&.danger {
-		p {
+		> *:not(label) {
 			box-shadow: inset 4px 0 0 $color_danger;
 			background: transparentize($color_danger, 0.95);
 			color: darken($color_danger,20%) !important; 
@@ -85,7 +85,7 @@ div.notices {
 	}
 
 	&.warning {
-		>* {
+		> *:not(label) {
 			box-shadow: inset 4px 0 0 $color_warning;
 			background: transparentize($color_warning, 0.95);
 			color: darken($color_warning,20%) !important; 
@@ -94,7 +94,7 @@ div.notices {
 	}
 
 	&.info {
-		p {
+		> *:not(label) {
 			box-shadow: inset 4px 0 0 $color_info;
 			background: transparentize($color_info, 0.95);
 			color: darken($color_info,20%) !important; 
@@ -103,7 +103,7 @@ div.notices {
 	}
 
 	&.light {
-		p {
+		> *:not(label) {
 			box-shadow: inset 4px 0 0 $color_light;
 			background: transparentize($color_light, 0.95);
 			color: darken($color_light,20%) !important; 
@@ -111,7 +111,7 @@ div.notices {
 		label{color: $color_light;}
 	}
 	&.dark {
-		p {
+		> *:not(label) {
 			box-shadow: inset 4px 0 0 $color_dark;
 			background: transparentize($color_dark, 0.95);
 			color: darken($color_dark,20%) !important; 
@@ -119,7 +119,7 @@ div.notices {
 		label{color: $color_dark;}
 	}
 	&.white {
-		p {
+		> *:not(label) {
 			box-shadow: inset 4px 0 0 $color_white;
 			background: transparentize($color_white, 0.95);
 			color: whiteen($color_white,20%) !important; 
@@ -127,7 +127,7 @@ div.notices {
 		label{color: $color_white;}
 	}
 	&.transparent {
-		p {
+		> *:not(label) {
 			box-shadow: inset 4px 0 0 $color_transparent;
 			background: transparentize($color_transparent, 0.95);
 			color: transparenten($color_transparent,20%) !important; 
