@@ -20,8 +20,7 @@
 {{if lt $level $maxlevel }}
  {{- with .sect}}
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
-    {{- $numberOfPages := (len .Sections) }}
-    {{- $numberOfPages := (len (where .Sections "Params.subpage" "ne" true)) }}
+    {{- $numberOfPages := (len (where (where .Sections "Params.subpage" "ne" true) "Params.hidden" "ne" true )) }}
     {{- safeHTML .Params.head}}
     <li data-nav-id="{{.Permalink}}" class="dd-item
         {{- if .IsAncestor $currentNode}} parent{{end}}
@@ -37,7 +36,6 @@
       {{if gt $level 0 }}
           <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{$menuTitle}}{{safeHTML .Params.Post}}</a>
       {{end}}    
-      
       {{- if and (ne $numberOfPages 0) (lt (add $level 1) $maxlevel) }}
         {{- if or (.IsAncestor $currentNode) (.Params.alwaysopen) }}
           <i class="fas fa-chevron-down ddexp"></i>

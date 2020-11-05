@@ -1,8 +1,9 @@
 ---
 ---
+
 <div class="checklist-footer">
 	<button type="button" 
-	onclick="downloadFile('6d2ab01b-fad4-4e70-83a8-b910ca848fec');"
+	onclick="skwad.saveDocumentAsFile(skwad.form.getAttribute('ref'));"
 	class="btn btn-success"><i class="fas fa-download"></i>&nbsp;Download Answers</button>
 </div>
 

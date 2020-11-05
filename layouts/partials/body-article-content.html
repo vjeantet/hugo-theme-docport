@@ -75,9 +75,9 @@
 
 	<div class="content">
     {{- with .Content -}}
-		{{ partial "_checklist-header.html" $ }}
+		{{ partial "_skwad-header.html" $ }}
 	    {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
-		{{ partial "_checklist-footer.html" $ }}      	
+		{{ partial "_skwad-footer.html" $ }}
     {{- else -}}
       {{with index .Pages 0}}
       <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>

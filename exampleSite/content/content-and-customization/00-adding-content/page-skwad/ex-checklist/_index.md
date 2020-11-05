@@ -1,19 +1,20 @@
 ---
+description: Very long and Complex example, with file save/load on client side 
+hidden: true
 hide:
 - nextpage
-- navs
-
+- nav
+- breadcrumb
 
 title: WebApp Security Assessment
 weight: 99
 
-checklist: true
+skwad:
+  clientside: true
 ---
 
-
-
 {{%notice success%}}
-This is a demo of a [checklist page]({{%ref "content-and-customization/00-adding-content/page-checklist"%}})
+This is a demo of a [skwad page]({{%ref "content-and-customization/00-adding-content/page-skwad"%}})
 {{%/notice %}}
 
 ## Application Metadata

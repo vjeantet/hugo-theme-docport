@@ -8,7 +8,7 @@ jQuery(document).ready(function() {
     });
 
     // Execute actions on images generated from Markdown pages
-    
+
     var images = $("article section.page img");
     // Change styles, depending on parameters set to the image
     images.each(function (index) {
@@ -101,9 +101,9 @@ jQuery(document).ready(function() {
 
         if (currNavActive) {
           activeNavFound = true;
-          headings[i].classList.add('active');
+          headings[i].parentElement.classList.add('active');
         } else {
-          headings[i].classList.remove('active');
+          headings[i].parentElement.classList.remove('active');
         }
       }
     }, 100);

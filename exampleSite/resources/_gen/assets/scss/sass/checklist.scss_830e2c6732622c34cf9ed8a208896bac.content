@@ -27,13 +27,26 @@ body article section.page div.content div.checklist-header .form-control-file {
     border-style: solid;
     box-shadow: inset 0px 0px 0px 0.25em currentColor; }
 
+body article section.page div.content h2 a {
+  margin-left: 0.2em;
+  text-decoration: none; }
+
 body article section.page div.content div.checklist-footer {
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: center; }
 
 body #TableOfContents > ul li input {
-  margin-right: 0.3em; }
+  margin-right: 0.3em;
+  display: none; }
+
+body #TableOfContents > ul li i {
+  margin-right: 0.3em;
+  color: #e6e6e6; }
+  body #TableOfContents > ul li i.fa-check-circle {
+    color: green; }
+  body #TableOfContents > ul li i.fa-dot-circle {
+    color: #999999; }
 
 body #TableOfContents > ul li:not(.cl-ready):not(.cl-done):not(.cl-doing) input {
   visibility: hidden; }

@@ -65,7 +65,7 @@ body{
         align-items: stretch ;
 
         color:($c_light2);
-        a {
+        a, a:hover {
             color:invert($c_dark2);
         }
         > div {
@@ -176,11 +176,12 @@ body{
                 li{
                     padding: 8px 0px 8px 0px;
                     font-weight:300;
+                    border-bottom: 1px solid transparent;
+                    &.active{
+                        border-bottom: 1px dashed #999999;
+                    }
                     a {
                         /*padding-left: 2px;*/
-                        &.active{
-                            font-weight:500;
-                        }
                     }
                     
                 }

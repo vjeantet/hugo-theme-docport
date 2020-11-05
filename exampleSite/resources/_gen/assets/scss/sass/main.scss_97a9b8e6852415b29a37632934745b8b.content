@@ -18,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: stretch;
     color: #e6e6e6; }
-    body header a {
+    body header a, body header a:hover {
       color: #cccccc; }
     body header > div {
       display: flex;
@@ -87,11 +87,12 @@ body {
           list-style-type: none; }
         body article section.right-menu > div li {
           padding: 8px 0px 8px 0px;
-          font-weight: 300; }
+          font-weight: 300;
+          border-bottom: 1px solid transparent; }
+          body article section.right-menu > div li.active {
+            border-bottom: 1px dashed #999999; }
           body article section.right-menu > div li a {
             /*padding-left: 2px;*/ }
-            body article section.right-menu > div li a.active {
-              font-weight: 500; }
       body article section.right-menu .Actions {
         font-size: 75%; }
   body footer {
@@ -306,11 +307,13 @@ article section.page div.content {
     overflow: inherit !important; }
     article section.page div.content div.highlight pre code {
       color: inherit !important;
-      font-size: 75%;
+      font-size: 95%;
       display: block;
-      margin-left: -1.5rem;
-      margin-right: -1.5rem;
+      line-height: 1.2em;
       padding: 10px;
       border: 0px;
       font-weight: inherit;
       background-color: inherit; }
+  article section.page div.content > div.highlight pre code {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; }
