@@ -4,7 +4,12 @@ description: Mermaid is a tool that generates diagrams and charts, from markdown
 title: mermaid
 ---
 
+## Configuring
 
+To select a specific version of Mermaid, include this in your config.toml:
+
+    [params]
+    mermaidVersion = "8.11.4"
 
 ## Flowchart example
 {{%expand "Show code ..."%}}
