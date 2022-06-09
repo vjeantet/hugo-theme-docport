@@ -180,7 +180,6 @@ gantt
     stateDiagram-v2
         [*] --> Still
         Still --> [*]
-
         Still --> Moving
         Moving --> Still
         Moving --> Crash
@@ -189,14 +188,3 @@ gantt
 ```
 
 {{%/expand%}}
-
-```
-    {{<mermaid align="left">}}
-    stateDiagram-v2
-        [*] --> Still
-        Still --> [*]
-        Still --> Moving
-        Moving --> Still
-        Moving --> Crash
-        Crash --> [*]
-```
