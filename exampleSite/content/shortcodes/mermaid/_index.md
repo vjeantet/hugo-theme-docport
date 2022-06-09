@@ -1,13 +1,13 @@
 ---
-description: Mermaid is a tool that generates diagrams and charts, from markdown-inspired
-  text definitions
 title: mermaid
+description: Mermaid is a tool that generates diagrams and charts, from
+  markdown-inspired text definitions
+date: 2022-06-09T21:08:20.853Z
 ---
-
-
-
 ## Flowchart example
+
 {{%expand "Show code ..."%}}
+
 ```
 	{{</*mermaid align="left"*/>}}
 	graph LR;
@@ -17,19 +17,21 @@ title: mermaid
     	C -->|Two| E[Result two]
     {{</* /mermaid */>}}
 ```
+
 {{%/expand%}}
 
 {{<mermaid align="left">}}
 graph LR;
-	A[Hard edge] -->|Link text| B(Round edge)
+	A\[Hard edge] -->|Link text| B(Round edge)
     B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
+    C -->|One| D\[Result one]
+    C -->|Two| E\[Result two]
 {{< /mermaid >}}
 
 ### With sub-graphs and some style
 
 {{%expand "Show code..."%}}
+
 ```
     {{</*mermaid align="left"*/>}}
     graph LR;
@@ -56,7 +58,8 @@ graph LR;
         classDef left fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
         class A1,B1,C1 left
     {{</* /mermaid */>}}
-```    
+```
+
 {{%/expand%}}
 
 {{<mermaid align="left">}}
@@ -65,28 +68,33 @@ graph LR;
     linkStyle 0 stroke:#f00,stroke-width:4px;
     Y --> Z
     Z --> X
-    
-    X --> A1
-    subgraph right
-        A2 --> B2
-        B2 --> C2
-    end
-    subgraph left
-        A1 --> B1
-        B1 --> C1
-    end
-    C1 --> X
-    Z --> A2
-    C2 --> Z
 
-    style Y fill:#f9f,stroke:#333,stroke-width:4px
+```
+X --> A1
+subgraph right
+    A2 --> B2
+    B2 --> C2
+end
+subgraph left
+    A1 --> B1
+    B1 --> C1
+end
+C1 --> X
+Z --> A2
+C2 --> Z
 
-    classDef left fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
-    class A1,B1,C1 left
+style Y fill:#f9f,stroke:#333,stroke-width:4px
+
+classDef left fill:#ccf,stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
+class A1,B1,C1 left
+```
+
 {{</mermaid>}}
 
 ## Sequence example
+
 {{%expand "Show code ..."%}}
+
 ```
 	{{</*mermaid*/>}}
 	sequenceDiagram
@@ -102,6 +110,7 @@ graph LR;
 	    Bob-->John: Jolly good!
 	{{</* /mermaid */>}}
 ```
+
 {{%/expand%}}
 
 {{<mermaid>}}
@@ -118,10 +127,10 @@ sequenceDiagram
     Bob-->John: Jolly good!
 {{< /mermaid >}}
 
-
-
 ## GANTT Example
+
 {{%expand "Show code ..."%}}
+
 ```
 	{{</*mermaid*/>}}
 	gantt
@@ -141,6 +150,7 @@ sequenceDiagram
 	        Add to mermaid                      :1d
 	{{</* /mermaid */>}}
 ```
+
 {{%/expand%}}
 
 {{<mermaid>}}
@@ -162,28 +172,19 @@ gantt
 {{</mermaid>}}
 
 ## State Diagram
+
 {{%expand "Show code ..."%}}
+
 ```
     {{</*mermaid*/>}}
     stateDiagram-v2
         [*] --> Still
         Still --> [*]
-
         Still --> Moving
         Moving --> Still
         Moving --> Crash
         Crash --> [*]
     {{</* /mermaid */>}}
 ```
+
 {{%/expand%}}
-{{<mermaid align="left">}}
-stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
-{{</mermaid>}}
-
