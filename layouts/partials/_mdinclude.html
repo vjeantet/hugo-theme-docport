@@ -3,7 +3,7 @@
 
 {{- define "siteBlock" -}}
 	{{ $path := printf "_layout/%s/_index.%s.md" .name .page.Lang}}	
-	{{ range where .page.Site.Pages "File.BaseFileName" $path }}
+	{{ range where .page.Site.RegularPages "File.BaseFileName" $path }}
 		{{ .Content }} 
 	{{else}}
 		{{ $path = printf "_layout/%s/_index.md" .name }}	
